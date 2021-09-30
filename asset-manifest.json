@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/LineageNFT.com/static/css/main.a617e044.chunk.css",
-    "main.js": "/LineageNFT.com/static/js/main.7ce82abf.chunk.js",
-    "main.js.map": "/LineageNFT.com/static/js/main.7ce82abf.chunk.js.map",
+    "main.js": "/LineageNFT.com/static/js/main.2349a95f.chunk.js",
+    "main.js.map": "/LineageNFT.com/static/js/main.2349a95f.chunk.js.map",
     "runtime-main.js": "/LineageNFT.com/static/js/runtime-main.b96305bb.js",
     "runtime-main.js.map": "/LineageNFT.com/static/js/runtime-main.b96305bb.js.map",
     "static/js/2.556dccae.chunk.js": "/LineageNFT.com/static/js/2.556dccae.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.b96305bb.js",
     "static/js/2.556dccae.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.7ce82abf.chunk.js"
+    "static/js/main.2349a95f.chunk.js"
   ]
 }
