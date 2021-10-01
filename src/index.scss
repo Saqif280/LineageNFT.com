@@ -1,11 +1,13 @@
 @import 'variables';
 html {
+  // set this to normalize rem unit
   font-size: 10px;
 }
 body {
   margin: 0;
   font-family: 'Lora', serif;
   font-size: 2rem;
+  color: $font-grey;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,6 +21,7 @@ h1 {
   font-family: 'Spectral SC', serif;
   font-weight: 200;
   font-size: 6.4rem;
+  color: $font-white;
   line-height: 6.4rem;
   letter-spacing: 1.6rem;
   padding-left: 1.6rem; // offsets letter spacing
@@ -28,7 +31,7 @@ h1 {
 
 a {
   &.link--social {
-    color: $font-primary;
+    color: $font-grey;
     font-size: 2rem;
     margin-left: 0.8rem;
     margin-right: 0.8rem;
@@ -43,7 +46,6 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: $font-primary;
   }
 }
 
