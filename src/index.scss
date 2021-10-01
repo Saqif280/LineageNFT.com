@@ -1,8 +1,11 @@
 @import 'variables';
-
+html {
+  font-size: 10px;
+}
 body {
   margin: 0;
   font-family: 'Lora', serif;
+  font-size: 2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,20 +18,35 @@ code {
 h1 {
   font-family: 'Spectral SC', serif;
   font-weight: 200;
-  font-size: 4rem;
-  line-height: 4rem;
-  letter-spacing: 0.8rem;
-  padding-left: 0.8rem; // offsets letter spacing
+  font-size: 6.4rem;
+  line-height: 6.4rem;
+  letter-spacing: 1.6rem;
+  padding-left: 1.6rem; // offsets letter spacing
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.section--hero {
-  background-color: $background-primary;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+a {
+  &.link--social {
+    color: $font-primary;
+    font-size: 2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+  }
+}
+
+.section {
+  &--hero {
+    background-color: $background-primary;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $font-primary;
+  }
+}
+
+.socials {
+  margin-top: 1rem;
 }
