@@ -3,10 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <div className="section--hero">
         <h1>Lineage</h1>
-      </header>
+        <p>Shape the world - it’s yours after all.</p>
+      </div>
     </div>
   );
 }
