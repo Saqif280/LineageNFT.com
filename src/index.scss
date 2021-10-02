@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'animations';
+
 html {
   // set this to normalize rem unit
   font-size: 10px;
@@ -38,17 +40,30 @@ a {
   }
 }
 
-.section {
-  &--hero {
-    background-color: $background-primary;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.section--hero {
+  background-color: $background-primary;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    @include fade-in('1000ms');
   }
-}
-
-.socials {
-  margin-top: 1rem;
+  p {
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    @include fade-in('2000ms');
+  }
+  .socials {
+    margin-top: 1rem;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    @include fade-in('3500ms');
+  }
 }
