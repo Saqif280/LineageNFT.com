@@ -64,6 +64,6 @@ a {
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
-    @include fade-in('3500ms');
+    @include fade-in('3000ms');
   }
 }
