@@ -57,13 +57,12 @@ a {
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
-    @include fade-in('2000ms');
   }
   .socials {
     margin-top: 1rem;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
-    @include fade-in('3000ms');
+    @include fade-in('2000ms');
   }
 }
