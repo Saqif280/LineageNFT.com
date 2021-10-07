@@ -1,3 +1,4 @@
+@import 'grid12';
 @import 'variables';
 @import 'animations';
 
@@ -9,7 +10,8 @@ body {
   margin: 0;
   font-family: 'Lora', serif;
   font-size: 2rem;
-  color: $font-grey;
+  line-height: 3rem;
+  color: $font-grey-2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,6 +32,20 @@ h1 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+h2{
+  font-family: 'Spectral SC', serif;
+  color: $font-black;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+h3{
+  font-family: 'Spectral SC', serif;
+  color: $font-black;
+}
+h4{
+  font-family: 'Spectral SC', serif;
+  color: $font-black;
+}
 
 a {
   &.link--social {
@@ -42,6 +58,9 @@ a {
 
 .section--hero {
   background-color: $background-primary;
+  // background-color: $background-black;
+  // background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -65,4 +84,28 @@ a {
     animation-duration: 3s;
     @include fade-in('2000ms');
   }
+}
+.section {
+  padding-top: 10rem;
+  background-color: $background-secondary;
+
+  &--footer {
+    height: 20rem;
+    background-color: $background-white;
+    // background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+  }
+}
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100rem;
+  padding: 2rem 4rem;
+}
+.crest {
+  display: block;
+  width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-filter: drop-shadow(5px 5px 5px #222222);
+  filter: drop-shadow(5px 5px 5px #222222);
 }
