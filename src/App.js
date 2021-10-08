@@ -2,8 +2,10 @@ import Crest1 from './img/crest_1.png';
 import Crest2 from './img/crest_2.png';
 // import Placeholder from './img/white.png';
 import Placeholder from './img/placeholder-square.jpeg';
+import PlaceholderWide from './img/placeholder-wide.jpeg';
 import { IconContext } from "react-icons";
 import { FaDiscord, FaTwitter, FaInstagram, FaMedium, FaLinkedin } from 'react-icons/fa';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 
 function App() {
   return (
@@ -40,24 +42,33 @@ function App() {
         </div>
       </div>
 
-      <div className="section">
+      <div className="section section--roadmap">
         <div className="content">
-			    <div className="container-fluid roadmap">
+			    <div className="container-fluid">
             <div className="col-sm-offset-3 col-sm-6">
               <h2 className="text--center">The Road Ahead</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna. Quisque ut diam egestas, viverra nulla pellentesque, gravida ipsum.</p>
             </div>
-
-            <div className="col-sm-offset-4 col-sm-8">
-              <div className="roadmap__card">
+          </div>
+          <div className="card-navigation">
+            <a>
+              <MdKeyboardArrowLeft />
+            </a>
+            <a>
+              <MdKeyboardArrowRight />
+            </a>
+          </div>
+			    <div className="cards">
+            <div className="card">
+              <div className="">
                 <h4>Chapter 1</h4>
                 <h3>Mint Crests</h3>
                 <p>We begin by discovering the skeleton of a world and its histories during the minting process. Read about it here.</p>
               </div>
             </div>
 
-            <div className="col-sm-offset-4 col-sm-8">
-              <div className="roadmap__card">
+            <div className="card">
+              <div className="">
                 <h4>Chapter 2</h4>
                 <h3>Interactive Lore Events</h3>
                 <p>We let you tell the story over the course of 6? 12? months; make permanent decisions, lifelong friends, and your legacy. Read more about the mechanics of the system and this project in particular here.</p>
@@ -66,8 +77,8 @@ function App() {
               </div>
             </div>
 
-            <div className="col-sm-offset-4 col-sm-8">
-              <div className="roadmap__card">
+            <div className="card">
+              <div className="">
                 <h4>Chapter 3</h4>
                 <h3>Community Events</h3>
                 <p>After we’ve all discovered our histories together, we create LineageDAO, a DAO that collectively owns the intellectual property our community has funded. Together we will deepen the world, work on new projects, grow the intellectual property, and work to create a fantasy world that can stand the test of time.</p>
@@ -75,14 +86,9 @@ function App() {
                 <p>But Lineage needs you. Not bots, not investors - you. We want lineage and its success to be owned by the players, the story tellers, and the nights with our friends where we’re laughing over some stupid story that plasters a grin on our faces. That’s what this revolution is all about.</p>
               </div>
             </div>
-
           </div>
-        </div>
-      </div>
 
-      <div className="section">
-        <div class="slider">
-          <div class="slider-row"></div>
+          <img src={PlaceholderWide} alt="illustration" className="illustration"/>
         </div>
       </div>
 
@@ -154,7 +160,7 @@ function App() {
             <div className="col-sm-6">
               <h2>Join the Community</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna.</p>
-              <a className="button">Join the Discord</a>
+              <a className="button" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the Discord</a>
             </div>
             <div className="col-sm-6">
               <img src={Placeholder} alt="family crest 2" className="crest"/>

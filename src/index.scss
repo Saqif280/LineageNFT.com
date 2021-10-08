@@ -106,6 +106,88 @@ a {
   padding-bottom: 10rem;
   background-color: $background-secondary;
 
+  &--roadmap {
+    .card-navigation {
+      margin: 0 auto;
+      position: relative;
+      max-width: 100rem;
+      a {
+        z-index: 5;
+        margin-top: 40rem;
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 500ms all;
+        &:hover {
+          background-color: rgba(192, 192, 192, 0.3);
+        }
+        svg {
+          width: 10rem;
+          height: 10rem;
+        }
+        &:nth-child(1) {
+          left: 0;
+        }
+        &:nth-child(2) {
+          right: 0;
+        }
+      }
+    }
+    .cards {
+      position: relative;
+      height: 90rem;
+    }
+    .card {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      display: inline-block;
+      // border-left: .3rem solid #d6d6d6;
+      min-height: 76rem;
+      width: 60rem;
+      margin-top: 10rem;
+      background-color: $background-white;
+      padding: 3rem 6.5rem 5rem;
+      box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+      h3 {
+        margin-top: 1rem;
+      }
+      h4 {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+      }
+      &:nth-child(1){
+        z-index: 3;
+      }
+      &:nth-child(2){
+        z-index: 2;
+        transform: translate(-50%, 0) rotate(5deg);
+        // left: calc(50% + 10rem);
+      }
+      &:nth-child(3){
+        z-index: 1;
+        transform: translate(-50%, 0) rotate(-7deg);
+        // left: 20rem;
+        box-shadow: 0 0 30px 0 rgba(192, 192, 192, 0.7), 0 0 0 transparent;
+        -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
+        -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.7), 0 0 0 transparent;
+      }
+    }
+    .illustration {
+      display: block;
+      margin: 10rem auto 0;
+      width: 80rem;
+    }
+  }
+
   &--community {
     background-image: url();
     background: 
@@ -122,7 +204,6 @@ a {
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: $background-primary;
-    // background-image: url("https://www.transparenttextures.com/patterns/leather.png");
 
     h3 {
       color: $font-white;
@@ -189,28 +270,6 @@ $speed: 50s;
   to   { background-position-x: -$img-w * $ratio; }
 }
 
-// roadmap
-.roadmap {
-  h3 {
-    margin-top: 1rem;
-  }
-  h4 {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-size: 1.6rem;
-  }
-  &__card {
-    border-left: 6px solid green;
-    min-height: 76rem;
-    margin-top: 10rem;
-    background-color: $background-white;
-    padding: 3rem 6.5rem 5rem;
-    box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-    -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-    -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
-  }
-}
-
 .profile-card {
   margin-top: 10rem;
   background-color: $background-white;
@@ -251,6 +310,7 @@ $speed: 50s;
 	text-decoration: none;
   text-align: center;
 	font-size: 1.6rem;
+  font-weight: 700;
   transition: 300ms all;
   box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
   -moz-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
