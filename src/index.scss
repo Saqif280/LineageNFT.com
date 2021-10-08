@@ -5,6 +5,7 @@
 html {
   // set this to normalize rem unit
   font-size: 10px;
+  background-color: $background-primary;
 }
 body {
   margin: 0;
@@ -31,23 +32,34 @@ h1 {
   padding-left: 1.6rem; // offsets letter spacing
   margin-top: 1rem;
   margin-bottom: 1rem;
+  text-shadow: 2px 4px 5px rgba(20, 20, 20, 0.6);
 }
 h2{
   font-family: 'Spectral SC', serif;
   color: $font-black;
   font-size: 4rem;
   line-height: 5rem;
+  font-weight: 500;
 }
 h3{
   font-family: 'Spectral SC', serif;
   color: $font-black;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 400;
 }
 h4{
   font-family: 'Spectral SC', serif;
-  color: $font-black;
+  color: $font-grey;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 400;
 }
 
 a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+
   &.link--social {
     color: $font-grey;
     font-size: 2rem;
@@ -83,22 +95,56 @@ a {
     animation-timing-function: ease-in;
     animation-duration: 3s;
     @include fade-in('2000ms');
+    .link--social {
+      -webkit-filter: drop-shadow(5px 5px 5px #222222);
+      filter: drop-shadow(5px 5px 5px #222222);
+    }
   }
 }
 .section {
   padding-top: 10rem;
+  padding-bottom: 10rem;
   background-color: $background-secondary;
 
+  &--community {
+    background-image: url();
+    background: 
+      linear-gradient(
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0.7)
+      ),
+      url("https://magazine.artstation.com/wp-content/uploads/2018/11/file-2-1-e1543433699301.jpg");
+  }
+
   &--footer {
-    height: 20rem;
-    background-color: $background-white;
+    font-size: 1.6rem;
+    color: $font-grey;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: $background-primary;
     // background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+
+    h3 {
+      color: $font-white;
+      margin: 1.6rem 0;
+      line-height: 1rem;
+    }
+    .copyright {
+      margin-top: 5rem;
+      color: $font-grey-2;
+    }
+    .navigation {
+      margin-bottom: 4rem;
+      a {
+        display: block;
+      }
+    }
   }
 }
 .content {
   margin-left: auto;
   margin-right: auto;
-  max-width: 100rem;
+  max-width: 110rem;
   padding: 2rem 4rem;
 }
 .crest {
@@ -106,6 +152,120 @@ a {
   width: 40rem;
   margin-left: auto;
   margin-right: auto;
-  -webkit-filter: drop-shadow(5px 5px 5px #222222);
-  filter: drop-shadow(5px 5px 5px #222222);
+  // -webkit-filter: drop-shadow(5px 5px 5px #222222);
+  // filter: drop-shadow(5px 5px 5px #222222);
+  box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+}
+
+// carousel
+$img-w: 3360px;
+$img-h: 840px;
+$shrink: 2;
+$ratio: 1 / $shrink;
+$speed: 50s;
+
+.slider {
+  width: 100%;
+  top: calc(50% - #{$img-h * $ratio / 2});
+  overflow: hidden;
+  box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  .slider-row {
+    width: $img-w * $ratio;
+    height: $img-h * $ratio;
+    // background-color: #fff;
+    // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/111863/ubiquity-summit-web-01.png);
+    background-image: url('./img/placeholder-banner.png');
+    background-size: $img-w * $ratio $img-h * $ratio;
+    animation: slide $speed linear infinite;    
+  }
+}
+
+@keyframes slide {
+  from { background-position-x: 0; }
+  to   { background-position-x: -$img-w * $ratio; }
+}
+
+// roadmap
+.roadmap {
+  h3 {
+    margin-top: 1rem;
+  }
+  h4 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+  }
+  &__card {
+    border-left: 6px solid green;
+    min-height: 76rem;
+    margin-top: 10rem;
+    background-color: $background-white;
+    padding: 3rem 6.5rem 5rem;
+    box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+    -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  }
+}
+
+.profile-card {
+  margin-top: 10rem;
+  background-color: $background-white;
+  width: 100%;
+  box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  img {
+    width: 100%;
+  }
+  .content-chunk {
+    padding: 3rem 6.5rem 5rem;
+    h4 {
+      color: $font-black;
+      span.title {
+        color: $font-grey-2;
+        text-transform: lowercase;
+        font-weight: 200;
+      }
+    }
+    a {
+      &.link--social {
+        color: $font-grey-2;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.button{
+  background: #fff;
+  display: inline-block;
+  height: auto;
+  width: auto;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	border: 0.1rem solid #fff;
+	text-decoration: none;
+  text-align: center;
+	font-size: 1.6rem;
+  transition: 300ms all;
+  box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+	-webkit-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
+  &:hover{
+    transform: translateY(2px);
+    transition: 300ms all;
+    box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
+    -moz-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
+  }
+}
+
+.text {
+  &--center {
+    text-align: center;
+  }
 }
