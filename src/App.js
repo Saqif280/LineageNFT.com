@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Crest1 from './img/crest_1.png';
 import Crest2 from './img/crest_2.png';
 import classNames from 'classnames';
@@ -25,13 +25,26 @@ const App = () => {
     setCurrentPageNumber(nextPageNumber);
   };
 
+  const [scrollOffset, setScrollOffset] = useState(0);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      setScrollOffset(window.pageYOffset);
+      console.log(window.pageYOffset)
+    }
+  }, []);
+
   return (
     <div className="app">
 
-      <div className="section--hero">
-        <h1>Lineage</h1>
-        {/* <p>Shape the world - it’s yours after all.</p> */}
-        <div className="socials">
+      <div className={classNames('navbar', { secondary: scrollOffset > (window.screen.availHeight - 180) })}>
+        <div className="left">
+          <a href="#"><h3>Lineage</h3></a>
+          <a href="#about">About</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#team">Team</a>
+        </div>
+        <div className="right">
           <a className="link--social" target="_blank" href="https://discord.gg/EVhzumCtMd"><FaDiscord /></a>
           <a className="link--social" target="_blank" href="https://twitter.com/lineagenft"><FaTwitter /></a>
           <a className="link--social" target="_blank" href="https://www.instagram.com/lineagenft/"><FaInstagram /></a>
@@ -39,7 +52,12 @@ const App = () => {
         </div>
       </div>
 
-      <div className="section">
+      <div className="section--hero">
+        <h1>Lineage</h1>
+        <p>Own a generation, influence a world</p>
+      </div>
+
+      <div className="section" id="about">
         <div className="content">
 			    <div className="container-fluid">
             <div className="col-sm-6">
@@ -59,7 +77,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="section section--roadmap">
+      <div className="section section--roadmap" id="roadmap">
         <div className="content">
 			    <div className="container-fluid">
             <div className="col-sm-offset-3 col-sm-6">
@@ -121,7 +139,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="section">
+      <div className="section" id="team">
         <div className="content">
 			    <div className="container-fluid">
             <div className="col-sm-6">
@@ -202,7 +220,7 @@ const App = () => {
         <div className="content">
 			    <div className="container-fluid">
             <div className="col-sm-6">
-              <h3>Lineage</h3>
+              <a href="#"><h3>Lineage</h3></a>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <p className="copyright">©2021 Lineage NFT. All rights reserved.</p>
             </div>
