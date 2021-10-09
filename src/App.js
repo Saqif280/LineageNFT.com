@@ -1,13 +1,30 @@
+import React, { useState } from 'react';
 import Crest1 from './img/crest_1.png';
 import Crest2 from './img/crest_2.png';
-// import Placeholder from './img/white.png';
+import classNames from 'classnames';
 import Placeholder from './img/placeholder-square.jpeg';
 import PlaceholderWide from './img/placeholder-wide.jpeg';
 import { IconContext } from "react-icons";
 import { FaDiscord, FaTwitter, FaInstagram, FaMedium, FaLinkedin } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 
-function App() {
+const App = () => {
+  const [currentPageNumber, setCurrentPageNumber] = useState(1);
+  const MIN_PAGE = 1;
+  const MAX_PAGE = 3;
+
+  const turnPageLeft = () => {
+    const nextPageNumber = currentPageNumber - 1;
+    if (nextPageNumber < MIN_PAGE) return;
+    setCurrentPageNumber(nextPageNumber);
+  };
+
+  const turnPageRight = () => {
+    const nextPageNumber = currentPageNumber + 1;
+    if (nextPageNumber > MAX_PAGE) return;
+    setCurrentPageNumber(nextPageNumber);
+  };
+
   return (
     <div className="app">
 
@@ -37,8 +54,8 @@ function App() {
       </div>
 
       <div className="section">
-        <div class="slider">
-          <div class="slider-row"></div>
+        <div className="slider">
+          <div className="slider-row"></div>
         </div>
       </div>
 
@@ -51,40 +68,52 @@ function App() {
             </div>
           </div>
           <div className="card-navigation">
-            <a>
+            <a onClick={turnPageLeft} className={classNames({ 'disabled': currentPageNumber === 1 })}>
               <MdKeyboardArrowLeft />
             </a>
-            <a>
+            <a onClick={turnPageRight} className={classNames({ 'disabled': currentPageNumber === 3 })}>
               <MdKeyboardArrowRight />
             </a>
           </div>
 			    <div className="cards">
-            <div className="card">
-              <div className="">
-                <h4>Chapter 1</h4>
-                <h3>Mint Crests</h3>
-                <p>We begin by discovering the skeleton of a world and its histories during the minting process. Read about it here.</p>
-              </div>
+            <div 
+              className={
+                classNames('card', {
+                  'flipped': currentPageNumber > 1,
+                })
+              }
+            >
+              <h4>Chapter 1</h4>
+              <h3>Mint Crests</h3>
+              <p>We begin by discovering the skeleton of a world and its histories during the minting process. Read about it here.</p>
             </div>
 
-            <div className="card">
-              <div className="">
-                <h4>Chapter 2</h4>
-                <h3>Interactive Lore Events</h3>
-                <p>We let you tell the story over the course of 6? 12? months; make permanent decisions, lifelong friends, and your legacy. Read more about the mechanics of the system and this project in particular here.</p>
-                <p>During this time, the Lineage Team will also be working on community events, establishing merchandising and social partnerships, NFT drops that fit into our world and IP, and helping bring Lineage off the screen and into the world around us</p>
-                <p>We plan to work with writers, visual artists, and storytellers of all mediums who want to become a part of our community to slowly reveal more of the world that’s been created, in the form of [cool things].</p>
-              </div>
+            <div 
+              className={
+                classNames('card', {
+                  'flipped': currentPageNumber > 2,
+                })
+              }
+            >
+              <h4>Chapter 2</h4>
+              <h3>Interactive Lore Events</h3>
+              <p>We let you tell the story over the course of 6? 12? months; make permanent decisions, lifelong friends, and your legacy. Read more about the mechanics of the system and this project in particular here.</p>
+              <p>During this time, the Lineage Team will also be working on community events, establishing merchandising and social partnerships, NFT drops that fit into our world and IP, and helping bring Lineage off the screen and into the world around us</p>
+              <p>We plan to work with writers, visual artists, and storytellers of all mediums who want to become a part of our community to slowly reveal more of the world that’s been created, in the form of [cool things].</p>
             </div>
 
-            <div className="card">
-              <div className="">
-                <h4>Chapter 3</h4>
-                <h3>Community Events</h3>
-                <p>After we’ve all discovered our histories together, we create LineageDAO, a DAO that collectively owns the intellectual property our community has funded. Together we will deepen the world, work on new projects, grow the intellectual property, and work to create a fantasy world that can stand the test of time.</p>
-                <p>Lineage is going to be so much more than just a bunch of family crests - both on chain, and off chain.</p>
-                <p>But Lineage needs you. Not bots, not investors - you. We want lineage and its success to be owned by the players, the story tellers, and the nights with our friends where we’re laughing over some stupid story that plasters a grin on our faces. That’s what this revolution is all about.</p>
-              </div>
+            <div 
+              className={
+                classNames('card', {
+                  'flipped': currentPageNumber > 3,
+                })
+              }
+            >
+              <h4>Chapter 3</h4>
+              <h3>Community Events</h3>
+              <p>After we’ve all discovered our histories together, we create LineageDAO, a DAO that collectively owns the intellectual property our community has funded. Together we will deepen the world, work on new projects, grow the intellectual property, and work to create a fantasy world that can stand the test of time.</p>
+              <p>Lineage is going to be so much more than just a bunch of family crests - both on chain, and off chain.</p>
+              <p>But Lineage needs you. Not bots, not investors - you. We want lineage and its success to be owned by the players, the story tellers, and the nights with our friends where we’re laughing over some stupid story that plasters a grin on our faces. That’s what this revolution is all about.</p>
             </div>
           </div>
 
