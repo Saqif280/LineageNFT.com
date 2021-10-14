@@ -79,9 +79,9 @@ a {
   background-color: $background-primary;
   font-size: 1.7rem;
   transition: 300ms all;
-  box-shadow: 0 0 10px 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
-  -moz-box-shadow: 0 0 10px 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 10px 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
+  box-shadow: 0 0 1rem 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 1rem 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 1rem 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 3s;
@@ -107,19 +107,47 @@ a {
   }
   .right {
     position: absolute;
-    right: 2rem;
-    top: 2.5rem;
+    right: 0;
+    top: 0;
+    a.link--social {
+      transform: translateY(0.6rem);
+    }
+    .button {
+      margin-top: 0.9rem;
+      margin-left: 1.6rem;
+      margin-right: 2.5rem;
+      background-color: $background-primary;
+      box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
+      &:hover{
+        box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
+        -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
+        -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
+      }
+    }
   }
   &.secondary {
     background-color: $background-secondary;
     color: $font-grey-2;
-    box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
-    -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
-    -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.7), 0 0 0 transparent;
+    box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.7), 0 0 0 transparent;
+    .button {
+      background-color: $background-white;
+      box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
+      &:hover{
+        box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
+        -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
+        -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
+      }
+    }
     h3 {
       color: $font-black;
     }
-    a {
+    a.link--social {
       color: $font-grey-2;
       &:hover {
         color: $font-black;
@@ -136,14 +164,14 @@ a {
   align-items: center;
   justify-content: center;
   h1 {
-    text-shadow: 2px 4px 5px rgba(20, 20, 20, 0.3);
+    text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
     @include fade-in('500ms');
   }
   p {
-    text-shadow: 2px 4px 5px rgba(20, 20, 20, 0.3);
+    text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
     color: $font-grey;
     margin-top: 0;
     animation-iteration-count: 1;
@@ -209,9 +237,9 @@ a {
       margin-top: 10rem;
       background-color: $background-white;
       padding: 3rem 6.5rem 5rem;
-      box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+      box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
       transition: 500ms all;
       h3 {
         margin-top: 1rem;
@@ -231,9 +259,9 @@ a {
       &:nth-child(3){
         z-index: 1;
         transform: translate(-50%, 0) rotate(-7deg);
-        box-shadow: 0 0 30px 0 rgba(192, 192, 192, 0.7), 0 0 0 transparent;
-        -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
-        -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.7), 0 0 0 transparent;
+        box-shadow: 0 0 0.3rem 0 rgba(192, 192, 192, 0.7), 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
+        -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.7), 0 0 0 transparent;
       }
     }
     .flipped {
@@ -243,6 +271,7 @@ a {
     .illustration {
       display: block;
       margin: 10rem auto 0;
+      max-width: 100%;
       width: 80rem;
     }
   }
@@ -297,11 +326,11 @@ a {
   width: 40rem;
   margin-left: auto;
   margin-right: auto;
-  // -webkit-filter: drop-shadow(5px 5px 5px #222222);
-  // filter: drop-shadow(5px 5px 5px #222222);
-  box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  // -webkit-filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
+  // filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
+  box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
 }
 
 // carousel
@@ -315,9 +344,9 @@ $speed: 50s;
   width: 100%;
   top: calc(50% - #{$img-h * $ratio / 2});
   overflow: hidden;
-  box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
   .slider-row {
     width: 100%;
     height: $img-h * $ratio;
@@ -336,9 +365,9 @@ $speed: 50s;
   margin-top: 10rem;
   background-color: $background-white;
   width: 100%;
-  box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
   img {
     width: 100%;
   }
@@ -367,8 +396,7 @@ $speed: 50s;
   height: auto;
   width: auto;
 	padding: 1rem 2rem;
-	border-radius: 5px;
-	border: 0.1rem solid #fff;
+	border-radius: 0.5rem;
 	text-decoration: none;
   text-align: center;
 	font-size: 1.6rem;
@@ -378,7 +406,7 @@ $speed: 50s;
   -moz-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
 	-webkit-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
   &:hover{
-    transform: translateY(2px);
+    transform: translateY(0.2rem);
     transition: 300ms all;
     box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
     -moz-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
