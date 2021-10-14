@@ -319,10 +319,8 @@ $speed: 50s;
   -moz-box-shadow: 0 0 30px 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   -webkit-box-shadow: 0 0 30px 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
   .slider-row {
-    width: $img-w * $ratio;
+    width: 100%;
     height: $img-h * $ratio;
-    // background-color: #fff;
-    // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/111863/ubiquity-summit-web-01.png);
     background-image: url('./img/placeholder-banner.png');
     background-size: $img-w * $ratio $img-h * $ratio;
     animation: slide $speed linear infinite;
