@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div className="app">
 
-      <div className={classNames('navbar', { secondary: scrollOffset > (window.screen.availHeight - 180) })}>
+      <div className={classNames('navbar', { secondary: scrollOffset > (window.innerHeight - 70) })}>
         <div className="left">
           <a href="#"><h3>Lineage</h3></a>
           <a href="#about">About</a>
