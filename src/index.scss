@@ -254,7 +254,9 @@ a {
         rgba(255, 255, 255, 0.7), 
         rgba(255, 255, 255, 0.7)
       ),
-      url("https://magazine.artstation.com/wp-content/uploads/2018/11/file-2-1-e1543433699301.jpg");
+      url("https://magazine.artstation.com/wp-content/uploads/2018/11/file-2-1-e1543433699301.jpg")
+      no-repeat;
+    background-size: cover;
   }
 
   &--footer {
@@ -323,7 +325,7 @@ $speed: 50s;
     // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/111863/ubiquity-summit-web-01.png);
     background-image: url('./img/placeholder-banner.png');
     background-size: $img-w * $ratio $img-h * $ratio;
-    animation: slide $speed linear infinite;    
+    animation: slide $speed linear infinite;
   }
 }
 
