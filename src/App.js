@@ -6,9 +6,10 @@ import Placeholder from './img/placeholder-square.jpeg';
 import PlaceholderWide from './img/placeholder-wide.jpeg';
 import { IconContext } from "react-icons";
 import { FaDiscord, FaTwitter, FaInstagram, FaMedium, FaLinkedin } from 'react-icons/fa';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 
 const App = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const MIN_PAGE = 1;
   const MAX_PAGE = 3;
@@ -37,9 +38,12 @@ const App = () => {
   return (
     <div className="app">
 
-      <div className={classNames('navbar', { secondary: scrollOffset > (window.innerHeight - 70) })}>
+      <div className={classNames('navbar', {
+        secondary: scrollOffset > (window.innerHeight - 70),
+        open: navbarOpen,
+      })}>
         <div className="left">
-          <a href="#"><h3>Lineage</h3></a>
+          <a href="#" className="logo"><h3>Lineage</h3></a>
           <a href="#about">About</a>
           <a href="#roadmap">Roadmap</a>
           <a href="#team">Team</a>
@@ -49,6 +53,10 @@ const App = () => {
           <a className="link--social" target="_blank" href="https://www.instagram.com/lineagenft/"><FaInstagram /></a>
           <a className="link--social" target="_blank" href="https://medium.com/@lineagenft"><FaMedium /></a>
           <a className="button" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the Discord</a>
+        </div>
+        <div className="navbar-controls">
+          <a className="arrow-down" onClick={() => { setNavbarOpen(true); }}><MdKeyboardArrowDown /></a>
+          <a className="arrow-up" onClick={() => { setNavbarOpen(false); }}><MdKeyboardArrowUp /></a>
         </div>
       </div>
 

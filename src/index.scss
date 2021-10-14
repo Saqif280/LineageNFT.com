@@ -90,6 +90,16 @@ img {
   animation-timing-function: ease-in;
   animation-duration: 3s;
   @include fade-in('1500ms');
+  .navbar-controls {
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 3rem;
+    .arrow-down svg,.arrow-up svg{
+      width: 4rem;
+      height: 4rem;
+    }
+  }
   h3 {
     color: $font-white;
     margin: 0;
@@ -155,6 +165,60 @@ img {
       color: $font-grey-2;
       &:hover {
         color: $font-black;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $width-xs) {
+  .navbar {
+    height: 5rem;
+    text-align: center;
+    a {
+      margin-bottom: 2rem;
+      &.logo {
+        margin-top: 0.6rem;
+      }
+    }
+    a:not(.link--social) {
+      display: block;
+    }
+    .left {
+      position: static;
+      a:not(.logo) {
+        display: none;
+      }
+    }
+    .right {
+      display: none;
+      position: static;
+    }
+    .navbar-controls {
+      display: block;
+      .arrow-down {
+        display: block;
+      }
+      .arrow-up {
+        display: none;
+      }
+    }
+    &.open {
+      height: auto;
+      .left {
+        a:not(.logo) {
+          display: block;
+        }
+      }
+      .right {
+        display: block;
+      }
+      .navbar-controls {
+        display: block;
+        .arrow-down {
+          display: none;
+        }
+        .arrow-up {
+          display: block;
+        }
       }
     }
   }
