@@ -454,10 +454,28 @@ $speed: 50s;
     animation: slide $speed linear infinite;
   }
 }
-
 @keyframes slide {
   from { background-position-x: 0; }
   to   { background-position-x: -$img-w * $ratio; }
+}
+
+@media only screen and (max-width: $width-xs) {
+  $shrink: 5;
+  $ratio: 1 / $shrink;
+
+  .slider {
+    top: calc(50% - #{$img-h * $ratio / 2});
+    .slider-row {
+      height: $img-h * $ratio;
+      background-size: $img-w * $ratio $img-h * $ratio;
+      animation: slide $speed linear infinite;
+    }
+  }
+
+  @keyframes slide {
+    from { background-position-x: 0; }
+    to   { background-position-x: -$img-w * $ratio; }
+  }
 }
 
 .profile-card {
