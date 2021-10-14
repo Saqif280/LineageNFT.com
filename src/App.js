@@ -208,6 +208,8 @@ const App = () => {
               <h2>Join the Community</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna.</p>
               <a className="button" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the Discord</a>
+              <br/>
+              <br/>
             </div>
             <div className="col-sm-6">
               <img src={Placeholder} alt="family crest 2" className="crest"/>
