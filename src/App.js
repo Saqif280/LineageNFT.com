@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { HashLink as Link } from 'react-router-hash-link';
 import Home from './Home';
+import WhitePaper from './WhitePaper';
 
 
 const App = () => {
@@ -49,6 +50,9 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/white_paper">
+            <WhitePaper />
           </Route>
           <Route path="/smart_contract">
           </Route>

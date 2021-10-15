@@ -4,6 +4,7 @@ import Placeholder from './img/placeholder-square.jpeg';
 import PlaceholderWide from './img/placeholder-wide.jpeg';
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Home = () => {
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
@@ -75,7 +76,7 @@ const Home = () => {
             >
               <h4>Chapter 1</h4>
               <h3>Mint Crests</h3>
-              <p>We begin by discovering the skeleton of a world and its histories during the minting process. Read about it here.</p>
+              <p>We begin by discovering the skeleton of a world and its histories during the minting process. Read about it <Link to="/white_paper#" className="colored">here</Link>.</p>
             </div>
 
             <div 
@@ -87,7 +88,7 @@ const Home = () => {
             >
               <h4>Chapter 2</h4>
               <h3>Interactive Lore Events</h3>
-              <p>We let you tell the story over the course of 6? 12? months; make permanent decisions, lifelong friends, and your legacy. Read more about the mechanics of the system and this project in particular here.</p>
+              <p>We let you tell the story over the course of 6? 12? months; make permanent decisions, lifelong friends, and your legacy. Read more about the mechanics of the system and this project in particular <Link to="/white_paper#" className="colored">here</Link>.</p>
               <p>During this time, the Lineage Team will also be working on community events, establishing merchandising and social partnerships, NFT drops that fit into our world and IP, and helping bring Lineage off the screen and into the world around us</p>
               <p>We plan to work with writers, visual artists, and storytellers of all mediums who want to become a part of our community to slowly reveal more of the world that’s been created, in the form of [cool things].</p>
             </div>

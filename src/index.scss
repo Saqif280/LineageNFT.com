@@ -69,6 +69,12 @@ a {
       color: $font-white;
     }
   }
+  &.colored {
+    color: #0077ff;
+    &:hover {
+      color: #0057bb;
+    }
+  }
 }
 
 img {
@@ -335,7 +341,7 @@ img {
     }
     .flipped {
       opacity: 0;
-      transform: translate(-100%, 0) rotate(-20deg) !important;
+      transform: translate(-120%, 0) rotate(-20deg) !important;
     }
     .illustration {
       display: block;
