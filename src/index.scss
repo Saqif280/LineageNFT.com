@@ -6,6 +6,7 @@ html {
   // set this to normalize rem unit
   font-size: 10px;
   background-color: $background-primary;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
