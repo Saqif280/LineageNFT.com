@@ -10,6 +10,7 @@ import {
 import { HashLink as Link } from 'react-router-hash-link';
 import Home from './Home';
 import WhitePaper from './WhitePaper';
+import TermsOfService from './TermsOfService';
 
 
 const App = () => {
@@ -57,6 +58,7 @@ const App = () => {
           <Route path="/smart_contract">
           </Route>
           <Route path="/tos">
+            <TermsOfService />
           </Route>
         </Switch>
 
@@ -71,8 +73,8 @@ const App = () => {
               <div className="col-sm-offset-3 col-sm-3">
                 <div className="navigation">
                   <Link to="/#">Home</Link>
-                  <Link to="/tos">Terms & Conditions</Link>
-                  <Link to="/smart_contract">Smart Contract</Link>
+                  <Link to="/white_paper#">White Paper</Link>
+                  <Link to="/tos#">Terms of Service</Link>
                 </div>
                 <div className="socials">
                   <a className="link--social" target="_blank" href="https://discord.gg/EVhzumCtMd"><FaDiscord /></a>

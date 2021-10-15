@@ -1,13 +1,13 @@
 import React from 'react'
 
-const WhitePaper = () => {
+const TermsOfService = () => {
   return (
     <>
       <div className='section'>
         <div className='content'>
           <div className='container-fluid'>
             <div className='col-sm-12'>
-              <h2>White Paper</h2>
+              <h2>Terms of Service</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo, lorem at ornare fringilla, diam justo semper augue, nec condimentum velit ante accumsan arcu. Sed cursus sem sit amet augue pellentesque, id aliquet massa vehicula. Vestibulum ac felis blandit, lacinia urna eu, pulvinar ligula. Integer venenatis neque sit amet bibendum sagittis. Maecenas eros metus, volutpat sed euismod non, finibus eget nulla. Nulla scelerisque tincidunt mauris, non pulvinar turpis porttitor vel. Mauris dictum, eros at bibendum tempus, lacus turpis tincidunt mi, a egestas velit libero in nibh.
               </p>
@@ -31,4 +31,4 @@ const WhitePaper = () => {
   )
 }
 
-export default WhitePaper;
+export default TermsOfService;
