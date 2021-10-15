@@ -126,7 +126,7 @@ const Home = () => {
               <div className="profile-card">
                 <img src={Placeholder} alt="Lucass"/>
                 <div className="content-chunk">
-                  <h4>Lucas<br /><span className="title">Eth Artificer</span></h4>
+                  <h4>Lucas<br /><span className="title">SOL Artificer</span></h4>
                   <div className="socials">
                     <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
                     <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
