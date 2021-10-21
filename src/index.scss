@@ -28,8 +28,8 @@ h1 {
   font-size: 6.4rem;
   color: $font-white;
   line-height: 6.4rem;
-  letter-spacing: 1.6rem;
-  padding-left: 1.6rem; // offsets letter spacing
+  // letter-spacing: 1.6rem;
+  // padding-left: 1.6rem; // offsets letter spacing
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -53,6 +53,16 @@ h4{
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 400;
+}
+
+span {
+  &.logo {
+    font-weight: 400;
+    font-size: 2.4rem;
+    font-family: 'Spectral SC', serif;
+    color: $font-white;
+    margin-right: 0.3rem;
+  }
 }
 
 a {
@@ -96,7 +106,7 @@ img {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 3s;
-  @include fade-in('1500ms');
+  @include fade-in('1000ms');
   .navbar-controls {
     display: none;
     position: absolute;
@@ -234,25 +244,36 @@ img {
 .section--hero {
   background-color: $background-primary;
   min-height: 100vh;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  h1 {
-    text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 3s;
-    @include fade-in('500ms');
-  }
+  text-align: center;
+  // h1 {
+  //   text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
+  //   animation-iteration-count: 1;
+  //   animation-timing-function: ease-in;
+  //   animation-duration: 3s;
+  //   @include fade-in('500ms');
+  // }
   p {
+    max-width: 55rem;
     text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
     color: $font-grey;
     margin-top: 0;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
-    @include fade-in('1000ms');
+    @include fade-in('500ms');
+  }
+  img {
+    width: 40rem;
+    -webkit-filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
+    filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
   }
 }
 .section {
@@ -312,9 +333,9 @@ img {
       margin-top: 10rem;
       background-color: $background-white;
       padding: 3rem 6.5rem 5rem;
-      box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+      box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226,0.3), 0 0 0 transparent;
       transition: 500ms all;
       h3 {
         margin-top: 1rem;
@@ -324,19 +345,26 @@ img {
         text-transform: uppercase;
         font-size: 1.6rem;
       }
+      img {
+        max-width: 40rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
       &:nth-child(1){
-        z-index: 3;
+        z-index: 4;
       }
       &:nth-child(2){
-        z-index: 2;
+        z-index: 3;
         transform: translate(-50%, 0) rotate(5deg);
       }
       &:nth-child(3){
+        z-index: 2;
+        transform: translate(-50%, 0) rotate(-3deg);
+      }
+      &:nth-child(4){
         z-index: 1;
-        transform: translate(-50%, 0) rotate(-7deg);
-        box-shadow: 0 0 3rem 0 rgba(192, 192, 192, 0.7), 0 0 0 transparent;
-        -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
-        -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226,0.7), 0 0 0 transparent;
+        transform: translate(-50%, 0) rotate(3deg);
       }
     }
     .flipped {
@@ -348,6 +376,21 @@ img {
       margin: 10rem auto 0;
       max-width: 100%;
       width: 80rem;
+    }
+  }
+
+  &--races {
+    img {
+      display: inline;
+      width: 20rem;
+      margin-right: 1rem;
+      box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+    }
+    .race-avatars {
+      text-align: center;
+      margin-top: 6rem;
     }
   }
 
@@ -420,6 +463,9 @@ img {
   margin-right: auto;
   max-width: 110rem;
   padding: 2rem 4rem;
+}
+.container-row {
+  margin-bottom: 20rem;
 }
 @media only screen and (max-width: $width-xs) {
   .content {
@@ -550,4 +596,8 @@ $speed: 50s;
   &--center {
     text-align: center;
   }
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10rem;
 }

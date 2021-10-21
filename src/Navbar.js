@@ -23,6 +23,7 @@ const Navbar = () => {
         <Link to="/#" className="logo"><h3>Lineage</h3></Link>
         <Link to="/#about">About</Link>
         <Link to="/#roadmap">Roadmap</Link>
+        <Link to="/#races">Races</Link>
         <Link to="/#team">Team</Link>
       </div>
       <div className="right">

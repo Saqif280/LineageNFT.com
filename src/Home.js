@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
+import Crest1 from './img/crest_1.png';
 import Placeholder from './img/placeholder-square.jpeg';
 import PlaceholderWide from './img/placeholder-wide.jpeg';
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
@@ -9,7 +10,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 const Home = () => {
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
   const MIN_PAGE = 1;
-  const MAX_PAGE = 3;
+  const MAX_PAGE = 4;
 
   const turnPageLeft = () => {
     const nextPageNumber = currentPageNumber - 1;
@@ -26,19 +27,53 @@ const Home = () => {
   return (
     <>
       <div className="section--hero">
-        <h1>Lineage</h1>
-        <p>Own a generation, influence a world</p>
+        <img src={Crest1} alt="family crest"/>
+        <p><span className="logo">Lineage</span> is an experiment where you, the community, tells the story and your decisions affect the NFTs of others.</p>
       </div>
 
-      <div className="section" id="about">
+      <div className="section section--about" id="about">
         <div className="content">
 			    <div className="container-fluid">
-            <div className="col-sm-6">
-              <h2>10 Family Lines,<br/>10,000 Family Crests</h2>
-              <p>In Lineage, your NFT is your family crest, representing one generation, of one branch, of a renowned family. It's a grand experiment where you, the community, tells the story and your decisions affect others. Where token holders opt in to events in the world that will change their fate, and that of their descendants, forever.</p>
+            <div className="row">
+              <div className="col-sm-12">
+                <h2>Why is Lineage Special?</h2>
+              </div>
             </div>
-            <div className="col-sm-6">
-              <img src={Placeholder} alt="family crest 1" className="crest"/>
+            <div className="row">
+              <div className="col-sm-6">
+                <h3>Story Driven</h3>
+                <p>Lineage is story first, art second. We’ve created NFTs with a deep world behind them, not just a layer of paint on top.</p>
+              </div>
+              <div className="col-sm-6">
+                <h3>Interconnected NFTs</h3>
+                <p>Our crests are connected in 8 massive family trees, one for each race. Your crest inherits curses, membership into secret societies, and more from its parent.</p>
+              </div>
+            </div>
+            <div className="row margin-bottom-10">
+              <div className="col-sm-6">
+                <img src={Placeholder} alt=""/>
+              </div>
+              <div className="col-sm-6">
+                <img src={Placeholder} alt=""/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6">
+                <h3>Meaningful Art</h3>
+                <p>Every piece of art on your crest is chosen for a reason -- it’s up to you to explore how and why your family crest looks the way it does.</p>
+              </div>
+              <div className="col-sm-6">
+                <h3>Changing Art</h3>
+                <p>Lineage will have 7 Moments where crest holders will be able to interact with the world. Each Moment will change your crest and your descendents’ crests forever.</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-sm-6">
+                <img src={Placeholder} alt=""/>
+              </div>
+              <div className="col-sm-6">
+                <img src={Placeholder} alt=""/>
+              </div>
             </div>
           </div>
         </div>
@@ -55,14 +90,13 @@ const Home = () => {
 			    <div className="container-fluid">
             <div className="col-sm-offset-3 col-sm-6">
               <h2 className="text--center">The Road Ahead</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna. Quisque ut diam egestas, viverra nulla pellentesque, gravida ipsum.</p>
             </div>
           </div>
           <div className="card-navigation">
-            <a onClick={turnPageLeft} className={classNames({ 'disabled': currentPageNumber === 1 })}>
+            <a onClick={turnPageLeft} className={classNames({ 'disabled': currentPageNumber === MIN_PAGE })}>
               <MdKeyboardArrowLeft />
             </a>
-            <a onClick={turnPageRight} className={classNames({ 'disabled': currentPageNumber === 3 })}>
+            <a onClick={turnPageRight} className={classNames({ 'disabled': currentPageNumber === MAX_PAGE })}>
               <MdKeyboardArrowRight />
             </a>
           </div>
@@ -77,6 +111,7 @@ const Home = () => {
               <h4>Chapter 1</h4>
               <h3>Mint Crests</h3>
               <p>We begin by discovering the skeleton of a world and its histories during the minting process. Read about it <Link to="/white_paper#" className="colored">here</Link>.</p>
+              <img src={Placeholder} alt="illustration"/>
             </div>
 
             <div 
@@ -88,9 +123,8 @@ const Home = () => {
             >
               <h4>Chapter 2</h4>
               <h3>Interactive Lore Events</h3>
-              <p>We let you tell the story over the course of 6? 12? months; make permanent decisions, lifelong friends, and your legacy. Read more about the mechanics of the system and this project in particular <Link to="/white_paper#" className="colored">here</Link>.</p>
-              <p>During this time, the Lineage Team will also be working on community events, establishing merchandising and social partnerships, NFT drops that fit into our world and IP, and helping bring Lineage off the screen and into the world around us</p>
-              <p>We plan to work with writers, visual artists, and storytellers of all mediums who want to become a part of our community to slowly reveal more of the world that’s been created, in the form of [cool things].</p>
+              <p>Seven weekends this winter there will be a Moment In Time where you make decisions to change your crest and others’. Read more <Link to="/white_paper#" className="colored">here</Link>.</p>
+              <img src={Placeholder} alt="illustration"/>
             </div>
 
             <div 
@@ -101,14 +135,47 @@ const Home = () => {
               }
             >
               <h4>Chapter 3</h4>
-              <h3>Community Events</h3>
-              <p>After we’ve all discovered our histories together, we create LineageDAO, a DAO that collectively owns the intellectual property our community has funded. Together we will deepen the world, work on new projects, grow the intellectual property, and work to create a fantasy world that can stand the test of time.</p>
-              <p>Lineage is going to be so much more than just a bunch of family crests - both on chain, and off chain.</p>
-              <p>But Lineage needs you. Not bots, not investors - you. We want lineage and its success to be owned by the players, the story tellers, and the nights with our friends where we’re laughing over some stupid story that plasters a grin on our faces. That’s what this revolution is all about.</p>
+              <h3>Bringing Lineage into the Real World</h3>
+              <p>Crest holders get to participate in real world events (think Cicada 3301), receive enamel pins of their genesis family, and <Link to="/white_paper#" className="colored">more</Link>.</p>
+              <img src={Placeholder} alt="illustration"/>
+            </div>
+
+            <div 
+              className={
+                classNames('card', {
+                  'flipped': currentPageNumber > 4,
+                })
+              }
+            >
+              <h4>Chapter 4</h4>
+              <h3>Continued Development</h3>
+              <p>We use 10,000 SOL of mint funds (based on the current mint price) to continue expanding the [worldname] universe, with new projects from the world we’ve discovered. Read more <Link to="/white_paper#" className="colored">here</Link>.</p>
+              <img src={Placeholder} alt="illustration"/>
             </div>
           </div>
+        </div>
+      </div>
 
-          <img src={PlaceholderWide} alt="illustration" className="illustration"/>
+      <div className="section section--races" id="races">
+        <div className="content">
+			    <div className="container-fluid">
+            <div className="row">
+              <div className="col-sm-12">
+                <h2>8 Races, 8,888 Unique Crests</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna. Quisque ut diam egestas, viverra nulla pellentesque, gravida ipsum.</p>
+                <div className="race-avatars">
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -124,7 +191,7 @@ const Home = () => {
             
             <div className="col-sm-4">
               <div className="profile-card">
-                <img src={Placeholder} alt="Lucass"/>
+                <img src={Placeholder} alt="Lucas"/>
                 <div className="content-chunk">
                   <h4>Lucas<br /><span className="title">SOL Artificer</span></h4>
                   <div className="socials">
