@@ -32,7 +32,7 @@ const Navbar = () => {
         <a className="link--social" target="_blank" href="https://www.instagram.com/lineagenft/"><FaInstagram /></a>
         <a className="link--social" target="_blank" href="https://medium.com/@lineagenft"><FaMedium /></a>
         <a className="button" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the Discord</a>
-        <Wallet />
+        {/* <Wallet /> */}
       </div>
       <div className="navbar-controls">
         <a className="arrow-down" onClick={() => { setNavbarOpen(true); }}><MdKeyboardArrowDown /></a>
