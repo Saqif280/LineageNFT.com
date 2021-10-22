@@ -146,7 +146,6 @@ img {
     .button {
       margin-top: 0.9rem;
       margin-left: 1.6rem;
-      margin-right: 2.5rem;
       background-color: $background-primary;
       box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
       -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
@@ -155,6 +154,23 @@ img {
         box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
         -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
         -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
+      }
+    }
+    .button--wallet {
+      font-family: 'Lora', serif;
+      color: $font-grey;
+      display: inline-block;
+      margin-right: 2.5rem;
+      &:hover{
+        background-image: none;
+      }
+      i {
+        display: inline;
+      }
+      img {
+        // hack to make icon sit right
+        margin-bottom: -0.5rem;
+        display: inline;
       }
     }
   }
@@ -174,6 +190,9 @@ img {
         -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
         -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
       }
+    }
+    .button--wallet {
+      color: $font-grey-2;
     }
     h3 {
       color: $font-black;
@@ -227,6 +246,17 @@ img {
       }
       .right {
         display: block;
+        .button {
+          margin-right: 2rem;
+        }
+        .wallet-adapter-button, .wallet-adapter-dropdown {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .button--wallet {
+          margin-bottom: 4rem;
+        }
       }
       .navbar-controls {
         display: block;
@@ -297,7 +327,7 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: 500ms all;
+        transition: 300ms all;
         &:hover {
           background-color: rgba(192, 192, 192, 0.3);
         }
