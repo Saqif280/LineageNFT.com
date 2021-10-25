@@ -147,7 +147,7 @@ const Home = () => {
             >
               <h4>Chapter 4</h4>
               <h3>Continued Development</h3>
-              <p>We use 10,000 SOL of mint funds (based on the current mint price) to continue expanding the [worldname] universe, with new projects from the world we’ve discovered. Read more <Link to="/white_paper#" className="colored">here</Link>.</p>
+              <p>We use 10,000 SOL of mint funds (based on the current mint price) to continue expanding the universe, with new projects from the world we’ve discovered. Read more <Link to="/white_paper#" className="colored">here</Link>.</p>
               <img src={Placeholder} alt="illustration"/>
             </div>
           </div>
