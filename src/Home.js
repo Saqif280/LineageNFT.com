@@ -79,10 +79,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="section">
-        <div className="slider">
-          <div className="slider-row"></div>
-        </div>
+      <div className="slider">
+        <div className="slider-row"></div>
       </div>
 
       <div className="section section--roadmap" id="roadmap">
@@ -156,13 +154,19 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="divider">
+        <div className="content">
+          <hr />
+        </div>
+      </div>
+
       <div className="section section--races" id="races">
         <div className="content">
 			    <div className="container-fluid">
             <div className="row">
               <div className="col-sm-12">
                 <h2>8 Races, 8,888 Unique Crests</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna. Quisque ut diam egestas, viverra nulla pellentesque, gravida ipsum.</p>
+                <p>The Lineage Universe is home to many races that use crests to identify themselves in trade and war. Your crest will be a descendent to one of these 8 genesis families.</p>
                 <div className="race-avatars">
                   <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
                   <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
@@ -179,62 +183,67 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="divider">
+        <div className="content">
+          <hr />
+        </div>
+      </div>
+
       <div className="section" id="team">
         <div className="content">
 			    <div className="container-fluid">
-            <div className="col-sm-6">
-              <h2>The Fellowship</h2>
-            </div>
-            <div className="col-sm-6">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna.</p>
-            </div>
-            
-            <div className="col-sm-4">
-              <div className="profile-card">
-                <img src={Placeholder} alt="Lucas"/>
-                <div className="content-chunk">
-                  <h4>Lucas<br /><span className="title">SOL Artificer</span></h4>
-                  <div className="socials">
-                    <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
-                    <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
+            <div className="row margin-bottom-6">
+              <div className="col-sm-6">
+                <h2>The Fellowship</h2>
+              </div>
+              <div className="col-sm-6">
+                <p>We're not afraid to dox ourselves &#8212; our team is committed to seeing the Lineage world come to life and become a one-of-a-kind NFT experience.</p>
+              </div>
+              
+              <div className="col-sm-4">
+                <div className="profile-card">
+                  <img src={Placeholder} alt="Lucas"/>
+                  <div className="content-chunk">
+                    <h4>Lucas<br /><span className="title">SOL Artificer</span></h4>
+                    <div className="socials">
+                      <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
+                      <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="col-sm-4">
+                <div className="profile-card">
+                  <img src={Placeholder} alt="Saqif"/>
+                  <div className="content-chunk">
+                    <h4>Saqif<br /><span className="title">Web Artificer</span></h4>
+                    <div className="socials">
+                      <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
+                      <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="col-sm-4">
+                <div className="profile-card">
+                  <img src={Placeholder} alt="Michael"/>
+                  <div className="content-chunk">
+                    <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
+                    <div className="socials">
+                      <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
+                      <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <div className="col-sm-4">
-              <div className="profile-card">
-                <img src={Placeholder} alt="Saqif"/>
-                <div className="content-chunk">
-                  <h4>Saqif<br /><span className="title">Web Artificer</span></h4>
-                  <div className="socials">
-                    <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
-                    <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
-                  </div>
-                </div>
+            <div className="row">
+              <div className="col-sm-12">
+                <h3>Other Party Members</h3>
+                <p>The founders and creatives are just a small part of what makes the Lineage world turn. <Link className="colored" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the discord</Link> to meet the other amazing members of our team and help shape Lineage to become the universe you envision.</p>
               </div>
-            </div>
-            
-            <div className="col-sm-4">
-              <div className="profile-card">
-                <img src={Placeholder} alt="Michael"/>
-                <div className="content-chunk">
-                  <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
-                  <div className="socials">
-                    <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
-                    <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="content">
-			    <div className="container-fluid">
-            <div className="col-sm-12">
-              <h3>Other Party Members</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus.</p>
             </div>
           </div>
         </div>
@@ -245,7 +254,7 @@ const Home = () => {
 			    <div className="container-fluid">
             <div className="col-sm-6">
               <h2>Join the Community</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas condimentum neque in nunc scelerisque, non lacinia libero dapibus. Integer at consequat magna, nec ultrices diam. Etiam nec nunc magna.</p>
+              <p>The story has already begun. Suit up for adventure by joining our discord and preparing for mint. Your crest and legacy await you.</p>
               <a className="button" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the Discord</a>
               <br/>
               <br/>

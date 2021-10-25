@@ -19,7 +19,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 h1 {
@@ -33,21 +34,21 @@ h1 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-h2{
+h2 {
   font-family: 'Spectral SC', serif;
   color: $font-black;
   font-size: 4rem;
   line-height: 5rem;
   font-weight: 500;
 }
-h3{
+h3 {
   font-family: 'Spectral SC', serif;
   color: $font-black;
   font-size: 3rem;
   line-height: 4rem;
   font-weight: 400;
 }
-h4{
+h4 {
   font-family: 'Spectral SC', serif;
   color: $font-grey;
   font-size: 2rem;
@@ -91,6 +92,33 @@ img {
   max-width: 100%;
 }
 
+hr {
+  opacity: 0.3;
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double $font-black;
+  color: $font-black;
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+hr:after {
+  content: '§';
+  display: inline-block;
+  position: relative;
+  top: -1.8rem;
+  font-size: 3rem;
+  padding: 0 0rem;
+  background: $background-secondary;
+}
+
 .navbar {
   z-index: 10;
   width: 100%;
@@ -112,7 +140,8 @@ img {
     position: absolute;
     top: 0.5rem;
     right: 3rem;
-    .arrow-down svg,.arrow-up svg{
+    .arrow-down svg,
+    .arrow-up svg {
       width: 4rem;
       height: 4rem;
     }
@@ -151,7 +180,7 @@ img {
       box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
       -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
       -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
-      &:hover{
+      &:hover {
         box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
         -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
         -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
@@ -162,7 +191,7 @@ img {
       color: $font-grey;
       display: inline-block;
       margin-right: 2.5rem;
-      &:hover{
+      &:hover {
         background-image: none;
       }
       i {
@@ -180,13 +209,13 @@ img {
     color: $font-grey-2;
     box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
     -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
-    -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226,0.7), 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.7), 0 0 0 transparent;
     .button {
       background-color: $background-white;
       box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
       -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
       -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
-      &:hover{
+      &:hover {
         box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
         -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
         -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05), 0 0 0 transparent;
@@ -250,7 +279,8 @@ img {
         .button {
           margin-right: 2rem;
         }
-        .wallet-adapter-button, .wallet-adapter-dropdown {
+        .wallet-adapter-button,
+        .wallet-adapter-dropdown {
           display: block;
           margin-left: auto;
           margin-right: auto;
@@ -306,6 +336,9 @@ img {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
   }
+}
+.divider {
+  background-color: $background-secondary;
 }
 .section {
   padding-top: 10rem;
@@ -366,7 +399,7 @@ img {
       padding: 3rem 6.5rem 5rem;
       box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
       -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
-      -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226,0.3), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
       transition: 500ms all;
       h3 {
         margin-top: 1rem;
@@ -382,18 +415,18 @@ img {
         margin-left: auto;
         margin-right: auto;
       }
-      &:nth-child(1){
+      &:nth-child(1) {
         z-index: 4;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         z-index: 3;
         transform: translate(-50%, 0) rotate(5deg);
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         z-index: 2;
         transform: translate(-50%, 0) rotate(-3deg);
       }
-      &:nth-child(4){
+      &:nth-child(4) {
         z-index: 1;
         transform: translate(-50%, 0) rotate(3deg);
       }
@@ -417,7 +450,8 @@ img {
       margin-right: 1rem;
       box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
       -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5),
+        0 0 0 transparent;
     }
     .race-avatars {
       text-align: center;
@@ -427,13 +461,12 @@ img {
 
   &--community {
     background-image: url();
-    background: 
-      linear-gradient(
-        rgba(255, 255, 255, 0.7), 
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.7)
       ),
-      url("https://magazine.artstation.com/wp-content/uploads/2018/11/file-2-1-e1543433699301.jpg")
-      no-repeat;
+      url('https://magazine.artstation.com/wp-content/uploads/2018/11/file-2-1-e1543433699301.jpg')
+        no-repeat;
     background-size: cover;
   }
 
@@ -513,7 +546,7 @@ img {
   // filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
   box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
 }
 
 // carousel
@@ -529,7 +562,7 @@ $speed: 50s;
   overflow: hidden;
   box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   .slider-row {
     width: 100%;
     height: $img-h * $ratio;
@@ -539,8 +572,12 @@ $speed: 50s;
   }
 }
 @keyframes slide {
-  from { background-position-x: 0; }
-  to   { background-position-x: -$img-w * $ratio; }
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -$img-w * $ratio;
+  }
 }
 
 @media only screen and (max-width: $width-xs) {
@@ -557,8 +594,12 @@ $speed: 50s;
   }
 
   @keyframes slide {
-    from { background-position-x: 0; }
-    to   { background-position-x: -$img-w * $ratio; }
+    from {
+      background-position-x: 0;
+    }
+    to {
+      background-position-x: -$img-w * $ratio;
+    }
   }
 }
 
@@ -568,7 +609,7 @@ $speed: 50s;
   width: 100%;
   box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226,0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   img {
     width: 100%;
   }
@@ -599,27 +640,27 @@ $speed: 50s;
   }
 }
 
-.button{
+.button {
   background: #fff;
   display: inline-block;
   height: auto;
   width: auto;
-	padding: 1rem 2rem;
-	border-radius: 0.5rem;
-	text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
   text-align: center;
-	font-size: 1.6rem;
+  font-size: 1.6rem;
   font-weight: 700;
   transition: 300ms all;
-  box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
-  -moz-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
-	-webkit-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.5), 0 0 0 transparent;
-  &:hover{
+  box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.5), 0 0 0 transparent;
+  -moz-box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.5), 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.5), 0 0 0 transparent;
+  &:hover {
     transform: translateY(0.2rem);
     transition: 300ms all;
-    box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
-    -moz-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
-    -webkit-box-shadow: 0 0 3rem 0 rgba(229,232,235,0.1), 0 0 0 transparent;
+    box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.1), 0 0 0 transparent;
+    -moz-box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.1), 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.1), 0 0 0 transparent;
   }
 }
 
@@ -629,6 +670,9 @@ $speed: 50s;
   }
 }
 
+.margin-bottom-6 {
+  margin-bottom: 6rem;
+}
 .margin-bottom-10 {
   margin-bottom: 10rem;
 }
