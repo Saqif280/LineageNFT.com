@@ -29,8 +29,8 @@ const Navbar = () => {
       </div>
       <div className="right">
         <a className="link--social" target="_blank" href="https://twitter.com/lineagenft"><FaTwitter /></a>
-        <a className="link--social" target="_blank" href="https://www.instagram.com/lineagenft/"><FaInstagram /></a>
-        <a className="link--social" target="_blank" href="https://medium.com/@lineagenft"><FaMedium /></a>
+        {/* <a className="link--social" target="_blank" href="https://www.instagram.com/lineagenft/"><FaInstagram /></a> */}
+        {/* <a className="link--social" target="_blank" href="https://medium.com/@lineagenft"><FaMedium /></a> */}
         <a className="button" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the Discord</a>
         {/* <Wallet /> */}
       </div>

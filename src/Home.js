@@ -147,7 +147,7 @@ const Home = () => {
             >
               <h4>Chapter 4</h4>
               <h3>Continued Development</h3>
-              <p>We use 8,000 SOL of mint funds (based on the current mint price) to continue expanding the universe, with new projects from the world we’ve discovered. Read more <Link to="/white_paper#" className="colored">here</Link>.</p>
+              <p>We use 4,000 SOL of mint funds (based on the current mint price) to continue expanding the universe, with new projects from the world we’ve discovered. Read more <Link to="/white_paper#" className="colored">here</Link>.</p>
               <img src={Placeholder} alt="illustration"/>
             </div>
           </div>
@@ -165,7 +165,7 @@ const Home = () => {
 			    <div className="container-fluid">
             <div className="row">
               <div className="col-sm-12">
-                <h2>8 Races, 5,000 Unique Crests</h2>
+                <h2>8 Races, 4,000 Unique Crests</h2>
                 <p>The Lineage Universe is home to many races that use crests to identify themselves in trade and war. Your crest will be a descendent to one of these 8 genesis families.</p>
                 <div className="race-avatars">
                   <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
