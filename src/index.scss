@@ -460,13 +460,16 @@ hr:after {
   }
 
   &--community {
-    background-image: url();
+    // background: linear-gradient(
+    //     rgba(255, 255, 255, 0.7),
+    //     rgba(255, 255, 255, 0.7)
+    //   ),
+    //   url('https://magazine.artstation.com/wp-content/uploads/2018/11/file-2-1-e1543433699301.jpg')
+    //     no-repeat;
     background: linear-gradient(
         rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.7)
-      ),
-      url('https://magazine.artstation.com/wp-content/uploads/2018/11/file-2-1-e1543433699301.jpg')
-        no-repeat;
+      );
     background-size: cover;
   }
 
