@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import Crest1 from './img/crest_1.png';
+import Crest3 from './img/crest_3.png';
 import Placeholder from './img/placeholder-square.jpeg';
 import PlaceholderWide from './img/placeholder-wide.jpeg';
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
@@ -34,42 +35,15 @@ const Home = () => {
       <div className="section section--about" id="about">
         <div className="content">
 			    <div className="container-fluid">
-            <div className="row">
+            <div className="row margin-bottom-2">
               <div className="col-sm-12">
                 <h2>Why is Lineage Special?</h2>
               </div>
-            </div>
-            <div className="row">
               <div className="col-sm-6">
-                <h3>Story Driven</h3>
-                <p>Lineage is story first, art second. We’ve created NFTs with a deep world behind them, not just a layer of paint on top.</p>
-              </div>
-              <div className="col-sm-6">
-                <h3>Interconnected NFTs</h3>
-                <p>Our crests are connected in 8 massive family trees, one for each race. Your crest inherits curses, membership into secret societies, and more from its parent.</p>
-              </div>
-            </div>
-            <div className="row margin-bottom-10">
-              <div className="col-sm-6">
-                <img src={Placeholder} alt=""/>
-              </div>
-              <div className="col-sm-6">
-                <img src={Placeholder} alt=""/>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-6">
-                <h3>Meaningful Art</h3>
-                <p>Every piece of art on your crest is chosen for a reason -- it’s up to you to explore how and why your family crest looks the way it does.</p>
-              </div>
-              <div className="col-sm-6">
-                <h3>Changing Art</h3>
-                <p>Lineage will have 7 Moments where crest holders will be able to interact with the world. Each Moment will change your crest and your descendents’ crests forever.</p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-6">
-                <img src={Placeholder} alt=""/>
+                <h5>Interconnected, Changing NFTs</h5>
+                <p>Your crest inherits curses, newly learned abilities, and more from its parent. Crest holders will be able to change their crests and their descendents’ crests forever.</p>
+                <h5>A Story-First, Art-Second World</h5>
+                <p>We’ve created NFTs with a deep world behind them, not just a layer of paint on top. Every piece of art on your crest is chosen for a reason that ties back to the lore.</p>
               </div>
               <div className="col-sm-6">
                 <img src={Placeholder} alt=""/>
@@ -87,10 +61,10 @@ const Home = () => {
         <div className="content">
 			    <div className="container-fluid">
             <div className="col-sm-offset-3 col-sm-6">
-              <h2 className="text--center">The Road Ahead</h2>
+              <h2 className="text--center">Lineage Roadmap</h2>
             </div>
           </div>
-          <div className="card-navigation">
+          {/* <div className="card-navigation">
             <a onClick={turnPageLeft} className={classNames({ 'disabled': currentPageNumber === MIN_PAGE })}>
               <MdKeyboardArrowLeft />
             </a>
@@ -150,7 +124,7 @@ const Home = () => {
               <p>We use 4,000 SOL of mint funds (based on the current mint price) to continue expanding the universe, with new projects from the world we’ve discovered. Read more <Link to="/white_paper#" className="colored">here</Link>.</p>
               <img src={Placeholder} alt="illustration"/>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -204,10 +178,11 @@ const Home = () => {
                 <div className="profile-card">
                   <img src={Placeholder} alt="Lucas"/>
                   <div className="content-chunk">
-                    <h4>Lucas<br /><span className="title">SOL Artificer</span></h4>
+                    <h4>Lucas<br /><span className="title">SOL Alchemist</span></h4>
+                    <p>7+ years of software development experience. Formerly @ Apple. Fantasy nerd since age 4.</p>
                     <div className="socials">
-                      <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
-                      <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
+                      <a className="link--social" target="_blank" href="https://www.linkedin.com/in/lucasdellabella/"><FaLinkedin /></a>
+                      <a className="link--social" target="_blank" href="https://twitter.com/heylucas_eth"><FaTwitter /></a>
                     </div>
                   </div>
                 </div>
@@ -218,9 +193,10 @@ const Home = () => {
                   <img src={Placeholder} alt="Saqif"/>
                   <div className="content-chunk">
                     <h4>Saqif<br /><span className="title">Web Artificer</span></h4>
+                    <p>7+ years of web development experience. Formerly @ Yelp. Fan of the Sugandese Universe.</p>
                     <div className="socials">
-                      <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
-                      <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
+                      <a className="link--social" target="_blank" href="https://www.linkedin.com/in/saqif/"><FaLinkedin /></a>
+                      <a className="link--social" target="_blank" href="https://twitter.com/FungMeButt"><FaTwitter /></a>
                     </div>
                   </div>
                 </div>
@@ -231,8 +207,9 @@ const Home = () => {
                   <img src={Placeholder} alt="Michael"/>
                   <div className="content-chunk">
                     <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
+                    <p>1000+ hours of Game Master experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP.</p>
                     <div className="socials">
-                      <a className="link--social" target="_blank" href="#"><FaLinkedin /></a>
+                      <a className="link--social" target="_blank" href="https://www.linkedin.com/in/michaelgguo/"><FaLinkedin /></a>
                       <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
                     </div>
                   </div>
@@ -245,6 +222,69 @@ const Home = () => {
                 <p>The founders and creatives are just a small part of what makes the Lineage world turn. <Link className="colored" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the discord</Link> to meet the other amazing members of our team and help shape Lineage to become the universe you envision.</p>
               </div>
             </div>
+            <div className="row">
+
+              <div className="col-sm-4">
+                <div className="profile-card-small">
+                  <div className="content-chunk">
+                    <a target="_blank" href="https://www.instagram.com/ahtan_delmundo/">
+                      <h4>@ahtan_delmundo<br /><span className="title">Crest Artist</span></h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-4">
+                <div className="profile-card-small">
+                  <div className="content-chunk">
+                    <a target="_blank" href="https://twitter.com/sambino">
+                      <h4>@sambino<br /><span className="title">Community Manager</span></h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-4">
+                <div className="profile-card-small">
+                  <div className="content-chunk">
+                    <a target="_blank" href="https://twitter.com/yoman301">
+                      <h4>@yoman301<br /><span className="title">World Builder</span></h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-4">
+                <div className="profile-card-small">
+                  <div className="content-chunk">
+                    <a target="_blank" href="#">
+                      <h4>@prince<br /><span className="title">Growth Engineer</span></h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-4">
+                <div className="profile-card-small">
+                  <div className="content-chunk">
+                    <a target="_blank" href="#">
+                      <h4>@?<br /><span className="title">Team Member</span></h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-sm-4">
+                <div className="profile-card-small">
+                  <div className="content-chunk">
+                    <a target="_blank" href="#">
+                      <h4>@?<br /><span className="title">Team Member</span></h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -253,6 +293,8 @@ const Home = () => {
         <div className="content">
 			    <div className="container-fluid">
             <div className="col-sm-6">
+              <br />
+              <br />
               <h2>Join the Community</h2>
               <p>The story has already begun. Suit up for adventure by joining our discord and preparing for mint. Your crest and legacy await you.</p>
               <a className="button" href="https://discord.gg/EVhzumCtMd" target="_blank">Join the Discord</a>
@@ -260,7 +302,7 @@ const Home = () => {
               <br/>
             </div>
             <div className="col-sm-6">
-              <img src={Placeholder} alt="family crest 2" className="crest"/>
+              <img src={Crest3} alt="family crest 3" className="crest"/>
             </div>
           </div>
         </div>
