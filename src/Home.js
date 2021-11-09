@@ -207,7 +207,7 @@ const Home = () => {
                   <img src={Placeholder} alt="Michael"/>
                   <div className="content-chunk">
                     <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
-                    <p>2,000+ hours of Game Master experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP.</p>
+                    <p>2,000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP.</p>
                     <div className="socials">
                       <a className="link--social" target="_blank" href="https://www.linkedin.com/in/michaelgguo/"><FaLinkedin /></a>
                       <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
