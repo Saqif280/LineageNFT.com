@@ -29,8 +29,6 @@ h1 {
   font-size: 6.4rem;
   color: $font-white;
   line-height: 6.4rem;
-  // letter-spacing: 1.6rem;
-  // padding-left: 1.6rem; // offsets letter spacing
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -133,13 +131,10 @@ hr:after {
   width: 100%;
   height: 7rem;
   position: fixed;
-  color: $font-grey;
-  background-color: $background-primary;
+  color: $font-white;
+  background-color: rgba(39, 39, 39, 0.1);
   font-size: 1.7rem;
   transition: 300ms all;
-  box-shadow: 0 0 1rem 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
-  -moz-box-shadow: 0 0 1rem 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
-  -webkit-box-shadow: 0 0 1rem 0 rgba(39, 39, 39, 0.7), 0 0 0 transparent;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 3s;
@@ -181,6 +176,7 @@ hr:after {
     top: 0;
     a.link--social {
       transform: translateY(0.6rem);
+      color: $font-white;
     }
     .button {
       margin-top: 0.9rem;
@@ -237,7 +233,7 @@ hr:after {
     h3 {
       color: $font-black;
     }
-    a {
+    a, a.link--social {
       color: $font-grey-2;
       &:hover {
         color: $font-black;
@@ -312,9 +308,29 @@ hr:after {
   }
 }
 
-.section--hero {
-  background-color: $background-primary;
+.foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url('/img/scenes/pillar_valley_fg.png')
+      no-repeat;
   background-position: center;
+  background-size: cover;
+}
+.section--hero {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  ),
+  url('/img/scenes/pillar_valley_bg.png')
+    no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
   min-height: 100vh;
   padding: 2rem 2rem;
@@ -325,16 +341,19 @@ hr:after {
   text-align: center;
   p {
     max-width: 55rem;
-    text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
-    color: $font-grey;
+    // text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
+    color: $font-black;
     margin-top: 0;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
     @include fade-in('500ms');
+    span.logo {
+      color: $font-black;
+    }
   }
   img {
-    width: 40rem;
+    width: 30rem;
     -webkit-filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
     filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
   }
@@ -348,116 +367,84 @@ hr:after {
   background-color: $background-secondary;
 
   &--roadmap {
-    .card-navigation {
-      margin: 0 auto;
-      position: relative;
-      max-width: 100rem;
-      a {
-        z-index: 5;
-        margin-top: 40rem;
-        position: absolute;
-        display: block;
-        border-radius: 50%;
-        width: 6rem;
-        height: 6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 300ms all;
-        &:hover {
-          background-color: rgba(192, 192, 192, 0.3);
-        }
-        svg {
-          width: 10rem;
-          height: 10rem;
-        }
-        &:nth-child(1) {
-          left: 0;
-        }
-        &:nth-child(2) {
-          right: 0;
-        }
-        &.disabled {
-          color: $font-grey;
-          &:hover {
-            background-color: rgba(192, 192, 192, 0) !important;
-          }
-        }
-      }
-    }
-    .cards {
-      position: relative;
-      height: 90rem;
-    }
+    position: relative;
     .card {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      display: inline-block;
-      min-height: 76rem;
-      width: 60rem;
-      margin-top: 10rem;
+      margin-top: 2rem;
       background-color: $background-white;
-      padding: 3rem 6.5rem 5rem;
-      box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
-      -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
-      -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.3), 0 0 0 transparent;
-      transition: 500ms all;
-      h3 {
-        margin-top: 1rem;
-      }
-      h4 {
+      width: 100%;
+      box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+      border-left: 3rem $snow solid;
+      .number {
+        position: absolute;
+        top: calc(50% - 1rem);
+        left: 2.4rem;
         color: $font-grey;
-        text-transform: uppercase;
-        font-size: 1.6rem;
+        font-family: 'Spectral SC', serif;
+        font-size: 2rem;
       }
-      img {
-        width: 40rem;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+      .content-chunk {
+        padding: 0.2rem 3rem 1.6rem 3.5rem;
+        h4 {
+          line-height: 3rem;
+          margin-bottom: 0;
+        }
+        p {
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+        }
       }
+      &--special-1{
+        border-top: 0.2rem gold solid;
+        border-left: 3rem $background-secondary solid;
+        .number {
+          color: gold;
+          font-weight: 700;
+        }
+      }
+    }
+    .roadmap__illustration {
+      width: 30rem;
+      position: absolute;
       &:nth-child(1) {
-        z-index: 4;
+        top: 35rem;
+        left: 40rem;
       }
       &:nth-child(2) {
-        z-index: 3;
-        transform: translate(-50%, 0) rotate(5deg);
+        top: 70rem;
+        right: 25rem;
       }
       &:nth-child(3) {
-        z-index: 2;
-        transform: translate(-50%, 0) rotate(-3deg);
+        top: 100rem;
+        left: 25rem;
       }
       &:nth-child(4) {
-        z-index: 1;
-        transform: translate(-50%, 0) rotate(3deg);
+        top: 135rem;
+        right: 40rem;
       }
-    }
-    .flipped {
-      opacity: 0;
-      transform: translate(-120%, 0) rotate(-20deg) !important;
-    }
-    .illustration {
-      display: block;
-      margin: 10rem auto 0;
-      max-width: 100%;
-      width: 80rem;
     }
   }
 
   &--races {
-    img {
-      display: inline;
-      width: 20rem;
-      margin-right: 1rem;
-      box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5),
-        0 0 0 transparent;
+    .content-chunk {
+      padding: 0 3rem 0;
+    }
+    .selected-race {
+      margin-top: 2.6rem;
+      width: 50rem;
     }
     .race-avatars {
-      text-align: center;
-      margin-top: 6rem;
+      margin-top: 1rem;
+      img {
+        display: inline;
+        width: 5rem;
+        margin-right: 1rem;
+        box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+        -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
+        -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5),
+          0 0 0 transparent;
+      }
     }
   }
 
@@ -467,7 +454,7 @@ hr:after {
         rgba(255, 255, 255, 0.6),
         rgba(255, 255, 255, 0.6)
       ),
-      url('/img/rice_paddy_flipped.png')
+      url('/img/scenes/rice_paddy_flipped.png')
         no-repeat;
     background-position: center;
     background-size: cover;
@@ -505,23 +492,8 @@ hr:after {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  .section--roadmap {
-    .card-navigation {
-      display: none;
-    }
-    .cards {
-      position: static;
-      height: auto;
-      .card {
-        position: static;
-        transform: none;
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        padding: 3rem 4rem 3.6rem;
-        margin-top: 1rem;
-      }
-    }
+  .roadmap__illustration {
+    display: none;
   }
 }
 
@@ -566,7 +538,7 @@ $speed: 50s;
   .slider-row {
     width: 100%;
     height: $img-h * $ratio;
-    background-image: url('./img/placeholder-banner.png');
+    background-image: url('./img/placeholders/placeholder-banner.png');
     background-size: $img-w * $ratio $img-h * $ratio;
     animation: slide $speed linear infinite;
   }
@@ -643,7 +615,7 @@ $speed: 50s;
   -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   .content-chunk {
-    padding: 1rem 4.5rem 1.6rem;
+    padding: 0.2rem 3.5rem 0.4rem;
     h4 {
       line-height: 3rem;
       span.title {
@@ -651,16 +623,6 @@ $speed: 50s;
         text-transform: lowercase;
         font-weight: 200;
       }
-    }
-    a {
-      &.link--social {
-        color: $font-grey-2;
-        margin-left: 0;
-      }
-    }
-    p {
-      font-size: 1.6rem;
-      line-height: 2.6rem;
     }
   }
 }

@@ -10,8 +10,12 @@ const Navbar = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
 
   useEffect(() => {
-    window.onscroll = () => {
+    const setOffset = () => {
       setScrollOffset(window.pageYOffset);
+    }
+    window.addEventListener('scroll', setOffset);
+    return function cleanupListener() {
+      window.removeEventListener('scroll', setOffset);
     }
   }, []);
 
