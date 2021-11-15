@@ -43,7 +43,7 @@ const Home = () => {
       <div className="section--hero" style={ bgPosition(heroBgX, heroBgY) }>
         <div className="foreground" style={ bgPosition(heroFgX, heroFgY) }></div>
         <img src={Crest3} alt="family crest"/>
-        <p><span className="logo">Lineage</span> is an experiment where you, the community, tells the story and your decisions affect the NFTs of others.</p>
+        <p><span className="logo">Lineage</span> is an experiment in interactive and collaborative world-building, using NFTs</p>
       </div>
 
       <div className="section section--about" id="about">

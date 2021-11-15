@@ -138,7 +138,7 @@ hr:after {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 3s;
-  @include fade-in('1000ms');
+  @include fade-in('1300ms');
   .navbar-controls {
     display: none;
     position: absolute;
@@ -340,20 +340,27 @@ hr:after {
   justify-content: center;
   text-align: center;
   p {
+    line-height: 4rem;
+    font-size: 2.6rem;
     max-width: 55rem;
-    // text-shadow: 0.2rem 0.4rem 0.5rem rgba(20, 20, 20, 0.3);
+    text-shadow: 0.1rem 0.2rem 0.5rem rgba(255, 255, 255, 0.6);
     color: $font-black;
     margin-top: 0;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
-    @include fade-in('500ms');
+    @include fade-in('800ms');
     span.logo {
+      font-size: 2.8rem;
       color: $font-black;
     }
   }
   img {
-    width: 30rem;
+    width: 34rem;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    @include fade-in('300ms');
     -webkit-filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
     filter: drop-shadow(0.5rem 0.5rem 0.5rem #222222);
   }
