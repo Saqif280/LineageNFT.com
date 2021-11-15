@@ -199,14 +199,14 @@ const Home = () => {
               <div className="col-sm-6">
                 <img className="selected-race" src={Placeholder} alt="race avatar 1"/>
                 <div className="race-avatars">
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 1"/></Link>
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 2"/></Link>
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 3"/></Link>
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 4"/></Link>
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 5"/></Link>
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 6"/></Link>
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 7"/></Link>
-                  <Link to="/#"><img src={Placeholder} alt="race avatar 8"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 1"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 2"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 3"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 4"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 5"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 6"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 7"/></Link>
+                  <Link to=""><img src={Placeholder} alt="race avatar 8"/></Link>
                 </div>
               </div>
               <div className="col-sm-6">
@@ -273,7 +273,7 @@ const Home = () => {
                     <p>2,000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP.</p>
                     <div className="socials">
                       <a className="link--social" target="_blank" href="https://www.linkedin.com/in/michaelgguo/"><FaLinkedin /></a>
-                      <a className="link--social" target="_blank" href="#"><FaTwitter /></a>
+                      {/* <a className="link--social" target="_blank" href="#"><FaTwitter /></a> */}
                     </div>
                   </div>
                 </div>
@@ -335,7 +335,7 @@ const Home = () => {
               {/* <div className="col-sm-4">
                 <div className="profile-card-small">
                   <div className="content-chunk">
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="">
                       <h4>@anon<br /><span className="title">Lore Artist</span></h4>
                     </a>
                   </div>
@@ -346,7 +346,7 @@ const Home = () => {
               {/* <div className="col-sm-4">
                 <div className="profile-card-small">
                   <div className="content-chunk">
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="">
                       <h4>@anon<br /><span className="title">Lore Artist</span></h4>
                     </a>
                   </div>
@@ -390,7 +390,7 @@ const Home = () => {
               <div className="col-sm-4">
                 <div className="profile-card-small">
                   <div className="content-chunk">
-                    <a target="_blank" href="#">
+                    <a href="">
                       <h4>@dustysky<br /><span className="title">Growth Engineer</span></h4>
                     </a>
                   </div>
@@ -401,7 +401,7 @@ const Home = () => {
               <div className="col-sm-4">
                 <div className="profile-card-small">
                   <div className="content-chunk">
-                    <a target="_blank" href="#">
+                    <a href="">
                       <h4>@FY<br /><span className="title">Growth Engineer</span></h4>
                     </a>
                   </div>
@@ -412,7 +412,7 @@ const Home = () => {
               <div className="col-sm-4">
                 <div className="profile-card-small">
                   <div className="content-chunk">
-                    <a target="_blank" href="#">
+                    <a href="">
                       <h4>@prince<br /><span className="title">Growth Engineer</span></h4>
                     </a>
                   </div>
