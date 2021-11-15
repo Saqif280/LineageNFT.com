@@ -375,6 +375,7 @@ hr:after {
 
   &--roadmap {
     position: relative;
+    overflow-x: hidden;
     .card {
       margin-top: 2rem;
       background-color: $background-white;
@@ -416,19 +417,19 @@ hr:after {
       position: absolute;
       &:nth-child(1) {
         top: 35rem;
-        left: 40rem;
+        left: calc(50% - 55rem);
       }
       &:nth-child(2) {
         top: 70rem;
-        right: 25rem;
+        right: calc(50% - 65rem);
       }
       &:nth-child(3) {
         top: 100rem;
-        left: 25rem;
+        left: calc(50% - 70rem);
       }
       &:nth-child(4) {
         top: 135rem;
-        right: 40rem;
+        right: calc(50% - 60rem);
       }
     }
   }
