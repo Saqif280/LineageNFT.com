@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.96a00779.chunk.css",
-    "main.js": "/static/js/main.a4bbade7.chunk.js",
-    "main.js.map": "/static/js/main.a4bbade7.chunk.js.map",
+    "main.css": "/static/css/main.cf178a36.chunk.css",
+    "main.js": "/static/js/main.d9662e4a.chunk.js",
+    "main.js.map": "/static/js/main.d9662e4a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.28f63e9a.js",
     "runtime-main.js.map": "/static/js/runtime-main.28f63e9a.js.map",
     "static/css/2.e9a48431.chunk.css": "/static/css/2.e9a48431.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.4fccee77.chunk.js.map": "/static/js/3.4fccee77.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e9a48431.chunk.css.map": "/static/css/2.e9a48431.chunk.css.map",
-    "static/css/main.96a00779.chunk.css.map": "/static/css/main.96a00779.chunk.css.map",
+    "static/css/main.cf178a36.chunk.css.map": "/static/css/main.cf178a36.chunk.css.map",
     "static/js/2.ceb3863b.chunk.js.LICENSE.txt": "/static/js/2.ceb3863b.chunk.js.LICENSE.txt",
     "static/media/crest_1.d7dd6dbc.png": "/static/media/crest_1.d7dd6dbc.png",
     "static/media/crest_3.d49935e3.png": "/static/media/crest_3.d49935e3.png",
@@ -27,7 +27,7 @@
     "static/js/runtime-main.28f63e9a.js",
     "static/css/2.e9a48431.chunk.css",
     "static/js/2.ceb3863b.chunk.js",
-    "static/css/main.96a00779.chunk.css",
-    "static/js/main.a4bbade7.chunk.js"
+    "static/css/main.cf178a36.chunk.css",
+    "static/js/main.d9662e4a.chunk.js"
   ]
 }
