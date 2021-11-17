@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8ec241b.chunk.css",
+    "main.css": "/static/css/main.da9d86ba.chunk.css",
     "main.js": "/static/js/main.92458c1f.chunk.js",
     "main.js.map": "/static/js/main.92458c1f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.28f63e9a.js",
@@ -12,13 +12,13 @@
     "static/js/3.4fccee77.chunk.js.map": "/static/js/3.4fccee77.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e9a48431.chunk.css.map": "/static/css/2.e9a48431.chunk.css.map",
-    "static/css/main.c8ec241b.chunk.css.map": "/static/css/main.c8ec241b.chunk.css.map",
+    "static/css/main.da9d86ba.chunk.css.map": "/static/css/main.da9d86ba.chunk.css.map",
     "static/js/2.9f5ad7ab.chunk.js.LICENSE.txt": "/static/js/2.9f5ad7ab.chunk.js.LICENSE.txt",
     "static/media/crest_1.d7dd6dbc.png": "/static/media/crest_1.d7dd6dbc.png",
     "static/media/crest_3.d49935e3.png": "/static/media/crest_3.d49935e3.png",
     "static/media/lucas.81702849.png": "/static/media/lucas.81702849.png",
     "static/media/michael.9cd63b62.png": "/static/media/michael.9cd63b62.png",
-    "static/media/index.scss": "/static/media/rice_paddy_flipped.1ca37720.png",
+    "static/media/index.scss": "/static/media/rice_paddy_flipped.1881045d.jpg",
     "static/media/placeholder-square.951f8ae1.jpeg": "/static/media/placeholder-square.951f8ae1.jpeg",
     "static/media/placeholder-wide.b699ea61.jpeg": "/static/media/placeholder-wide.b699ea61.jpeg",
     "static/media/saqif.e8f40c0f.png": "/static/media/saqif.e8f40c0f.png"
@@ -27,7 +27,7 @@
     "static/js/runtime-main.28f63e9a.js",
     "static/css/2.e9a48431.chunk.css",
     "static/js/2.9f5ad7ab.chunk.js",
-    "static/css/main.c8ec241b.chunk.css",
+    "static/css/main.da9d86ba.chunk.css",
     "static/js/main.92458c1f.chunk.js"
   ]
 }
