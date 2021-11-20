@@ -1,12 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
+
 import Crest1 from './img/crests/crest_1.png';
 import Crest3 from './img/crests/crest_3.png';
+
 import LucasPortrait from './img/portraits/lucas.png';
 import SaqifPortrait from './img/portraits/saqif.png';
 import MichaelPortrait from './img/portraits/michael.png';
+
 import Placeholder from './img/placeholders/placeholder-square.jpeg';
 import PlaceholderWide from './img/placeholders/placeholder-wide.jpeg';
+import QuestionMark from './img/placeholders/question_mark.jpeg';
+
+import FrogFamily from './img/scenes/frog_family.jpg';
+import ArtificerForest from './img/scenes/artificer_forest.png';
+import DemonChanging from './img/scenes/demon_changing.png';
+import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
+
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { HashLink as Link } from 'react-router-hash-link';
@@ -82,12 +92,17 @@ const Home = () => {
 
             <div className="row">
 
-              <img className="roadmap__illustration" src={Placeholder} alt=""/>
-              <img className="roadmap__illustration" src={Placeholder} alt=""/>
-              <img className="roadmap__illustration" src={Placeholder} alt=""/>
-              <img className="roadmap__illustration" src={Placeholder} alt=""/>
+              <img className="roadmap__illustration" src={ArtificerForest} alt=""/>
+              <img className="roadmap__illustration" src={DemonChanging} alt=""/>
+              <img className="roadmap__illustration" src={FrogFamily} alt=""/>
+              <img className="roadmap__illustration" src={MoonMonkeyCathedral} alt=""/>
+
+              <div className="roadmap__line"></div>
+              <div className="roadmap__line"></div>
+              <div className="roadmap__line"></div>
+              <div className="roadmap__line"></div>
             
-              <div className="col-sm-offset-2 col-sm-6">
+              <div className="col-md-offset-2 col-md-6">
                 <div className="card">
                   <div className="number">1</div>
                   <div className="content-chunk">
@@ -97,7 +112,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-4 col-sm-6">
+              <div className="col-md-offset-4 col-md-6">
                 <div className="card">
                   <div className="number">2</div>
                   <div className="content-chunk">
@@ -107,7 +122,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-2 col-sm-6">
+              <div className="col-md-offset-2 col-md-6">
                 <div className="card card--special-1">
                   <div className="number">3</div>
                   <div className="content-chunk">
@@ -117,7 +132,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-4 col-sm-6">
+              <div className="col-md-offset-4 col-md-6">
                 <div className="card">
                   <div className="number">4</div>
                   <div className="content-chunk">
@@ -127,7 +142,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-2 col-sm-6">
+              <div className="col-md-offset-2 col-md-6">
                 <div className="card">
                   <div className="number">5</div>
                   <div className="content-chunk">
@@ -137,7 +152,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-4 col-sm-6">
+              <div className="col-md-offset-4 col-md-6">
                 <div className="card">
                   <div className="number">6</div>
                   <div className="content-chunk">
@@ -147,7 +162,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-2 col-sm-6">
+              <div className="col-md-offset-2 col-md-6">
                 <div className="card">
                   <div className="number">7</div>
                   <div className="content-chunk">
@@ -157,7 +172,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-4 col-sm-6">
+              <div className="col-md-offset-4 col-md-6">
                 <div className="card">
                   <div className="number">8</div>
                   <div className="content-chunk">
@@ -167,7 +182,7 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-sm-offset-2 col-sm-6">
+              <div className="col-md-offset-2 col-md-6">
                 <div className="card card--special-1">
                   <div className="number">9</div>
                   <div className="content-chunk">
@@ -197,16 +212,16 @@ const Home = () => {
                 <p>The Lineage Universe is home to many races that use crests to identify themselves in trade and war. Your crest will be a descendent to one of these 8 genesis families.</p>
               </div>
               <div className="col-sm-6">
-                <img className="selected-race" src={Placeholder} alt="race avatar 1"/>
+                <img className="selected-race" src={QuestionMark} alt="race avatar 1"/>
                 <div className="race-avatars">
-                  <Link to=""><img src={Placeholder} alt="race avatar 1"/></Link>
-                  <Link to=""><img src={Placeholder} alt="race avatar 2"/></Link>
-                  <Link to=""><img src={Placeholder} alt="race avatar 3"/></Link>
-                  <Link to=""><img src={Placeholder} alt="race avatar 4"/></Link>
-                  <Link to=""><img src={Placeholder} alt="race avatar 5"/></Link>
-                  <Link to=""><img src={Placeholder} alt="race avatar 6"/></Link>
-                  <Link to=""><img src={Placeholder} alt="race avatar 7"/></Link>
-                  <Link to=""><img src={Placeholder} alt="race avatar 8"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 1"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 2"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 3"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 4"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 5"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 6"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 7"/></Link>
+                  <Link to=""><img src={QuestionMark} alt="race avatar 8"/></Link>
                 </div>
               </div>
               <div className="col-sm-6">

@@ -340,6 +340,7 @@ hr:after {
   justify-content: center;
   text-align: center;
   p {
+    opacity: 0.999;
     line-height: 4rem;
     font-size: 2.6rem;
     max-width: 55rem;
@@ -375,7 +376,7 @@ hr:after {
 
   &--roadmap {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     .card {
       margin-top: 2rem;
       background-color: $background-white;
@@ -404,32 +405,67 @@ hr:after {
         }
       }
       &--special-1{
-        border-top: 0.2rem gold solid;
+        border-top: 0.2rem $gold solid;
         border-left: 3rem $background-secondary solid;
         .number {
-          color: gold;
+          color: $gold;
           font-weight: 700;
         }
       }
     }
+    .roadmap__line {
+      position: absolute;
+      &:nth-child(5) {
+        width: 20rem;
+        height: 5rem;
+        top: 32rem;
+        left: calc(50% - 50rem);
+        border-top: 4px $font-grey-2 dashed;
+        border-left: 4px $font-grey-2 dashed;
+      }
+      &:nth-child(6) {
+        width: 30rem;
+        height: 5rem;
+        top: 68rem;
+        right: calc(50% - 45rem);
+        border-top: 4px $gold dashed;
+        border-right: 4px $gold dashed;
+      }
+      &:nth-child(7) {
+        width: 40rem;
+        height: 5rem;
+        top: 152.5rem;
+        left: calc(50% - 45rem);
+        border-bottom: 4px $font-grey-2 dashed;
+        border-left: 4px $font-grey-2 dashed;
+      }
+      &:nth-child(8) {
+        width: 20rem;
+        height: 5rem;
+        top: 175rem;
+        right: calc(50% - 30rem);
+        border-top: 4px $gold dashed;
+      }
+    }
     .roadmap__illustration {
-      width: 30rem;
+      width: 50rem;
       position: absolute;
       &:nth-child(1) {
-        top: 35rem;
-        left: calc(50% - 55rem);
+        top: 30rem;
+        left: calc(50% - 75rem);
+        transform: scaleX(-1);
       }
       &:nth-child(2) {
-        top: 75rem;
-        right: calc(50% - 65rem);
+        top: 70rem;
+        right: calc(50% - 80rem);
       }
       &:nth-child(3) {
-        top: 110rem;
-        left: calc(50% - 70rem);
+        top: 105rem;
+        left: calc(50% - 85rem);
       }
       &:nth-child(4) {
-        top: 155rem;
-        right: calc(50% - 60rem);
+        top: 145rem;
+        right: calc(50% - 70rem);
       }
     }
   }
@@ -448,6 +484,7 @@ hr:after {
         display: inline;
         width: 5rem;
         margin-right: 1rem;
+        filter: grayscale(1);
         box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
         -moz-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
         -webkit-box-shadow: 0 0 0.3rem 0 rgba(226, 226, 226, 0.5),
@@ -462,7 +499,7 @@ hr:after {
         rgba(255, 255, 255, 0.6),
         rgba(255, 255, 255, 0.6)
       ),
-      url('/img/scenes/rice_paddy_flipped.jpg')
+      url('/img/scenes/rice_paddy.jpg')
         no-repeat;
     background-position: center;
     background-size: cover;
@@ -500,7 +537,9 @@ hr:after {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  .roadmap__illustration {
+}
+@media only screen and (max-width: $width-sm) {
+  .roadmap__illustration, .roadmap__line {
     display: none;
   }
 }
