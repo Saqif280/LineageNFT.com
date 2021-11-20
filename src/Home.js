@@ -12,7 +12,7 @@ import Placeholder from './img/placeholders/placeholder-square.jpeg';
 import PlaceholderWide from './img/placeholders/placeholder-wide.jpeg';
 import QuestionMark from './img/placeholders/question_mark.jpeg';
 
-import FrogFamily from './img/scenes/frog_family.jpg';
+import FrogFamily from './img/scenes/frog_family.png';
 import ArtificerForest from './img/scenes/artificer_forest.png';
 import DemonChanging from './img/scenes/demon_changing.png';
 import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
@@ -70,7 +70,7 @@ const Home = () => {
                 <p>We’ve created NFTs with a deep world behind them, not just a layer of paint on top. Every piece of art on your crest is chosen for a reason that ties back to the lore.</p>
               </div>
               <div className="col-sm-6">
-                <img src={Placeholder} alt=""/>
+                <img src={MoonMonkeyCathedral} alt=""/>
               </div>
             </div>
           </div>

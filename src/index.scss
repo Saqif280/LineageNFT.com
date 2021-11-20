@@ -424,10 +424,10 @@ hr:after {
         border-left: 4px $font-grey-2 dashed;
       }
       &:nth-child(6) {
-        width: 30rem;
-        height: 5rem;
+        width: 35rem;
+        height: 10rem;
         top: 68rem;
-        right: calc(50% - 45rem);
+        right: calc(50% - 50rem);
         border-top: 4px $gold dashed;
         border-right: 4px $gold dashed;
       }
@@ -435,7 +435,7 @@ hr:after {
         width: 40rem;
         height: 5rem;
         top: 152.5rem;
-        left: calc(50% - 45rem);
+        left: calc(50% - 55rem);
         border-bottom: 4px $font-grey-2 dashed;
         border-left: 4px $font-grey-2 dashed;
       }
@@ -460,12 +460,13 @@ hr:after {
         right: calc(50% - 80rem);
       }
       &:nth-child(3) {
-        top: 105rem;
+        top: 115rem;
         left: calc(50% - 85rem);
       }
       &:nth-child(4) {
         top: 145rem;
         right: calc(50% - 70rem);
+        opacity: 0.1;
       }
     }
   }
