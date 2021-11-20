@@ -440,10 +440,10 @@ hr:after {
         border-left: 4px $font-grey-2 dashed;
       }
       &:nth-child(8) {
-        width: 20rem;
+        width: 30rem;
         height: 5rem;
         top: 175rem;
-        right: calc(50% - 30rem);
+        right: calc(50% - 40rem);
         border-top: 4px $gold dashed;
       }
     }
@@ -452,12 +452,12 @@ hr:after {
       position: absolute;
       &:nth-child(1) {
         top: 30rem;
-        left: calc(50% - 75rem);
+        left: calc(50% - 85rem);
         transform: scaleX(-1);
       }
       &:nth-child(2) {
         top: 70rem;
-        right: calc(50% - 80rem);
+        right: calc(50% - 85rem);
       }
       &:nth-child(3) {
         top: 115rem;
@@ -465,7 +465,7 @@ hr:after {
       }
       &:nth-child(4) {
         top: 145rem;
-        right: calc(50% - 70rem);
+        right: calc(50% - 85rem);
         opacity: 0.1;
       }
     }
