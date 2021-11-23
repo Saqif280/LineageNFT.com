@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="container-fluid">
           <div className="col-sm-6">
             <Link to="/#" className="logo"><h3>Lineage</h3></Link>
-            <p>Lineage is an experiment where you, the community, tells the story and your decisions affect the NFTs of others.</p>
+            <p>Lineage is an experiment in interactive and collaborative world-building, using NFTs.</p>
             <p className="copyright">©2021 Lineage NFT. All rights reserved.</p>
           </div>
           <div className="col-sm-offset-3 col-sm-3">
