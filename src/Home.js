@@ -85,109 +85,112 @@ const Home = () => {
         <div className="content">
 			    <div className="container-fluid">
             <div className="row">
-              <div className="col-sm-offset-3 col-sm-6">
+              <div className="col-md-offset-3 col-md-6">
                 <h2 className="text--center">Lineage Roadmap</h2>
               </div>
             </div>
 
             <div className="row">
-
-              <img className="roadmap__illustration" src={ArtificerForest} alt=""/>
-              <img className="roadmap__illustration" src={DemonChanging} alt=""/>
-              <img className="roadmap__illustration" src={FrogFamily} alt=""/>
-              <img className="roadmap__illustration" src={MoonMonkeyCathedral} alt=""/>
-
-              <div className="roadmap__line"></div>
-              <div className="roadmap__line"></div>
-              <div className="roadmap__line"></div>
-              <div className="roadmap__line"></div>
             
-              <div className="col-md-offset-2 col-md-6">
+              <div className="col-md-6">
                 <div className="card">
                   <div className="number">1</div>
                   <div className="content-chunk">
                     <h4>Mint your crest</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <p>Discovering your place in history means first discovering your own family crest.</p>
                   </div>
                 </div>
-              </div>
-            
-              <div className="col-md-offset-4 col-md-6">
                 <div className="card">
                   <div className="number">2</div>
                   <div className="content-chunk">
                     <h4>List on solana marketplaces</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <p>List on Magiceden, and partner with magiceden launch.</p>
                   </div>
                 </div>
-              </div>
-            
-              <div className="col-md-offset-2 col-md-6">
                 <div className="card card--special-1">
                   <div className="number">3</div>
                   <div className="content-chunk">
                     <h4>Lineage Moments in Time begin</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <p>One Moment In Time every week, for 7 weeks. Sculpt your history, and your crest.</p>
                   </div>
                 </div>
               </div>
             
-              <div className="col-md-offset-4 col-md-6">
+              <div className="col-md-6">
+                <img src={ArtificerForest} alt=""/>
+              </div>
+
+            </div>
+            <div className="row">
+            
+              <div className="col-sm-hidden col-md-6">
+                <img src={DemonChanging} alt=""/>
+              </div>
+
+              <div className="col-md-6">
                 <div className="card">
                   <div className="number">4</div>
                   <div className="content-chunk">
-                    <h4>Crest holders receive crest pin</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <h4>Create Enamel Pins</h4>
+                    <p>All crest holders receive high quality enamel pins of your race’s genesis crest.</p>
                   </div>
                 </div>
-              </div>
-            
-              <div className="col-md-offset-2 col-md-6">
                 <div className="card">
                   <div className="number">5</div>
                   <div className="content-chunk">
                     <h4>Launch Merch store</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <p>Rep the community and flex on the normies by printing your crest onto bento boxes, your underwear… and maybe hoodies and hats too.</p>
                   </div>
                 </div>
-              </div>
-            
-              <div className="col-md-offset-4 col-md-6">
                 <div className="card">
                   <div className="number">6</div>
                   <div className="content-chunk">
                     <h4>Launch Twitter Banner Creator</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <p>Show off your non-PFP NFT through banners for discord and twitter.</p>
                   </div>
                 </div>
               </div>
+
+            </div>
+            <div className="row">
             
-              <div className="col-md-offset-2 col-md-6">
+              <div className="col-md-6">
                 <div className="card">
                   <div className="number">7</div>
                   <div className="content-chunk">
-                    <h4>Lineage Quests Begin</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <h4>The Hunt Begins</h4>
+                    <p>Solve riddles and follow clues that span reality and the metaverse for tangible rewards.</p>
                   </div>
                 </div>
-              </div>
-            
-              <div className="col-md-offset-4 col-md-6">
                 <div className="card">
                   <div className="number">8</div>
                   <div className="content-chunk">
-                    <h4>Lore Narrations Begin</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <h4>Showcase Authors and Narrators</h4>
+                    <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community.</p>
+                  </div>
+                </div>
+                <div className="card card--special-1">
+                  <div className="number">9</div>
+                  <div className="content-chunk">
+                    <h4>Profile Pictures</h4>
+                    <p>An 8000 piece collection, 50% of the collection reserved for OG crest holders.</p>
                   </div>
                 </div>
               </div>
             
-              <div className="col-md-offset-2 col-md-6">
-                <div className="card card--special-1">
-                  <div className="number">9</div>
+              <div className="col-md-6">
+                <img src={FrogFamily} alt=""/>
+              </div>
+
+            </div>
+            <div className="row">
+            
+              <div className="col-md-offset-3 col-md-6">
+                <div className="card card--two-digit">
+                  <div className="number">10</div>
                   <div className="content-chunk">
-                    <h4>Future Development</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+                    <h4>Further Development</h4>
+                    <p>There’s more but it’s still in the planning stage… stay tuned!</p>
                   </div>
                 </div>
               </div>

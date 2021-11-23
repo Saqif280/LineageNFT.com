@@ -131,8 +131,14 @@ hr:after {
   width: 100%;
   height: 7rem;
   position: fixed;
-  color: $font-white;
-  background-color: rgba(39, 39, 39, 0.1);
+  color: $font-grey-2;
+  // background-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    to left,
+    $background-secondary,
+    rgba(255, 255, 255, 0),
+    $background-secondary,
+  );
   font-size: 1.7rem;
   transition: 300ms all;
   animation-iteration-count: 1;
@@ -151,7 +157,7 @@ hr:after {
     }
   }
   h3 {
-    color: $font-white;
+    color: $font-black;
     margin: 0;
     font-size: 2rem;
     line-height: 4rem;
@@ -166,7 +172,7 @@ hr:after {
     a {
       margin-right: 2rem;
       &:hover {
-        color: $font-white;
+        color: $font-black;
       }
     }
   }
@@ -176,16 +182,16 @@ hr:after {
     top: 0;
     a.link--social {
       transform: translateY(0.6rem);
-      color: $font-white;
+      color: $font-black;
     }
     .button {
       margin-top: 0.9rem;
       margin-left: 1.6rem;
       margin-right: 2.5rem;
-      background-color: $background-primary;
-      box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
-      -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
-      -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.3), 0 0 0 transparent;
+      background-color: rgba(0, 0, 0, 0);
+      box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2), 0 0 0 transparent;
+      -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2), 0 0 0 transparent;
+      -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.2), 0 0 0 transparent;
       &:hover {
         box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
         -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.1), 0 0 0 transparent;
@@ -377,19 +383,25 @@ hr:after {
   &--roadmap {
     position: relative;
     overflow: hidden;
+    img {
+      margin: 6rem auto;
+      display: block;
+      max-width: 50rem;
+    }
     .card {
+      position: relative;
       margin-top: 2rem;
       background-color: $background-white;
       width: 100%;
       box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
       -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
       -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
-      border-left: 3rem $snow solid;
+      border-left: 3rem $dark-snow solid;
       .number {
         position: absolute;
-        top: calc(50% - 1rem);
-        left: 2.4rem;
-        color: $font-grey;
+        top: calc(50% - 1.5rem);
+        left: -2rem;
+        color: $font-grey-2;
         font-family: 'Spectral SC', serif;
         font-size: 2rem;
       }
@@ -404,69 +416,21 @@ hr:after {
           line-height: 2.6rem;
         }
       }
-      &--special-1{
-        border-top: 0.2rem $gold solid;
-        border-left: 3rem $background-secondary solid;
+      &--two-digit {
+        border-left: 3.8rem $dark-snow solid;
+        .number {
+          left: -3rem;
+        }
+      }
+      &--special-1 {
+        border: 0.2rem $gold solid;
+        padding-left: 3rem;
+        // border-left: 3rem $background-white solid;
         .number {
           color: $gold;
           font-weight: 700;
+          left: 1rem;
         }
-      }
-    }
-    .roadmap__line {
-      position: absolute;
-      &:nth-child(5) {
-        width: 20rem;
-        height: 5rem;
-        top: 32rem;
-        left: calc(50% - 50rem);
-        border-top: 4px $font-grey-2 dashed;
-        border-left: 4px $font-grey-2 dashed;
-      }
-      &:nth-child(6) {
-        width: 35rem;
-        height: 10rem;
-        top: 68rem;
-        right: calc(50% - 50rem);
-        border-top: 4px $gold dashed;
-        border-right: 4px $gold dashed;
-      }
-      &:nth-child(7) {
-        width: 40rem;
-        height: 5rem;
-        top: 152.5rem;
-        left: calc(50% - 55rem);
-        border-bottom: 4px $font-grey-2 dashed;
-        border-left: 4px $font-grey-2 dashed;
-      }
-      &:nth-child(8) {
-        width: 30rem;
-        height: 5rem;
-        top: 175rem;
-        right: calc(50% - 40rem);
-        border-top: 4px $gold dashed;
-      }
-    }
-    .roadmap__illustration {
-      width: 50rem;
-      position: absolute;
-      &:nth-child(1) {
-        top: 30rem;
-        left: calc(50% - 85rem);
-        transform: scaleX(-1);
-      }
-      &:nth-child(2) {
-        top: 70rem;
-        right: calc(50% - 85rem);
-      }
-      &:nth-child(3) {
-        top: 115rem;
-        left: calc(50% - 85rem);
-      }
-      &:nth-child(4) {
-        top: 145rem;
-        right: calc(50% - 85rem);
-        opacity: 0.1;
       }
     }
   }
@@ -540,7 +504,7 @@ hr:after {
   }
 }
 @media only screen and (max-width: $width-sm) {
-  .roadmap__illustration, .roadmap__line {
+  .col-sm-hidden {
     display: none;
   }
 }
