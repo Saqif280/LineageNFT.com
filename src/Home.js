@@ -14,7 +14,7 @@ import QuestionMark from './img/placeholders/question_mark.jpeg';
 
 import FrogFamily from './img/scenes/frog_family.png';
 import ArtificerForest from './img/scenes/artificer_forest.png';
-import DemonChanging from './img/scenes/demon_changing.png';
+import DemonChanging from './img/scenes/demon_changing-2.png';
 import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
 
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
@@ -53,7 +53,7 @@ const Home = () => {
       <div className="section--hero" style={ bgPosition(heroBgX, heroBgY) }>
         <div className="foreground" style={ bgPosition(heroFgX, heroFgY) }></div>
         <img src={Crest3} alt="family crest"/>
-        <p><span className="logo">Lineage</span> is an experiment in interactive and collaborative world-building, using NFTs</p>
+        <p><span className="logo">Lineage</span> is an experiment in interactive and collaborative world-building using NFTs</p>
       </div>
 
       <div className="section section--about" id="about">
@@ -93,25 +93,31 @@ const Home = () => {
             <div className="row">
             
               <div className="col-md-6">
-                <div className="card">
-                  <div className="number">1</div>
-                  <div className="content-chunk">
-                    <h4>Mint your crest</h4>
-                    <p>Discovering your place in history means first discovering your own family crest.</p>
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">1</div>
+                    <div className="content-chunk">
+                      <h4>Mint your crest</h4>
+                      <p>Discovering your place in history means first discovering your own family crest.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="card">
-                  <div className="number">2</div>
-                  <div className="content-chunk">
-                    <h4>List on solana marketplaces</h4>
-                    <p>List on Magiceden, and partner with magiceden launch.</p>
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">2</div>
+                    <div className="content-chunk">
+                      <h4>List on solana marketplaces</h4>
+                      <p>List on MagicEden, and partner with MagicEden launch.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="card card--special-1">
-                  <div className="number">3</div>
-                  <div className="content-chunk">
-                    <h4>Lineage Moments in Time begin</h4>
-                    <p>One Moment In Time every week, for 7 weeks. Sculpt your history, and your crest.</p>
+                <div className="card-wrapper card-wrapper--special">
+                  <div className="card">
+                    <div className="number">3</div>
+                    <div className="content-chunk">
+                      <h4>Lineage Moments in Time begin</h4>
+                      <p>One Moment In Time every week, for 7 weeks. Sculpt your history, and your crest.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -128,25 +134,31 @@ const Home = () => {
               </div>
 
               <div className="col-md-6">
-                <div className="card">
-                  <div className="number">4</div>
-                  <div className="content-chunk">
-                    <h4>Create Enamel Pins</h4>
-                    <p>All crest holders receive high quality enamel pins of your race’s genesis crest.</p>
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">4</div>
+                    <div className="content-chunk">
+                      <h4>Create Enamel Pins</h4>
+                      <p>All crest holders receive high quality enamel pins of your race’s genesis crest.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="card">
-                  <div className="number">5</div>
-                  <div className="content-chunk">
-                    <h4>Launch Merch store</h4>
-                    <p>Rep the community and flex on the normies by printing your crest onto bento boxes, your underwear… and maybe hoodies and hats too.</p>
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">5</div>
+                    <div className="content-chunk">
+                      <h4>Launch Merch store</h4>
+                      <p>Rep the community and flex on the normies by printing your crest onto bento boxes, your underwear… and maybe hoodies and hats too.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="card">
-                  <div className="number">6</div>
-                  <div className="content-chunk">
-                    <h4>Launch Twitter Banner Creator</h4>
-                    <p>Show off your non-PFP NFT through banners for discord and twitter.</p>
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">6</div>
+                    <div className="content-chunk">
+                      <h4>Launch Twitter Banner Creator</h4>
+                      <p>Show off your non-PFP NFT through banners for discord and twitter.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -155,25 +167,31 @@ const Home = () => {
             <div className="row">
             
               <div className="col-md-6">
-                <div className="card">
-                  <div className="number">7</div>
-                  <div className="content-chunk">
-                    <h4>The Hunt Begins</h4>
-                    <p>Solve riddles and follow clues that span reality and the metaverse for tangible rewards.</p>
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">7</div>
+                    <div className="content-chunk">
+                      <h4>The Hunt Begins</h4>
+                      <p>Solve riddles and follow clues that span reality and the metaverse for tangible rewards.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="card">
-                  <div className="number">8</div>
-                  <div className="content-chunk">
-                    <h4>Showcase Authors and Narrators</h4>
-                    <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community.</p>
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">8</div>
+                    <div className="content-chunk">
+                      <h4>Showcase Authors and Narrators</h4>
+                      <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community.</p>
+                    </div>
                   </div>
                 </div>
-                <div className="card card--special-1">
-                  <div className="number">9</div>
-                  <div className="content-chunk">
-                    <h4>Profile Pictures</h4>
-                    <p>An 8000 piece collection, 50% of the collection reserved for OG crest holders.</p>
+                <div className="card-wrapper card-wrapper--special">
+                  <div className="card">
+                    <div className="number">9</div>
+                    <div className="content-chunk">
+                      <h4>Profile Pictures</h4>
+                      <p>An 8000 piece collection, 50% of the collection reserved for OG crest holders.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -186,11 +204,13 @@ const Home = () => {
             <div className="row">
             
               <div className="col-md-offset-3 col-md-6">
-                <div className="card card--two-digit">
-                  <div className="number">10</div>
-                  <div className="content-chunk">
-                    <h4>Further Development</h4>
-                    <p>There’s more but it’s still in the planning stage… stay tuned!</p>
+                <div className="card-wrapper card-wrapper--two-digit">
+                  <div className="card">
+                    <div className="number">10</div>
+                    <div className="content-chunk">
+                      <h4>Further Development</h4>
+                      <p>There’s more but it’s still in the planning stage… stay tuned!</p>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -360,9 +360,12 @@ hr:after {
     span.logo {
       font-size: 2.8rem;
       color: $font-black;
+      text-decoration: solid underline $gold 0.4rem;
+      text-underline-offset: 0.3rem;
     }
   }
   img {
+    margin-top: -10rem;
     width: 34rem;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
@@ -387,10 +390,10 @@ hr:after {
       margin: 6rem auto;
       display: block;
       max-width: 50rem;
+      width: 100%;
     }
     .card {
       position: relative;
-      margin-top: 2rem;
       background-color: $background-white;
       width: 100%;
       box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
@@ -416,20 +419,25 @@ hr:after {
           line-height: 2.6rem;
         }
       }
-      &--two-digit {
-        border-left: 3.8rem $dark-snow solid;
-        .number {
-          left: -3rem;
+      &-wrapper {
+        margin-top: 2rem;
+        &--special {
+          border: 0.2rem $gold solid;
+          .card {
+            border-left: 3rem darken($background-secondary, 1%) solid;
+          }
+          .number {
+            color: darken($gold, 3%);
+            font-weight: 700;
+          }
         }
-      }
-      &--special-1 {
-        border: 0.2rem $gold solid;
-        padding-left: 3rem;
-        // border-left: 3rem $background-white solid;
-        .number {
-          color: $gold;
-          font-weight: 700;
-          left: 1rem;
+        &--two-digit {
+          .card {
+            border-left: 3.8rem $dark-snow solid;
+          }
+          .number {
+            left: -3rem;
+          }
         }
       }
     }
