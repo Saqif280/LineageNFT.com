@@ -23,6 +23,11 @@ code {
     monospace;
 }
 
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 h1 {
   font-family: 'Spectral SC', serif;
   font-weight: 200;
@@ -676,6 +681,18 @@ $speed: 50s;
     box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.1), 0 0 0 transparent;
     -moz-box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.1), 0 0 0 transparent;
     -webkit-box-shadow: 0 0 3rem 0 rgba(229, 232, 235, 0.1), 0 0 0 transparent;
+  }
+}
+
+.whitepaper {
+  h3 {
+    margin-top: 6rem;
+  }
+  h4 {
+    margin-top: 5rem;
+  }
+  h5 {
+    margin-top: 5rem;
   }
 }
 
