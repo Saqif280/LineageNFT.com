@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.522d51f0.chunk.css",
-    "main.js": "/static/js/main.b69d417b.chunk.js",
-    "main.js.map": "/static/js/main.b69d417b.chunk.js.map",
+    "main.css": "/static/css/main.4ed556e5.chunk.css",
+    "main.js": "/static/js/main.79cb1479.chunk.js",
+    "main.js.map": "/static/js/main.79cb1479.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.9103c9fd.js",
     "runtime-main.js.map": "/static/js/runtime-main.9103c9fd.js.map",
     "static/css/2.e9a48431.chunk.css": "/static/css/2.e9a48431.chunk.css",
@@ -12,19 +12,20 @@
     "static/js/3.1974cb4e.chunk.js.map": "/static/js/3.1974cb4e.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e9a48431.chunk.css.map": "/static/css/2.e9a48431.chunk.css.map",
-    "static/css/main.522d51f0.chunk.css.map": "/static/css/main.522d51f0.chunk.css.map",
+    "static/css/main.4ed556e5.chunk.css.map": "/static/css/main.4ed556e5.chunk.css.map",
     "static/js/2.9f5ad7ab.chunk.js.LICENSE.txt": "/static/js/2.9f5ad7ab.chunk.js.LICENSE.txt",
+    "static/media/artificer.369f8ba2.jpg": "/static/media/artificer.369f8ba2.jpg",
     "static/media/artificer_forest.18b171ac.png": "/static/media/artificer_forest.18b171ac.png",
     "static/media/crest_1.808365dd.png": "/static/media/crest_1.808365dd.png",
     "static/media/crest_3.885e7b52.png": "/static/media/crest_3.885e7b52.png",
     "static/media/demon_changing-2.320957a0.png": "/static/media/demon_changing-2.320957a0.png",
+    "static/media/frog.e8d8f5a0.jpg": "/static/media/frog.e8d8f5a0.jpg",
     "static/media/frog_family.6ee4c2ee.png": "/static/media/frog_family.6ee4c2ee.png",
     "static/media/lucas.81702849.png": "/static/media/lucas.81702849.png",
     "static/media/michael.9cd63b62.png": "/static/media/michael.9cd63b62.png",
     "static/media/moon_monkey_cathedral.04613b08.png": "/static/media/moon_monkey_cathedral.04613b08.png",
+    "static/media/owl.0937f6f5.jpg": "/static/media/owl.0937f6f5.jpg",
     "static/media/index.scss": "/static/media/rice_paddy.6cd00341.jpg",
-    "static/media/placeholder-square.951f8ae1.jpeg": "/static/media/placeholder-square.951f8ae1.jpeg",
-    "static/media/placeholder-wide.b699ea61.jpeg": "/static/media/placeholder-wide.b699ea61.jpeg",
     "static/media/question_mark.5a58150c.jpeg": "/static/media/question_mark.5a58150c.jpeg",
     "static/media/saqif.e8f40c0f.png": "/static/media/saqif.e8f40c0f.png"
   },
@@ -32,7 +33,7 @@
     "static/js/runtime-main.9103c9fd.js",
     "static/css/2.e9a48431.chunk.css",
     "static/js/2.9f5ad7ab.chunk.js",
-    "static/css/main.522d51f0.chunk.css",
-    "static/js/main.b69d417b.chunk.js"
+    "static/css/main.4ed556e5.chunk.css",
+    "static/js/main.79cb1479.chunk.js"
   ]
 }
