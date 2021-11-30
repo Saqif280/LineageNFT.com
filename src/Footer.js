@@ -20,7 +20,7 @@ const Footer = () => {
               <Link to="/tos#">Terms of Service</Link>
             </div>
             <div className="socials">
-              <a className="link--social" target="_blank" href="https://discord.gg/EVhzumCtMd"><FaDiscord /></a>
+              <a className="link--social" target="_blank" href="https://discord.gg/FbxxaqVVCU"><FaDiscord /></a>
               <a className="link--social" target="_blank" href="https://twitter.com/lineagenft"><FaTwitter /></a>
               {/* <a className="link--social" target="_blank" href="https://www.instagram.com/lineagenft/"><FaInstagram /></a> */}
               {/* <a className="link--social" target="_blank" href="https://medium.com/@lineagenft"><FaMedium /></a> */}

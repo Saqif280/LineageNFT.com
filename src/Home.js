@@ -8,14 +8,16 @@ import LucasPortrait from './img/portraits/lucas.png';
 import SaqifPortrait from './img/portraits/saqif.png';
 import MichaelPortrait from './img/portraits/michael.png';
 
-import Placeholder from './img/placeholders/placeholder-square.jpeg';
-import PlaceholderWide from './img/placeholders/placeholder-wide.jpeg';
 import QuestionMark from './img/placeholders/question_mark.jpeg';
 
 import FrogFamily from './img/scenes/frog_family.png';
 import ArtificerForest from './img/scenes/artificer_forest.png';
 import DemonChanging from './img/scenes/demon_changing-2.png';
 import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
+
+import Artificer from './img/races/artificer.jpg';
+import Frog from './img/races/frog.jpg';
+import Owl from './img/races/owl.jpg';
 
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
@@ -138,8 +140,8 @@ const Home = () => {
                   <div className="card">
                     <div className="number">4</div>
                     <div className="content-chunk">
-                      <h4>Create Enamel Pins</h4>
-                      <p>All crest holders receive high quality enamel pins of your race’s genesis crest.</p>
+                      <h4>Lineage Gifts</h4>
+                      <p>We've got IRL surprise gifts in store for all crest holders. Don’t worry, these will be just as high quality as the NFTs themselves.</p>
                     </div>
                   </div>
                 </div>
@@ -326,7 +328,7 @@ const Home = () => {
             <div className="row">
 
               {/* Ahtan */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a target="_blank" href="https://www.instagram.com/ahtan_delmundo/">
@@ -337,29 +339,18 @@ const Home = () => {
               </div>
 
               {/* Concept Artist 1 */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a target="_blank" href="https://www.instagram.com/v__i__q/">
-                      <h4>@v__i__q<br /><span className="title">Crest Concept Artist</span></h4>
+                      <h4>@v__i__q<br /><span className="title">Concept Artist</span></h4>
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* Concept Artist 2 */}
-              {/* <div className="col-sm-4">
-                <div className="profile-card-small">
-                  <div className="content-chunk">
-                    <a target="_blank" href="#">
-                      <h4>@anon<br /><span className="title">Crest Concept Artist</span></h4>
-                    </a>
-                  </div>
-                </div>
-              </div> */}
-
               {/* CB */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a target="_blank" href="https://www.instagram.com/chahatbavanya">
@@ -369,30 +360,8 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Website Artist 2 */}
-              {/* <div className="col-sm-4">
-                <div className="profile-card-small">
-                  <div className="content-chunk">
-                    <a target="_blank" href="">
-                      <h4>@anon<br /><span className="title">Lore Artist</span></h4>
-                    </a>
-                  </div>
-                </div>
-              </div> */}
-
-              {/* Website Artist 3 */}
-              {/* <div className="col-sm-4">
-                <div className="profile-card-small">
-                  <div className="content-chunk">
-                    <a target="_blank" href="">
-                      <h4>@anon<br /><span className="title">Lore Artist</span></h4>
-                    </a>
-                  </div>
-                </div>
-              </div> */}
-
               {/* Yoman */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a target="_blank" href="https://twitter.com/yoman301">
@@ -403,7 +372,7 @@ const Home = () => {
               </div>
 
               {/* Sambino */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a target="_blank" href="https://twitter.com/sambino">
@@ -414,7 +383,7 @@ const Home = () => {
               </div>
 
               {/* Community Manager */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a target="_blank" href="https://twitter.com/nftyktty">
@@ -425,7 +394,7 @@ const Home = () => {
               </div>
 
               {/* Dusty */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a href="">
@@ -436,7 +405,7 @@ const Home = () => {
               </div>
 
               {/* FY */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a href="">
@@ -447,7 +416,7 @@ const Home = () => {
               </div>
 
               {/* Prince */}
-              <div className="col-sm-4">
+              <div className="col-md-4 col-sm-6">
                 <div className="profile-card-small">
                   <div className="content-chunk">
                     <a href="">

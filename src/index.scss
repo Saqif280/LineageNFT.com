@@ -137,7 +137,6 @@ hr:after {
   height: 7rem;
   position: fixed;
   color: $font-grey-2;
-  // background-color: rgba(255, 255, 255, 0.3);
   background: linear-gradient(
     to left,
     $background-secondary,
@@ -256,6 +255,7 @@ hr:after {
   .navbar {
     height: 5rem;
     text-align: center;
+    background-color: rgba($background-secondary, 0.9);
     a {
       margin-bottom: 2rem;
       &.logo {
@@ -640,7 +640,7 @@ $speed: 50s;
   -moz-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   -webkit-box-shadow: 0 0 3rem 0 rgba(226, 226, 226, 0.5), 0 0 0 transparent;
   .content-chunk {
-    padding: 0.2rem 3.5rem 0.4rem;
+    padding: 0.2rem 3.2rem 0.3rem;
     h4 {
       line-height: 3rem;
       span.title {
