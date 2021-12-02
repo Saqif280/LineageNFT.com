@@ -65,16 +65,16 @@ const Home = () => {
         <div className="content">
 			    <div className="container-fluid">
             <div className="row margin-bottom-2">
-              <div className="col-sm-12">
+              <div className="col-md-12">
                 <h2>Why is Lineage Special?</h2>
               </div>
-              <div className="col-sm-5">
+              <div className="col-md-5">
                 <h5>Interconnected, Changing NFTs</h5>
                 <p>Your crest inherits curses, newly learned abilities, and more from its parent. Crest holders will be able to change their crests and their descendents’ crests forever.</p>
                 <h5>A Story-First, Art-Second World</h5>
                 <p>We’ve created NFTs with a deep world behind them, not just a layer of paint on top. Every piece of art on your crest is chosen for a reason that ties back to the lore.</p>
               </div>
-              <div className="col-sm-7">
+              <div className="col-md-7">
                 <video autoplay loop muted ref={inheritanceVideo}>
                   <source src={Inheritance}/>
                 </video>
