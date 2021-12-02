@@ -14,6 +14,7 @@ import FrogFamily from './img/scenes/frog_family.png';
 import ArtificerForest from './img/scenes/artificer_forest.png';
 import DemonChanging from './img/scenes/demon_changing-2.png';
 import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
+import Inheritance from './img/animations/inheritance.webm';
 
 import Artificer from './img/races/artificer.jpg';
 import Frog from './img/races/frog.jpg';
@@ -24,11 +25,13 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Home = () => {
+  const inheritanceVideo = useRef();
   const sectionCommunity = useRef();
   const [scrollOffset, setScrollOffset] = useState(0);
   const [sectionCommunityOffset, setSectionCommunityOffset] = useState()
 
   useEffect(() => {
+    inheritanceVideo.current.play();
     const setOffset = () => {
       setScrollOffset(window.pageYOffset);
       setSectionCommunityOffset(sectionCommunity?.current?.offsetTop);
@@ -65,14 +68,17 @@ const Home = () => {
               <div className="col-sm-12">
                 <h2>Why is Lineage Special?</h2>
               </div>
-              <div className="col-sm-6">
+              <div className="col-sm-5">
                 <h5>Interconnected, Changing NFTs</h5>
                 <p>Your crest inherits curses, newly learned abilities, and more from its parent. Crest holders will be able to change their crests and their descendents’ crests forever.</p>
                 <h5>A Story-First, Art-Second World</h5>
                 <p>We’ve created NFTs with a deep world behind them, not just a layer of paint on top. Every piece of art on your crest is chosen for a reason that ties back to the lore.</p>
               </div>
-              <div className="col-sm-6">
-                <img src={MoonMonkeyCathedral} alt=""/>
+              <div className="col-sm-7">
+                <video autoplay loop muted ref={inheritanceVideo}>
+                  <source src={Inheritance}/>
+                </video>
+                <div className="video-overlay"></div>
               </div>
             </div>
           </div>
@@ -132,7 +138,7 @@ const Home = () => {
             <div className="row">
             
               <div className="col-sm-hidden col-md-6">
-                <img src={DemonChanging} alt=""/>
+                <img src={MoonMonkeyCathedral} alt=""/>
               </div>
 
               <div className="col-md-6">
@@ -141,7 +147,7 @@ const Home = () => {
                     <div className="number">4</div>
                     <div className="content-chunk">
                       <h4>Lineage Gifts</h4>
-                      <p>We've got IRL surprise gifts in store for all crest holders. Don’t worry, these will be just as high quality as the NFTs themselves.</p>
+                      <p>We've got IRL surprise gifts in store for all crest holders. Get excited, these will be just as high quality as the NFTs themselves.</p>
                     </div>
                   </div>
                 </div>
