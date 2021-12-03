@@ -1,27 +1,6 @@
 module.exports = `
 <!-- Output copied to clipboard! -->
 
-<!-----
-NEW: Check the "Suppress top comment" option to remove this info from the output.
-
-Conversion time: 0.585 seconds.
-
-
-Using this HTML file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β31
-* Thu Nov 25 2021 13:58:37 GMT-0800 (PST)
-* Source doc: Technical Explainer
-* Tables are currently converted to HTML tables.
------>
-
 
 <h2>White Paper</h2>
 
@@ -39,7 +18,7 @@ NFTs are programmable assets. Months ago we saw the NFT space and wondered why s
 Before we talk about the system, and how things fit together, let’s talk about the crest(s) you’ll own if you decide to take part in the project.
 </p>
 <p>
-Every crest in lineage has 3 pieces of underlying data that are kept on-chain. The data is primarily used to dictate the art piece displayed in your wallet, but it also allows the system to induce changes in other crests. More will be explained in the section <a href="#lineage’s-three-chapters">Lineage’s Three Chapters</a>.<br><br>These 3 pieces of underlying data are your race, your attributes, and your modifiers. 
+Every crest in Lineage has 3 pieces of underlying data that are kept on-chain. The data is primarily used to dictate the art piece displayed in your wallet, but it also allows the system to induce changes in other crests. More will be explained in the section <a href="#lineage’s-three-chapters">Lineage’s Three Chapters</a>.<br><br>These 3 pieces of underlying data are your race, your attributes, and your modifiers. 
 </p>
 <h4 id="your-race">Your Race:</h4>
 
@@ -180,7 +159,7 @@ Lineage has three Chapters to the project, and it’s easiest to understand the 
 
 
 <p>
-On mint day (?) crests will be minted from our contract.  The team has reserved the first crest of each family - the genesis crests - as crests to hold onto for historical significance and either gift to famous authors, auction off for charity, or ultimately donate to our DAO for collective ownership. We plan for most of these 8 genesis crests to be owned by the community.
+On mint day 4000 crests will be minted from our contract.  The team has reserved the first crest of each family - the genesis crests - as crests to hold onto for historical significance and either gift to famous authors, auction off for charity, or ultimately donate to our DAO for collective ownership. We plan for most of these 8 genesis crests to be owned by the community.
 </p>
 <p>
 As people execute our contract function to mint their crest, we…
@@ -193,11 +172,11 @@ As people execute our contract function to mint their crest, we…
 
 <li>Using our modifier system mentioned in <a href="#your-modifiers">Your Modifiers</a>, assign our new crest modifiers based on the parent
 
-<li>Generate an additional (?) modifiers for the new crest
+<li>Generate an additional 1 - 2 modifiers for the new crest
 </li>
 </ol>
 <p>
-Once all (?) crests are minted, there will be a month-long gap (that we plan to fill with events, irl gifts to all token holders, and more) as we prepare and develop for chapter 2 of Lineage - the exciting part.
+Once all 4000 crests are minted, there will be a month-long gap (that we plan to fill with events, IRL gifts to all token holders, and more) as we prepare and develop for chapter 2 of Lineage - the exciting part.
 </p>
 <h4 id="chapter-2-telling-the-story">Chapter 2: Telling the Story</h4>
 
@@ -206,31 +185,68 @@ Once all (?) crests are minted, there will be a month-long gap (that we plan to 
 This covers the best part of Lineage, and why we’re so excited to share it with you.
 </p>
 <p>
-For the first (?) months after the mint we are collectively telling the story of the world through our choices. How? In Chapter 2 of Lineage we publish a new “Moment” every (?). The guaranteed outcome of participating in any event is receiving a new modifier for your crest (though <em>which</em> modifier is another story). New modifiers will almost always mean new art for your NFT. Based on your decisions the modifiers could be rare. Because our modifiers will ripple effect out and affect our descendants forever, over the course of the (?) months there will be plenty of changes and new additions to your crest. Once the (?) months are over, we close our chapter of storytelling and lock the crests, preventing them from changing further. 
+For the 7 weeks of Chapter 2, the world of [worldname] will be in Flux - the history of the world throughout time will be in an indeterminate state as we collectively tell the story of the world through our choices. How? In Chapter 2 of Lineage we publish a new “<strong>Moment In Time</strong>” every week. The guaranteed outcome of participating in any event is receiving a new modifier for your crest (though <em>which</em> modifier is another story). Some modifiers will correspond to new assets for your crest. Based on your decisions, you might receive rare modifiers. Because our modifiers will ripple effect out and affect our descendants forever, over the course of the 7 weeks there will be plenty of changes and new additions to your crest, sometimes unannounced as a result of an ancestor’s decision. Once the 7 weeks are over, we close our chapter of storytelling and the Flux ends, preventing your crest from changing further. 
 </p>
 <p>
-We hope for Moments to help keep Lineage decentralized, emphasizing and rewarding the token holders who have small crest counts. Rarity of your crest will be a result of the actions you take during each Moment. It’s going to be frustrating to run through the same interaction for all 50 of your crests each week, and hopefully this will incentivise a wide distribution of crests. Some bonus Moments may also be participation capped to only 1000, or a few hundred crest owners. Our goal is for ownership of the lore and history to be decentralized, and reward those who are most engaged and active in our community. We <em>do</em> understand that making the project work for whales and those who want to own many, many crests still matters though, so there will be plenty of rarity for those who want to just buy and hold after mint.
+We hope for <strong>Moments</strong> to keep Lineage decentralized, emphasizing and rewarding the token holders who have small crest counts. Some of the rarity of your crest will be a result of the actions you take during each Moment. It’s going to be frustrating to run through the same interaction for all 50 of your crests each week, and hopefully this will incentivise a wider-than-usual distribution of crests. Some bonus Moments may also be participation capped to only 1000, or a few hundred crest owners. Our goal is for ownership of the lore and history to be decentralized, and reward those who are most engaged and active in our community. We <em>do</em> understand that making the project work for whales and those who want to own many, many crests still matters though, so there will be plenty of rarity for those who want to just mint and hold.
 </p>
 <p>
 <br>For each Moment, crest holders will come to our website and be presented with an experience. This experience can be as simple as selecting one of three potions to drink, or as complicated as a dungeon requiring multiple separate token holders signing on to be members of a party that rewards the most successful dungeoneers with freshly minted NFTs. 
 </p>
 <p>
-Originally, we had planned to write our entire inheritance system and event systems on-chain. Practically speaking, that’s more difficult for us as developers, more gas you’ll have to burn, and Chapter 2 is heavily centralized around the Lineage Team anyway. Instead we’re planning on running the logic on our servers, and storing only the outcome of the logic, such as changes to attributes or modifiers, on-chain. And of course updating your NFT’s assets accordingly. Yes this is heavily centralized… but if you haven’t noticed, every project is centralized around the core team when it comes out, whether the team is willing to admit it or not. So trust us that this is going to be as exciting as it sounds! If you’re worried about team integrity let us know and we’ll happily consider putting most of the system logic on-chain. 
+After a lot of discussion, we’ve made the decision to keep the inheritance system off-chain. Instead we’re planning on running the logic on our servers, and storing only the outcome of the logic, such as changes to attributes or modifiers, on-chain. And of course updating your NFT’s assets accordingly. Yes this is centralized… but we think this is best to avoid revealing details about the moment in the Solana program to keep things fair for everyone. Most of the Lineage team themselves won’t know, and the three of us who will have sadly committed to holding no tokens during this Chapter of Lineage to avoid conflicts of interest and any catastrophes related to insider information (i.e. disasters like Mekaverse). So trust us that this is going to be as exciting as it sounds! If you’re worried about team integrity let us know and we’ll happily put anything important decisions to a vote in the community.
 </p>
 <h4 id="chapter-3-community-and-fun-stuff">Chapter 3: Community and Fun Stuff!</h4>
 
 
 <p>
-We haven’t decided on all the cool stuff we’re gonna do. 
+This doesn’t really belong in a technical whitepaper imo. But the web3 community seems to just stick all information about their project in a whitepaper, so here we go:
+</p>
+<h5>Lineage Gifts</h5>
+
+
+<p>
+We want to thank all crest holders with something fun. Don’t worry, these items will be just as high quality as the NFTs we distribute - we’re committed to only delivering works of high quality to our community, and this is no exception. We’ll collect addresses and send these gifts out to anyone with a crest and a willingness to share their address with the team.
+</p>
+<h5>Merch Store</h5>
+
+
+<p>
+We think it’s fun for people in the community to, and I quote, 
+</p>
+<p>
+
+    “Rep the community and flex on the normies”
+</p>
+<p>
+so we’re going to get a merch store up for people to get Lineage merch from where you can have <em>your</em> crest custom printed onto any gear you want. The crest is your identity in [worldname], so we want you to identify with it. 
+</p>
+<h5>Banner Creator</h5>
+
+
+<p>
+The crest part of Lineage isn’t a PFP project, and we think there are many projects better suited to your PFP. But most of us who love this project might want to show off our NFT somehow, so we’ll be setting up a tool to create a banner that marks yourself as a (?).
+</p>
+<h5>The Hunt</h5>
+
+
+<p>
+We’re going to have a set of puzzles that span physical and virtual realities. Have you heard of <a href="https://en.wikipedia.org/wiki/Cicada_3301">Cicada 3301</a>? These puzzles ain’t for no schmoes. Obviously if we give you too many details we ruin the fun. Some of the details of this have yet to be settled.
+</p>
+<h5>Author + Narrator Showcase</h5>
+
+
+<p>
+We want to be champions for many of the creators and artists who haven’t been able to engage with NFTs - the storytellers. We plan on sponsoring authors to write short stories in our world, and sponsoring narrators to narrate these short stories. We will then collectively canonicalize and auction them off, with proceeds split between the community fund and the authors and narrators themselves. NFTs matter because people like to own ideas, be it a picture, or a 3D model, and we think ownership of stories is an exciting avenue to explore.
 </p>
 <h4 id="chapter-4-[worldname]-lives-on">Chapter 4: [worldname] Lives On</h4>
 
 
 <p>
-We’re looking at potential projects that could be follow ups to Lineage in the world of [worldname]. These include things like paying authors to create short stories that the community can vote on turning into canon lore, doing a series of PFPs for each of our races, and the obligatory “building into the metaverse” consideration. 
+We’re looking at potential projects that could be follow ups to Lineage in the world of [worldname]. We’re already set on doing an 8000 piece PFP collection of our 8 races, as well as the Author + Narrator Showcase mentioned above. We’ll of course be investigating “building into the metaverse” like most other projects, but we’ll be spending some time thinking about where the NFT space is heading, and how further development can be just as innovative as Lineage is.
 </p>
 <p>
-For legal reasons, there are no plans at the moment to tie these tokens to anything that will lead back to profits.
+For reasons relating to US security law, there are no plans at the moment to tie your tokens to anything that with the intent “to provide an expectation of profit to the buyer based on the efforts of others” but we <strong>are</strong> exploring tokenomics options to enable you to do something with your crests and all NFTs set in [worldname].
 </p>
 <h3 id="summary">Summary</h3>
 
@@ -241,8 +257,23 @@ Lineage is cool because NFTs can change each other. Lineage is cool because you 
 <p>
 If you have questions, hop in our discord. Thanks for reading!
 </p>
-<p>
+<h3 id="glossary">Glossary</h3>
 
+
+<p>
+<strong>Ancestor</strong>: A relation between two crests. One crest is an ancestor of another if we start at the other crest and can reach the ‘ancestor’ crest by traveling only from child crest => parent crest.
+</p>
+<p>
+<strong>Descendant</strong>: A relation between two crests. One crest is a descendant of another if we start at the other crest and can reach the ‘descendant’ crest by traveling only from parent crest =>child crest.  
+</p>
+<p>
+<strong>Direct Descendant</strong>: A crest’s immediate child, aka the child in a parent - child relationship.
+</p>
+<p>
+<strong>Crest</strong>: A single instance of the NFT. Crests have one parent and anywhere from 0 to 2 children. 
+</p>
+<p>
+<strong>Moment In Time</strong>: An event that we hold by publishing something interactive on our website. Imagine it like a popup shop - it’s something fun but available for only a short period of time. The outcome of your interaction leads to data getting written back to your NFT on-chain.
 </p>
 <h3 id="even-technical-er-information">Even Technical-er Information</h3>
 
@@ -304,23 +335,5 @@ We’ll have a simple tool that displays all the crests in your wallet, and is a
 
 <p>
 Images stored on IPFS are just decentralized, not permanent. The second someone stops paying the IPFS pinning service it’s monthly fee, the data might just go poof. Arweave is theoretically a much more permanent solution - though its not fully proven. The tradeoff with Arweave is that any storage paid for is permanent. That means if your crest changes 15 times over the course of time, we’re paying to upload and permanently save all 15 images. Arweave is expensive and for 10,000 crests this would eat into the funds we want to spend growing the project.<br><br>Instead, we plan to keep all crest assets on IPFS during the months they’re in flux, pinning the newly uploaded assets, setting the URIs on the tokens, and unpinning the out of date assets. Once the crests lock, and everyone’s crests are no longer subject to change, we will upload the final assets to Arweave and reference the Arweave URI in the token for permanence.
-</p>
-<h3 id="glossary">Glossary</h3>
-
-
-<p>
-<strong>Ancestor</strong>: A relation between two crests. One crest is an ancestor of another if we start at the other crest and can reach the ‘ancestor’ crest by traveling only from child crest => parent crest.
-</p>
-<p>
-<strong>Descendant</strong>: A relation between two crests. One crest is a descendant of another if we start at the other crest and can reach the ‘descendant’ crest by traveling only from parent crest =>child crest.  
-</p>
-<p>
-<strong>Direct Descendant</strong>: A crest’s immediate child, aka the child in a parent - child relationship.
-</p>
-<p>
-<strong>Crest</strong>: A single instance of the NFT. Crests have one parent and anywhere from 0 to 2 children. 
-</p>
-<p>
-<strong>Moment</strong>: An event that we hold by publishing something interactive on our website. Imagine it like a popup shop - it’s something fun but available for only a short period of time. The outcome of your interaction leads to data getting written back to your NFT on-chain.
 </p>
 `;
