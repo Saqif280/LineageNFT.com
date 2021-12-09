@@ -34,7 +34,7 @@ const Navbar = () => {
       </div>
       <div className="right">
         <a className="link--social" target="_blank" href="https://twitter.com/lineagenft"><FaTwitter /></a>
-        <a className="button" href="https://discord.gg/FbxxaqVVCU" target="_blank">Join the Discord</a>
+        <a className="button" target="_blank">Join the Discord</a>
         {/* <Wallet /> */}
       </div>
       <div className="navbar-controls">

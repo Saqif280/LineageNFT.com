@@ -108,7 +108,7 @@ video {
   max-width: 100%;
 }
 .video-overlay {
-  z-index: 10;
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 1.4rem;
@@ -143,6 +143,25 @@ hr:after {
   font-size: 3rem;
   padding: 0 0rem;
   background: $background-secondary;
+}
+
+.modal-bg {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($background-primary, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-fg {
+  width: 60rem;
+  padding: 2rem 4rem;
+  background-color: $background-secondary;
 }
 
 .navbar {

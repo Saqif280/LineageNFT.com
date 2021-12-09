@@ -6,6 +6,7 @@ import {
 import Navbar from './Navbar';
 import Footer from './Footer';
 import Home from './Home';
+import HomeV2 from './HomeV2';
 import WhitePaper from './WhitePaper';
 import TermsOfService from './TermsOfService';
 
@@ -18,6 +19,9 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/test">
+            <HomeV2 />
           </Route>
           <Route path="/white_paper">
             <WhitePaper />
