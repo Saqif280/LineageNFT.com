@@ -4,6 +4,10 @@ import classNames from 'classnames';
 import Crest1 from './img/crests/crest_1.png';
 import Crest3 from './img/crests/crest_3.png';
 
+import DecisionsDiagram from './img/diagrams/decisions.png';
+import TreeDiagram from './img/diagrams/tree.png';
+import InheritanceDiagram from './img/diagrams/inheritance.png';
+
 import LucasPortrait from './img/portraits/lucas.png';
 import SaqifPortrait from './img/portraits/saqif.png';
 import MichaelPortrait from './img/portraits/michael.png';
@@ -77,34 +81,37 @@ const Home = () => {
             <div className="row margin-bottom-6">
               <div className="col-md-12">
                 <h2>Own your family, write your history</h2>
-              </div>
-              <div className="col-md-12">
-                <img src={PlaceholderBanner} />
                 <p>Decisions you make in Lineage will affect the history of your family forever and will appear as changes on your crest.</p>
+                <br />
+                <img src={DecisionsDiagram} />
               </div>
             </div>
-            <div className="row margin-bottom-6">
+            <div className="row equal margin-bottom-6">
               <div className="col-md-12">
                 <h2>300 years, 6 generations</h2>
               </div>
-              <div className="col-md-6">
-                <p>Lineage Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
-                <p>It's been 300 years since the first of the new sentients arose. As the human race hung on by a thread, new beasts of consciousness rose from the puddles, the clay deposits, and fruit trees of the world.</p>
+              <div className="col-md-8">
+                <img src={TreeDiagram} />
               </div>
-              <div className="col-md-offset-1 col-md-4">
-                <img src={PlaceholderSquare} />
+              <div className="col-md-4 v-center-children">
+                <div className="card">
+                  <p>Lineage Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
+                  <p>It's been 300 years since the first of the new sentients arose. As the human race hung on by a thread, new beasts of consciousness rose from the puddles, the clay deposits, and fruit trees of the world.</p>
+                </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row equal">
               <div className="col-md-12">
                 <h2>Many decisions, one world</h2>
               </div>
-              <div className="col-md-6">
-                <p>At each Moment in Time, your decision has the chance to ripple down and affect your descendants.</p>
-                <p>Just like you, your decision may add new lore and art to your descendants, and you may receive new lore and art from your ancestors.</p>
+              <div className="col-md-8">
+                <img src={InheritanceDiagram} />
               </div>
-              <div className="col-md-offset-1 col-md-4">
-                <img src={PlaceholderSquare} />
+              <div className="col-md-4 v-center-children">
+                <div className="card">
+                  <p>At each Moment in Time, your decision has the chance to ripple down and affect your descendants.</p>
+                  <p>Just like you, your decision may add new lore and art to your descendants, and you may receive new lore and art from your ancestors.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -115,22 +122,17 @@ const Home = () => {
         <div className="slider-row"></div>
       </div> */}
 
-      <div className="divider">
-        <div className="content">
-          <hr />
-        </div>
-      </div>
-
       <div className="section section--roadmap" id="roadmap">
         <div className="content">
 			    <div className="container-fluid">
-            <div className="row">
+            <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
                 <h2 className="text--center">Lineage Roadmap</h2>
               </div>
             </div>
+              {/* <img src={MoonMonkeyCathedral} alt=""/> */}
 
-            <div className="row">
+            <div className="row equal">
             
               <div className="col-md-6">
                 <div className="card-wrapper">
@@ -138,16 +140,17 @@ const Home = () => {
                     <div className="number">1</div>
                     <div className="content-chunk">
                       <h4>Mint your crest</h4>
-                      <p>Discovering your place in history means first discovering your own family crest. Praesent at eros sit amet purus blandit auctor. Pellentesque ultrices tempor porttitor. Suspendisse enim mi, malesuada condimentum ornare a, lobortis vel augue. Cras sed porttitor massa.</p>
+                      <p>Discovering your place in history means first discovering your own family crest.</p>
                     </div>
                   </div>
                 </div>
-                <div className="card-wrapper card-wrapper--special">
+                
+                <div className="card-wrapper">
                   <div className="card">
                     <div className="number">2</div>
                     <div className="content-chunk">
                       <h4>Lineage Moments in Time begin</h4>
-                      <p>One Moment In Time every week, for 7 weeks. Sculpt your history, and your crest. Praesent at eros sit amet purus blandit auctor. Pellentesque ultrices tempor porttitor. Suspendisse enim mi, malesuada condimentum ornare a, lobortis vel augue. Cras sed porttitor massa. Etiam in nisl aliquet, molestie mauris ut, facilisis lacus. In hendrerit quam quis tortor varius aliquet. In ac velit nunc. Nam eu nunc a lorem varius finibus eu eget metus.</p>
+                      <p>One Moment In Time every week, for 7 weeks. Sculpt your history, and your crest.</p>
                     </div>
                   </div>
                 </div>
@@ -156,7 +159,7 @@ const Home = () => {
                     <div className="number">3</div>
                     <div className="content-chunk">
                       <h4>Showcase Authors and Narrators</h4>
-                      <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community. Praesent at eros sit amet purus blandit auctor. Pellentesque ultrices tempor porttitor. Suspendisse enim mi, malesuada condimentum ornare a, lobortis vel augue. Cras sed porttitor massa.</p>
+                      <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community.</p>
                     </div>
                   </div>
                 </div>
@@ -180,24 +183,19 @@ const Home = () => {
                 </div>
               </div>
             
-              <div className="col-md-6">
-                <img src={ArtificerForest} alt=""/>
-                {/* <img src={FrogFamily} alt=""/> */}
-                <img src={MoonMonkeyCathedral} alt=""/>
-              </div>
-
+              <div className="col-md-6 bg-moon-monkey"></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="divider">
+      {/* <div className="divider">
         <div className="content">
           <hr />
         </div>
-      </div>
+      </div> */}
 
-      <div className="section section--races" id="races">
+      {/* <div className="section section--races" id="races">
         <div className="content">
 			    <div className="container-fluid">
             <div className="row">
@@ -233,7 +231,7 @@ const Home = () => {
         <div className="content">
           <hr />
         </div>
-      </div>
+      </div> */}
 
       <div className="section" id="team">
         <div className="content">
@@ -279,7 +277,7 @@ const Home = () => {
                   <img src={MichaelPortrait} alt="Michael"/>
                   <div className="content-chunk">
                     <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
-                    <p>2,000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP.</p>
+                    <p>2,000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP Inc.</p>
                     <div className="socials">
                       <a className="link--social" target="_blank" href="https://www.linkedin.com/in/michaelgguo/"><FaLinkedin /></a>
                       {/* <a className="link--social" target="_blank" href="#"><FaTwitter /></a> */}

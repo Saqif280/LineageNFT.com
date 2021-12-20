@@ -4,14 +4,25 @@ $background-grey: #C0CCDA;
 $background-primary: #282c34;
 $background-secondary: #fffcf6;
 
-$snow: #F9FAFC;
-$dark-snow: #EFF2F7;
-$gold: gold;
-
 $font-white: #ffffff;
 $font-grey: #C0CCDA;
 $font-grey-2: #3C4858;
 $font-black: #000000;
+
+$shadow-color: rgba(0, 0, 0, 0.05);
+@mixin box-shadow($color) {
+  box-shadow: 0 0 3rem 0 $color, 0 0 0 transparent;
+  -moz-box-shadow: 0 0 3rem 0 $color, 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 3rem 0 $color, 0 0 0 transparent;
+}
+@mixin drop-shadow($color) {
+  -webkit-filter: drop-shadow(0.5rem 0.5rem 0.5rem $color);
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem $color);
+}
+
+$snow: #F9FAFC;
+$dark-snow: #EFF2F7;
+$gold: gold;
 
 $width-xs: 767px; // [0 - 767px]
 $width-sm: 991px; // [768 - 991px]

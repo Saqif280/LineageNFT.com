@@ -4,11 +4,17 @@ import classNames from 'classnames';
 import Crest1 from './img/crests/crest_1.png';
 import Crest3 from './img/crests/crest_3.png';
 
+import DecisionsDiagram from './img/diagrams/decisions.png';
+import TreeDiagram from './img/diagrams/tree.png';
+import InheritanceDiagram from './img/diagrams/inheritance.png';
+
 import LucasPortrait from './img/portraits/lucas.png';
 import SaqifPortrait from './img/portraits/saqif.png';
 import MichaelPortrait from './img/portraits/michael.png';
 
 import QuestionMark from './img/placeholders/question_mark.jpeg';
+import PlaceholderBanner from './img/placeholders/placeholder-banner.png';
+import PlaceholderSquare from './img/placeholders/placeholder-square.jpeg';
 
 import FrogFamily from './img/scenes/frog_family.png';
 import ArtificerForest from './img/scenes/artificer_forest.png';
@@ -31,7 +37,7 @@ const Home = () => {
   const [sectionCommunityOffset, setSectionCommunityOffset] = useState()
 
   useEffect(() => {
-    inheritanceVideo.current.play();
+    if (inheritanceVideo.current) inheritanceVideo.current.play();
     const setOffset = () => {
       setScrollOffset(window.pageYOffset);
       setSectionCommunityOffset(sectionCommunity?.current?.offsetTop);
@@ -72,21 +78,40 @@ const Home = () => {
       <div className="section section--about" id="about">
         <div className="content">
 			    <div className="container-fluid">
-            <div className="row margin-bottom-2">
+            <div className="row margin-bottom-6">
               <div className="col-md-12">
-                <h2>Why is Lineage Special?</h2>
+                <h2>Own your family, write your history</h2>
+                <p>Decisions you make in Lineage will affect the history of your family forever and will appear as changes on your crest.</p>
+                <br />
+                <img src={DecisionsDiagram} />
               </div>
-              <div className="col-md-5">
-                <h5>Interconnected, Changing NFTs</h5>
-                <p>Your crest inherits curses, newly learned abilities, and more from its parent. Crest holders will be able to change their crests and their descendents’ crests forever.</p>
-                <h5>A Story-First, Art-Second World</h5>
-                <p>We’ve created NFTs with a deep world behind them, not just a layer of paint on top. Every piece of art on your crest is chosen for a reason that ties back to the lore.</p>
+            </div>
+            <div className="row equal margin-bottom-6">
+              <div className="col-md-12">
+                <h2>300 years, 6 generations</h2>
               </div>
-              <div className="col-md-7">
-                <video autoplay loop muted ref={inheritanceVideo}>
-                  <source src={Inheritance}/>
-                </video>
-                <div className="video-overlay"></div>
+              <div className="col-md-8">
+                <img src={TreeDiagram} />
+              </div>
+              <div className="col-md-4 v-center-children">
+                <div className="card">
+                  <p>Lineage Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
+                  <p>It's been 300 years since the first of the new sentients arose. As the human race hung on by a thread, new beasts of consciousness rose from the puddles, the clay deposits, and fruit trees of the world.</p>
+                </div>
+              </div>
+            </div>
+            <div className="row equal">
+              <div className="col-md-12">
+                <h2>Many decisions, one world</h2>
+              </div>
+              <div className="col-md-8">
+                <img src={InheritanceDiagram} />
+              </div>
+              <div className="col-md-4 v-center-children">
+                <div className="card">
+                  <p>At each Moment in Time, your decision has the chance to ripple down and affect your descendants.</p>
+                  <p>Just like you, your decision may add new lore and art to your descendants, and you may receive new lore and art from your ancestors.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -96,22 +121,18 @@ const Home = () => {
       {/* <div className="slider">
         <div className="slider-row"></div>
       </div> */}
-      <div className="divider">
-        <div className="content">
-          <hr />
-        </div>
-      </div>
 
       <div className="section section--roadmap" id="roadmap">
         <div className="content">
 			    <div className="container-fluid">
-            <div className="row">
+            <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
                 <h2 className="text--center">Lineage Roadmap</h2>
               </div>
             </div>
+              {/* <img src={MoonMonkeyCathedral} alt=""/> */}
 
-            <div className="row">
+            <div className="row equal">
             
               <div className="col-md-6">
                 <div className="card-wrapper">
@@ -123,44 +144,31 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
+                
                 <div className="card-wrapper">
                   <div className="card">
                     <div className="number">2</div>
-                    <div className="content-chunk">
-                      <h4>List on solana marketplaces</h4>
-                      <p>List on MagicEden, and partner with MagicEden launch.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-wrapper card-wrapper--special">
-                  <div className="card">
-                    <div className="number">3</div>
                     <div className="content-chunk">
                       <h4>Lineage Moments in Time begin</h4>
                       <p>One Moment In Time every week, for 7 weeks. Sculpt your history, and your crest.</p>
                     </div>
                   </div>
                 </div>
-              </div>
-            
-              <div className="col-md-6">
-                <img src={ArtificerForest} alt=""/>
-              </div>
-
-            </div>
-            <div className="row">
-            
-              <div className="col-sm-hidden col-md-6">
-                <img src={MoonMonkeyCathedral} alt=""/>
-              </div>
-
-              <div className="col-md-6">
+                <div className="card-wrapper">
+                  <div className="card">
+                    <div className="number">3</div>
+                    <div className="content-chunk">
+                      <h4>Showcase Authors and Narrators</h4>
+                      <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community.</p>
+                    </div>
+                  </div>
+                </div>
                 <div className="card-wrapper">
                   <div className="card">
                     <div className="number">4</div>
                     <div className="content-chunk">
-                      <h4>Lineage Gifts</h4>
-                      <p>We've got IRL surprise gifts in store for all crest holders. Get excited, these will be just as high quality as the NFTs themselves.</p>
+                      <h4>Profile Pictures</h4>
+                      <p>An 8000 piece collection, 50% of the collection reserved for OG crest holders.</p>
                     </div>
                   </div>
                 </div>
@@ -168,86 +176,26 @@ const Home = () => {
                   <div className="card">
                     <div className="number">5</div>
                     <div className="content-chunk">
-                      <h4>Launch Merch store</h4>
-                      <p>Rep the community and flex on the normies by printing your crest onto bento boxes, your underwear… and maybe hoodies and hats too.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-wrapper">
-                  <div className="card">
-                    <div className="number">6</div>
-                    <div className="content-chunk">
-                      <h4>Launch Twitter Banner Creator</h4>
-                      <p>Show off your non-PFP NFT through banners for discord and twitter.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div className="row">
-            
-              <div className="col-md-6">
-                <div className="card-wrapper">
-                  <div className="card">
-                    <div className="number">7</div>
-                    <div className="content-chunk">
-                      <h4>The Hunt Begins</h4>
-                      <p>Solve riddles and follow clues that span reality and the metaverse for tangible rewards.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-wrapper">
-                  <div className="card">
-                    <div className="number">8</div>
-                    <div className="content-chunk">
-                      <h4>Showcase Authors and Narrators</h4>
-                      <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-wrapper card-wrapper--special">
-                  <div className="card">
-                    <div className="number">9</div>
-                    <div className="content-chunk">
-                      <h4>Profile Pictures</h4>
-                      <p>An 8000 piece collection, 50% of the collection reserved for OG crest holders.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div className="col-md-6">
-                <img src={FrogFamily} alt=""/>
-              </div>
-
-            </div>
-            <div className="row">
-            
-              <div className="col-md-offset-3 col-md-6">
-                <div className="card-wrapper card-wrapper--two-digit">
-                  <div className="card">
-                    <div className="number">10</div>
-                    <div className="content-chunk">
                       <h4>Further Development</h4>
                       <p>There’s more but it’s still in the planning stage… stay tuned!</p>
                     </div>
                   </div>
                 </div>
               </div>
-
+            
+              <div className="col-md-6 bg-moon-monkey"></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="divider">
+      {/* <div className="divider">
         <div className="content">
           <hr />
         </div>
-      </div>
+      </div> */}
 
-      <div className="section section--races" id="races">
+      {/* <div className="section section--races" id="races">
         <div className="content">
 			    <div className="container-fluid">
             <div className="row">
@@ -283,7 +231,7 @@ const Home = () => {
         <div className="content">
           <hr />
         </div>
-      </div>
+      </div> */}
 
       <div className="section" id="team">
         <div className="content">
@@ -329,7 +277,7 @@ const Home = () => {
                   <img src={MichaelPortrait} alt="Michael"/>
                   <div className="content-chunk">
                     <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
-                    <p>2,000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP.</p>
+                    <p>2,000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP Inc.</p>
                     <div className="socials">
                       <a className="link--social" target="_blank" href="https://www.linkedin.com/in/michaelgguo/"><FaLinkedin /></a>
                       {/* <a className="link--social" target="_blank" href="#"><FaTwitter /></a> */}
