@@ -410,6 +410,9 @@ hr:after {
   padding-bottom: 10rem;
   background-color: $background-secondary;
   &--about {
+    img {
+      margin-top: 4rem;
+    }
     .card {
       width: 100%;
       padding: 2rem 4rem;
@@ -739,7 +742,7 @@ $speed: 50s;
 }
 
 .bg-moon-monkey {
-  min-height: 20rem;
+  min-height: 40rem;
   background: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -748,9 +751,13 @@ $speed: 50s;
       no-repeat;
   background-position: center;
   background-size: cover;
-  // clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
-  // clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
-  // clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+}
+
+
+@media (max-width: $width-sm) {
+  .bg-moon-monkey {
+    margin: 4rem 1.6rem;
+  }
 }
 
 @media (min-width: $width-sm) {

@@ -81,35 +81,34 @@ const Home = () => {
               <div className="col-md-12">
                 <h2>Own your family, write your history</h2>
                 <p>Decisions you make in Lineage will affect the history of your family forever and will appear as changes on your crest.</p>
-                <br />
                 <img src={DecisionsDiagram} />
               </div>
             </div>
             <div className="row equal margin-bottom-6">
               <div className="col-md-12">
                 <h2>300 years, 6 generations</h2>
+                <p>It's been 300 years since the first of the new sentients arose. As the human race hung on by a thread, new beasts of consciousness rose from the puddles, the clay deposits, and fruit trees of the world.</p>
               </div>
-              <div className="col-md-8">
+              <div className="col-md-offset-1 col-md-5">
                 <img src={TreeDiagram} />
               </div>
               <div className="col-md-4 v-center-children">
                 <div className="card">
                   <p>Lineage Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
-                  <p>It's been 300 years since the first of the new sentients arose. As the human race hung on by a thread, new beasts of consciousness rose from the puddles, the clay deposits, and fruit trees of the world.</p>
                 </div>
               </div>
             </div>
             <div className="row equal">
               <div className="col-md-12">
                 <h2>Many decisions, one world</h2>
+                <p>Your decision may add new lore and art to your descendants, and you may receive new lore and art from your ancestors.</p>
               </div>
-              <div className="col-md-8">
+              <div className="col-md-offset-1 col-md-5">
                 <img src={InheritanceDiagram} />
               </div>
               <div className="col-md-4 v-center-children">
                 <div className="card">
                   <p>At each Moment in Time, your decision has the chance to ripple down and affect your descendants.</p>
-                  <p>Just like you, your decision may add new lore and art to your descendants, and you may receive new lore and art from your ancestors.</p>
                 </div>
               </div>
             </div>
@@ -280,7 +279,7 @@ const Home = () => {
             <div className="row">
               <div className="col-sm-12">
                 <h3>Other Party Members</h3>
-                <p>The founders and creatives are just a small part of what makes the Lineage world turn. <Link className="colored" target="_blank">Join the discord</Link> to meet the other amazing members of our team and help shape Lineage to become the universe you envision.</p>
+                <p>The founders and creatives are just a small part of what makes the Lineage world turn. <Link className="colored" target="_blank">Join the discord</Link> to meet the other amazing members of our team and help shape Karth to become the universe you envision.</p>
               </div>
             </div>
             <div className="row">
