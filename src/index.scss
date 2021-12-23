@@ -428,8 +428,8 @@ hr:after {
       no-repeat;
     background-position: center;
     background-size: cover;
-    h2 {
-      color: $font-white;
+    p {
+      color: $font-black;
     }
     img {
       // margin: 6rem auto;
@@ -442,9 +442,15 @@ hr:after {
     }
     .card {
       position: relative;
-      background-color: $background-white;
+      background-color: $background-primary;
       width: 100%;
-      border-left: 3rem $dark-snow solid;
+      border-left: 3rem darken($background-primary, 3%) solid;
+      h4 {
+        color: $font-white;
+      }
+      p {
+        color: $font-grey;
+      }
       .number {
         position: absolute;
         top: calc(50% - 1.5rem);

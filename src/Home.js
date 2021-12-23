@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 
-import Crest1 from './img/crests/crest_1.png';
-import Crest3 from './img/crests/crest_3.png';
+import Crest1 from './img/crests/crest_4.png';
+import Crest2 from './img/crests/crest_5.png';
 
-import DecisionsDiagram from './img/diagrams/decisions.png';
-import TreeDiagram from './img/diagrams/tree.png';
-import InheritanceDiagram from './img/diagrams/inheritance.png';
+import DecisionsDiagram from './img/diagrams/decisions.jpg';
+import TreeDiagram from './img/diagrams/tree.jpg';
+import InheritanceDiagram from './img/diagrams/inheritance.jpg';
 
 import LucasPortrait from './img/portraits/lucas.png';
 import SaqifPortrait from './img/portraits/saqif.png';
@@ -20,7 +20,6 @@ import FrogFamily from './img/scenes/frog_family.png';
 import ArtificerForest from './img/scenes/artificer_forest.png';
 import DemonChanging from './img/scenes/demon_changing-2.png';
 import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
-import Inheritance from './img/animations/inheritance.webm';
 
 import Artificer from './img/races/artificer.jpg';
 import Frog from './img/races/frog.jpg';
@@ -31,13 +30,13 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Home = () => {
-  const inheritanceVideo = useRef();
+  // const inheritanceVideo = useRef();
   const sectionCommunity = useRef();
   const [scrollOffset, setScrollOffset] = useState(0);
   const [sectionCommunityOffset, setSectionCommunityOffset] = useState()
 
   useEffect(() => {
-    if (inheritanceVideo.current) inheritanceVideo.current.play();
+    // if (inheritanceVideo.current) inheritanceVideo.current.play();
     const setOffset = () => {
       setScrollOffset(window.pageYOffset);
       setSectionCommunityOffset(sectionCommunity?.current?.offsetTop);
@@ -71,7 +70,7 @@ const Home = () => {
 
       <div className="section--hero" style={ bgPosition(heroBgX, heroBgY) }>
         <div className="foreground" style={ bgPosition(heroFgX, heroFgY) }></div>
-        <img src={Crest3} alt="family crest"/>
+        <img src={Crest1} alt="family crest"/>
         <p><span className="logo">Lineage</span> is an experiment in interactive and collaborative world-building using NFTs</p>
       </div>
 
@@ -126,8 +125,9 @@ const Home = () => {
         <div className="content">
 			    <div className="container-fluid">
             <div className="row margin-bottom-6">
-              <div className="col-md-offset-3 col-md-6">
+              <div className="col-md-offset-0 col-md-12">
                 <h2 className="text--center">Lineage Roadmap</h2>
+                <p>CRESTS represent your heritage, the role in history that you and your family play. Lineage is a project where we uncover 300 years of lore for 8 races across all of Kharth. Lore can be discovered, shaped, or told.</p>
               </div>
             </div>
               {/* <img src={MoonMonkeyCathedral} alt=""/> */}
@@ -139,8 +139,8 @@ const Home = () => {
                   <div className="card">
                     <div className="number">1</div>
                     <div className="content-chunk">
-                      <h4>Mint your crest</h4>
-                      <p>Discovering your place in history means first discovering your own family crest.</p>
+                      <h4>Discover Your Family</h4>
+                      <p>The establishment of the families of Kharth, a series of 4000 CRESTS spanning three hundred years and eight races. Each CREST represents a family, and is the seed from which stories set in the land of Kharth sprout.</p>
                     </div>
                   </div>
                 </div>
@@ -149,8 +149,8 @@ const Home = () => {
                   <div className="card">
                     <div className="number">2</div>
                     <div className="content-chunk">
-                      <h4>Lineage Moments in Time begin</h4>
-                      <p>One Moment In Time every week, for 7 weeks. Sculpt your history, and your crest.</p>
+                      <h4>Shape Your History</h4>
+                      <p>Moments where Kharthian families with CRESTS make decisions at inflection points in their tale. A decision during a Moment will be irrevocably seared into your family’s history. As a Kharthian family’s history changes, so will their CREST.</p>
                     </div>
                   </div>
                 </div>
@@ -158,17 +158,8 @@ const Home = () => {
                   <div className="card">
                     <div className="number">3</div>
                     <div className="content-chunk">
-                      <h4>Showcase Authors and Narrators</h4>
-                      <p>We have stories and lore professionally narrated for the community, and run auctions where 100% of funds go to charity and back to the community.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-wrapper">
-                  <div className="card">
-                    <div className="number">4</div>
-                    <div className="content-chunk">
-                      <h4>Profile Pictures</h4>
-                      <p>An 8000 piece collection, 50% of the collection reserved for OG crest holders.</p>
+                      <h4>Find Truth In Stories</h4>
+                      <p>Wordspinners weave stories and Mesmers capture your mind’s eye, permanently chronicling the tales of the most renowned and notorious of families. Tales that reach the furthest corners of Kharth become EPICS, transforming from rumor or story to accepted truth.</p>
                     </div>
                   </div>
                 </div>
@@ -176,8 +167,8 @@ const Home = () => {
                   <div className="card">
                     <div className="number">5</div>
                     <div className="content-chunk">
-                      <h4>Further Development</h4>
-                      <p>There’s more but it’s still in the planning stage… stay tuned!</p>
+                      <h4>Expand Kharthian Borders</h4>
+                      <p>Pursuit of the unknown. Few have traveled the Osmerian seas, and fewer still have investigated the ancient murals buried  beneath the Cinderkeep Ruins. Who are the individuals that comprise each family? How do the EPICS spread around Kharth affect truth, and Kharthian societies? There’s still much to do. </p>
                     </div>
                   </div>
                 </div>
@@ -411,7 +402,7 @@ const Home = () => {
               <br/>
             </div>
             <div className="col-sm-6">
-              <img src={Crest1} alt="family crest 3" className="crest"/>
+              <img src={Crest2} alt="family crest" className="crest"/>
             </div>
           </div>
         </div>
