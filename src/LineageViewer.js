@@ -1,47 +1,60 @@
-import React, { useEffect } from "react";
-import { useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Tree from "react-d3-tree";
 
 import sampleData from "./data/sample-data.json";
 import useNavbarScrollPrevention from "./hooks/useMakeNavbarUnscrollable";
+
+const ethers = require("ethers");
 
 const containerStyles = {
   width: "100vw",
   height: "100vh",
 };
 
-// require("dotenv").config({ path: "../../lineage/.env" });
-// const cliArgs = process.argv.slice(2);
+const API_URL = process.env.API_URL;
+let PUBLIC_KEY;
+let PRIVATE_KEY;
 
-// const ethers = require("ethers");
+if (API_URL.includes("localhost")) {
+  PUBLIC_KEY = process.env.LOCALHOST_PUBLIC_KEY;
+  PRIVATE_KEY = process.env.LOCALHOST_PRIVATE_KEY;
+} else {
+  PUBLIC_KEY = process.env.PUBLIC_KEY;
+  PRIVATE_KEY = process.env.PRIVATE_KEY;
+}
 
-// const API_URL = process.env.API_URL;
-// let PUBLIC_KEY;
-// let PRIVATE_KEY;
+const LATEST_CONTRACT_ADDRESS = process.env.LATEST_CONTRACT_ADDRESS;
 
-// if (API_URL.includes("localhost")) {
-//   PUBLIC_KEY = process.env.LOCALHOST_PUBLIC_KEY;
-//   PRIVATE_KEY = process.env.LOCALHOST_PRIVATE_KEY;
-// } else {
-//   PUBLIC_KEY = process.env.PUBLIC_KEY;
-//   PRIVATE_KEY = process.env.PRIVATE_KEY;
-// }
+const useSmartContract = () => {
+  // Improve hook so that it updates the connected signer for the contract when the signer changes
+  let contract;
+  try {
+    contract = require("./artifacts/contracts/MyNFT.sol/MyNFT.json");
+  } catch (e) {
+    console.error(
+      "Lucas symlinked the lineage contract repo's deployment artifacts into this " +
+        "repo for testing. If you're seeing this it's because you need to " +
+        "`ln -s ~/path/to/contract/repo/artifacts/ artifacts`",
+      e
+    );
+    return [null];
+  }
 
-// const LATEST_CONTRACT_ADDRESS = process.env.LATEST_CONTRACT_ADDRESS;
-// // test
-// const contract = require("../../lineage/artifacts/contracts/MyNFT.sol/MyNFT.json");
+  // Ethers setup
+  const provider = new ethers.providers.JsonRpcProvider();
+  const signer = provider.getSigner();
+  const nftContract = new ethers.Contract(
+    LATEST_CONTRACT_ADDRESS,
+    contract.abi,
+    provider
+  );
 
-// // Ethers setup
-// const provider = new ethers.providers.JsonRpcProvider();
-// const signer = provider.getSigner();
-// const nftContract = new ethers.Contract(
-//   LATEST_CONTRACT_ADDRESS,
-//   contract.abi,
-//   provider
-// );
-
-// // Set the default signer for all functions that write to the network
-// const nftContractWithSigner = nftContract.connect(signer);
+  // Set the default signer for all functions that write to the network
+  const nftContractWithSigner = nftContract.connect(signer);
+  return [nftContractWithSigner];
+};
+// load the entire set of NFT data from the
+const getNftDag = () => {};
 
 const useCenteredTree = () => {
   const [translate, setTranslate] = useState({ x: 0, y: 0 });
@@ -83,10 +96,17 @@ const LineageViewer = () => {
   const [translate, containerRef] = useCenteredTree();
   const nodeSize = { x: 200, y: 200 };
   const foreignObjectProps = { width: nodeSize.x, height: nodeSize.y, x: 20 };
+  const [contractWithSigner] = useSmartContract();
+
+  // log calls to get token URI
+  useEffect(async () => {
+    await contractWithSigner.setBaseURI("https://lineagenft.com/");
+    console.log(`token uri is ${await contractWithSigner.tokenURI(1)}`);
+  }, []);
 
   return (
     <>
-      <div style={{ "background-color": "#fffcf6" }}>
+      <div style={{ backgroundColor: "#fffcf6" }}>
         <div style={containerStyles} ref={containerRef}>
           <Tree
             data={sampleData}

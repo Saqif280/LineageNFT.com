@@ -11,6 +11,7 @@ import HomeV2 from "./HomeV2";
 import WhitePaper from "./WhitePaper";
 import TermsOfService from "./TermsOfService";
 import LineageViewer from "./LineageViewer";
+import BasicErrorBoundary from "./BasicErrorBoundary";
 
 const App = () => {
   return (
@@ -25,7 +26,9 @@ const App = () => {
             <HomeV2 />
           </Route>
           <Route exact path="/lineage-viewer">
-            <LineageViewer />
+            <BasicErrorBoundary>
+              <LineageViewer />
+            </BasicErrorBoundary>
           </Route>
           <Route path="/white_paper">
             <WhitePaper />
