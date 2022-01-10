@@ -4,6 +4,9 @@ import Tree from "react-d3-tree";
 import useCenteredTree from "./hooks/useCenteredTree";
 import useNavbarScrollPrevention from "./hooks/useNavbarScrollPrevention";
 import useLineageCrestContract from "./hooks/useLineageCrestContract";
+import { Authorized } from "@solana/web3.js";
+
+import "./react-d3-tree-custom.css";
 
 const containerStyles = {
   width: "100vw",
@@ -18,22 +21,47 @@ const renderForeignObjectNode = ({
   nodeDatum,
   toggleNode,
   foreignObjectProps,
-}) => (
-  <g>
-    <circle r={15}></circle>
-    {/* `foreignObject` requires width & height to be explicitly set. */}
-    <foreignObject {...foreignObjectProps}>
-      <div style={{ border: "1px solid black", backgroundColor: "#dedede" }}>
-        <h3 style={{ textAlign: "center" }}>{nodeDatum.name}</h3>
-        {nodeDatum.children && (
+}) => {
+  // console.log(nodeDatum);
+  return (
+    <g>
+      {/* `foreignObject` requires width & height to be explicitly set. */}
+      <foreignObject
+        {...foreignObjectProps}
+        style={{
+          border: "1px solid black",
+          background: "#fffcf6",
+        }}
+      >
+        <img
+          width="300px"
+          height="300px"
+          src="https://lineage-nft-test.s3.us-west-2.amazonaws.com/nft-data/nft-components/nft_1.png"
+        />
+        <div
+          style={{
+            background: "#fffcf6",
+            display: "inline-block",
+            margin: "8px 8px 8px 0",
+            verticalAlign: "top",
+          }}
+        >
+          <h3 style={{ marginRight: "auto" }}>{nodeDatum.name}</h3>
+          <ul>
+            {Object.entries(nodeDatum.attributes).map(([k, v]) => (
+              <li>{v}</li>
+            ))}
+          </ul>
+          {/* {nodeDatum.children && (
           <button style={{ width: "100%" }} onClick={toggleNode}>
             {nodeDatum.__rd3t.collapsed ? "Expand" : "Collapse"}
           </button>
-        )}
-      </div>
-    </foreignObject>
-  </g>
-);
+        )} */}
+        </div>
+      </foreignObject>
+    </g>
+  );
+};
 
 const toLoreString = (i) => `TestModifier${i}`;
 
@@ -44,14 +72,37 @@ const crestLoreAsAttributes = (crestLore) => {
   }));
 };
 
+const getDynamicPathClass = ({ source, target }, orientation) => {
+  if (!target.children) {
+    // Target node has no children -> this link leads to a leaf node.
+    return "link__to-leaf";
+  } else if (source.name === "root") {
+    return "link__invisible";
+  }
+
+  // Style it as a link connecting two branch nodes by default.
+  return "link__to-branch";
+};
+
 const LineageViewer = () => {
   useNavbarScrollPrevention();
-  const [tree, setTree] = useState({});
+  const [tree, setTree] = useState({ name: "root", attributes: {} });
   const [translate, containerRef] = useCenteredTree();
   const [contractWithSigner] = useLineageCrestContract();
 
-  const nodeSize = { x: 200, y: 200 };
-  //   const foreignObjectProps = { width: nodeSize.x, height: nodeSize.y, x: 20 };
+  const nodeSize = { x: 525, y: 300 };
+  const foreignObjectProps = {
+    width: nodeSize.x,
+    height: nodeSize.y,
+    x: -(nodeSize.x / 2),
+    y: -(nodeSize.y / 2),
+  };
+
+  const nodeTypeClassNames = {
+    rootNodeClassName: "node__root",
+    branchNodeClassName: "node__branch",
+    leafNodeClassName: "node__leaf",
+  };
 
   // recursively builds json blob for <Tree />
   const getTree = async (rootTokenId) => ({
@@ -69,6 +120,7 @@ const LineageViewer = () => {
   useEffect(async () => {
     setTree({
       name: "root",
+      attributes: {},
       children: await Promise.all([1, 2, 3, 4, 5, 6, 7, 8].map(getTree)),
     });
   }, []);
@@ -80,10 +132,12 @@ const LineageViewer = () => {
           data={tree}
           translate={translate}
           nodeSize={nodeSize}
-          // renderCustomNodeElement={(rd3tProps) =>
-          //   renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
-          // }
+          renderCustomNodeElement={(rd3tProps) =>
+            renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
+          }
           orientation="vertical"
+          pathFunc={getDynamicPathClass}
+          {...nodeTypeClassNames}
         />
       </div>
     </div>
