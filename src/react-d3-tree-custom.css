@@ -6,6 +6,39 @@
   display: none;
 }
 
+.zoom {
+  animation: zoom-in 0.4s forwards;
+}
+
+foreignObject {
+  animation: zoom-out 0.4s;
+}
+
+.no-animation {
+  animation: none;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(3);
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(3);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* example classes to select nodes */
 .node__root > circle {
   fill: red;
 }
@@ -16,5 +49,4 @@
 
 .node__leaf > circle {
   fill: green;
-  /* Let's also make the radius of leaf nodes larger */
 }

@@ -13,21 +13,37 @@ const containerStyles = {
   height: "100vh",
 };
 
-// Here we're using `renderCustomNodeElement` render a component that uses
-// both SVG and HTML tags side-by-side.
-// This is made possible by `foreignObject`, which wraps the HTML tags to
-// allow for them to be injected into the SVG namespace.
+const zoomIn = (e) => {
+  const node = e.currentTarget.parentElement.parentElement;
+  const svgCanvas = node.parentElement;
+
+  // remove and reappend node to fix svg order
+  node.remove();
+  svgCanvas.append(node);
+
+  e.currentTarget.classList.remove("no-animation");
+  e.currentTarget.classList.add("zoom");
+};
+const zoomOut = (e) => {
+  e.currentTarget.classList.remove("zoom");
+};
+
 const renderForeignObjectNode = ({
   nodeDatum,
   toggleNode,
   foreignObjectProps,
+  onNodeMouseOver,
+  onNodeMouseOut,
+  ...rest
 }) => {
-  // console.log(nodeDatum);
   return (
     <g>
       {/* `foreignObject` requires width & height to be explicitly set. */}
       <foreignObject
         {...foreignObjectProps}
+        className="no-animation"
+        onMouseEnter={zoomIn}
+        onMouseLeave={zoomOut}
         style={{
           border: "1px solid black",
           background: "#fffcf6",
@@ -52,11 +68,6 @@ const renderForeignObjectNode = ({
               <li>{v}</li>
             ))}
           </ul>
-          {/* {nodeDatum.children && (
-          <button style={{ width: "100%" }} onClick={toggleNode}>
-            {nodeDatum.__rd3t.collapsed ? "Expand" : "Collapse"}
-          </button>
-        )} */}
         </div>
       </foreignObject>
     </g>
@@ -73,15 +84,19 @@ const crestLoreAsAttributes = (crestLore) => {
 };
 
 const getDynamicPathClass = ({ source, target }, orientation) => {
-  if (!target.children) {
+  if (source.depth === 0) {
+    return "link__invisible";
+  } else if (source.depth === 1) {
+    return "link__gensesis-family";
+  } else if (!target.children) {
     // Target node has no children -> this link leads to a leaf node.
     return "link__to-leaf";
-  } else if (source.name === "root") {
-    return "link__invisible";
-  }
+  } // Style it as a link connecting two branch nodes by default.
+  else return "link__to-branch";
+};
 
-  // Style it as a link connecting two branch nodes by default.
-  return "link__to-branch";
+const getCustomPath = ({ source, target }, orientation) => {
+  return `M${source.x},${source.y}L${target.x},${target.y}`;
 };
 
 const LineageViewer = () => {
@@ -99,7 +114,7 @@ const LineageViewer = () => {
   };
 
   const nodeTypeClassNames = {
-    rootNodeClassName: "node__root",
+    rootNodeClassName: "node node__root",
     branchNodeClassName: "node__branch",
     leafNodeClassName: "node__leaf",
   };
@@ -131,12 +146,19 @@ const LineageViewer = () => {
         <Tree
           data={tree}
           translate={translate}
-          nodeSize={nodeSize}
+          nodeSize={{ x: nodeSize.x * 1.5, y: nodeSize.y * 1.5 }}
           renderCustomNodeElement={(rd3tProps) =>
             renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
           }
           orientation="vertical"
-          pathFunc={getDynamicPathClass}
+          // pathFunc={getCustomPath}
+          pathClassFunc={getDynamicPathClass}
+          onNodeMouseOver={(nodeDatum, e) => {
+            console.log(nodeDatum);
+          }}
+          onNodeMouseOut={(nodeDatum, e) => {
+            console.log(nodeDatum);
+          }}
           {...nodeTypeClassNames}
         />
       </div>
