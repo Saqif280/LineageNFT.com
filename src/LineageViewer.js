@@ -115,7 +115,7 @@ const LineageViewer = () => {
       attributes: {},
       children: await Promise.all([1, 2, 3, 4, 5, 6, 7, 8].map(getTree)),
     });
-  }, [walletConnIsLoading, getTree, setTree]);
+  }, [walletConnIsLoading]);
 
   return (
     <div style={{ backgroundColor: "#fffcf6" }}>
