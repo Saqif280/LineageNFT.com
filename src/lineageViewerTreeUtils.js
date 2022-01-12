@@ -20,18 +20,18 @@ export const renderForeignObjectNode = ({
   nodeDatum,
   toggleNode,
   foreignObjectProps,
-  onNodeMouseOver,
-  onNodeMouseOut,
-  ...rest
+  generateRef,
 }) => {
   return (
     <g>
       {/* `foreignObject` requires width & height to be explicitly set. */}
       <foreignObject
         {...foreignObjectProps}
+        // ref={refGenerator(nodeDatum)}
         className="no-animation"
         onMouseEnter={zoomIn}
         onMouseLeave={zoomOut}
+        ref={generateRef(nodeDatum)}
         style={{
           border: "1px solid black",
           background: "#fffcf6",

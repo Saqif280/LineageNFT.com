@@ -51,9 +51,18 @@ const LineageViewer = () => {
 
   const [ownedTokens, setOwnedTokens] = useState([]);
 
+  const refTracker = {};
+  const generateRef = (nodeDatum) => {
+    refTracker[nodeDatum.name] = React.createRef();
+    return refTracker[nodeDatum.name];
+  };
+
   useEffect(() => {
-    console.log(ownedTokens);
-  }, [ownedTokens]);
+    // check our generated refs
+    new Promise((resolve, reject) => {
+      setTimeout(resolve, 5000);
+    }).then(() => console.log(refTracker));
+  }, []);
 
   useEffect(() => {
     if (walletConnIsLoading) {
@@ -83,11 +92,14 @@ const LineageViewer = () => {
   // recursively builds json blob for <Tree />
   const getTree = async (rootTokenId) => ({
     name: `Token ${String(rootTokenId).padStart(4, "0")}`,
+    tokenId: rootTokenId,
     attributes: crestLoreAsAttributes(
       await contractWithSigner.getCrestLore(rootTokenId)
     ),
     children: await Promise.all(
-      (await contractWithSigner.getChildren(rootTokenId)).map(getTree)
+      (await contractWithSigner.getChildren(rootTokenId))
+        .map((bigNumber) => bigNumber.toNumber())
+        .map(getTree)
     ),
   });
 
@@ -113,17 +125,15 @@ const LineageViewer = () => {
           translate={translate}
           nodeSize={{ x: nodeSize.x * 1.5, y: nodeSize.y * 1.5 }}
           renderCustomNodeElement={(rd3tProps) =>
-            renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
+            renderForeignObjectNode({
+              ...rd3tProps,
+              foreignObjectProps,
+              generateRef,
+            })
           }
           orientation="vertical"
           // pathFunc={getCustomPath}
           pathClassFunc={getDynamicPathClass}
-          onNodeMouseOver={(nodeDatum, e) => {
-            console.log(nodeDatum);
-          }}
-          onNodeMouseOut={(nodeDatum, e) => {
-            console.log(nodeDatum);
-          }}
           {...nodeTypeClassNames}
         />
       </div>
