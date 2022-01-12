@@ -58,7 +58,6 @@ const useLineageCrestContract = () => {
         const accounts = await browserProvider.request({
           method: "eth_requestAccounts",
         });
-        console.log(accounts);
         const provider = new ethers.providers.Web3Provider(
           browserProvider,
           "any"

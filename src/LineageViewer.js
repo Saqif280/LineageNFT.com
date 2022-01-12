@@ -8,6 +8,7 @@ import {
   renderForeignObjectNode,
   getDynamicPathClass,
 } from "./lineageViewerTreeUtils";
+import { partial, range } from "lodash";
 
 import "./react-d3-tree-custom.css";
 import useBrowserWallet from "./hooks/useBrowserWallet";
@@ -47,6 +48,37 @@ const LineageViewer = () => {
     branchNodeClassName: "node__branch",
     leafNodeClassName: "node__leaf",
   };
+
+  const [ownedTokens, setOwnedTokens] = useState([]);
+
+  useEffect(() => {
+    console.log(ownedTokens);
+  }, [ownedTokens]);
+
+  useEffect(() => {
+    if (walletConnIsLoading) {
+      return;
+    }
+
+    const fetchUserTokens = async () => {
+      const currentAddress = signer.getAddress();
+      const getNthTokenForCurrentUser = partial(
+        contractWithSigner.tokenOfOwnerByIndex,
+        signer.getAddress()
+      );
+
+      const balance = await contractWithSigner.balanceOf(currentAddress);
+      const tokenIds = (
+        await Promise.all(
+          range(0, balance).map((x) => getNthTokenForCurrentUser(x))
+        )
+      ).map((bigNumber) => bigNumber.toNumber());
+
+      setOwnedTokens(tokenIds);
+    };
+
+    fetchUserTokens();
+  }, [walletConnIsLoading, contractWithSigner, signer]);
 
   // recursively builds json blob for <Tree />
   const getTree = async (rootTokenId) => ({
