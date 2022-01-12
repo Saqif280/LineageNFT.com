@@ -55,7 +55,10 @@ const useLineageCrestContract = () => {
         }
 
         // TODO: I think I'm forcing a connection of a wallet potentially before its necessary!
-        await browserProvider.enable();
+        const accounts = await browserProvider.request({
+          method: "eth_requestAccounts",
+        });
+        console.log(accounts);
         const provider = new ethers.providers.Web3Provider(
           browserProvider,
           "any"

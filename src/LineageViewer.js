@@ -10,6 +10,7 @@ import {
 } from "./lineageViewerTreeUtils";
 
 import "./react-d3-tree-custom.css";
+import useBrowserWallet from "./hooks/useBrowserWallet";
 
 const containerStyles = {
   width: "100vw",
@@ -27,10 +28,11 @@ const crestLoreAsAttributes = (crestLore) => {
 
 const LineageViewer = () => {
   useNavbarScrollPrevention();
+  const [currentAccount, ...rest] = useBrowserWallet();
   const [tree, setTree] = useState({ name: "root", attributes: {} });
   const [translate, containerRef] = useCenteredTree();
   const [contractWithSigner, signer, walletConnIsLoading] =
-    useLineageCrestContract();
+    useLineageCrestContract(currentAccount);
 
   const nodeSize = { x: 525, y: 300 };
   const foreignObjectProps = {
