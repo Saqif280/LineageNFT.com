@@ -1,7 +1,5 @@
-import classNames from 'classnames';
-import { FaDiscord, FaTwitter, FaInstagram, FaMedium } from 'react-icons/fa';
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { HashLink as Link } from 'react-router-hash-link';
+import { FaDiscord, FaTwitter } from "react-icons/fa";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -9,8 +7,13 @@ const Footer = () => {
       <div className="content">
         <div className="container-fluid">
           <div className="col-sm-6">
-            <Link to="/#" className="logo"><h3>Lineage</h3></Link>
-            <p>Lineage is an experiment in interactive and collaborative world-building using NFTs.</p>
+            <Link to="/#" className="logo">
+              <h3>Lineage</h3>
+            </Link>
+            <p>
+              Lineage is an experiment in interactive and collaborative
+              world-building using NFTs.
+            </p>
             <p className="copyright">©2021 Lineage NFT. All rights reserved.</p>
           </div>
           <div className="col-sm-offset-3 col-sm-3">
@@ -20,8 +23,16 @@ const Footer = () => {
               <Link to="/tos#">Terms of Service</Link>
             </div>
             <div className="socials">
-              <a className="link--social" target="_blank"><FaDiscord /></a>
-              <a className="link--social" target="_blank" href="https://twitter.com/lineagenft"><FaTwitter /></a>
+              <a className="link--social" target="#" href="#">
+                <FaDiscord />
+              </a>
+              <a
+                className="link--social"
+                target="#"
+                href="https://twitter.com/lineagenft"
+              >
+                <FaTwitter />
+              </a>
               {/* <a className="link--social" target="_blank" href="https://www.instagram.com/lineagenft/"><FaInstagram /></a> */}
               {/* <a className="link--social" target="_blank" href="https://medium.com/@lineagenft"><FaMedium /></a> */}
             </div>
@@ -30,6 +41,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;
