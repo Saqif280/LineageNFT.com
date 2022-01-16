@@ -1,7 +1,7 @@
 {
-  "name": "lineage-website",
+  "name": "loredao-website",
   "version": "0.1.0",
-  "homepage": "https://lineagenft.com",
+  "homepage": "https://loredao.com",
   "private": true,
   "dependencies": {
     "@solana/wallet-adapter-base": "^0.6.0",

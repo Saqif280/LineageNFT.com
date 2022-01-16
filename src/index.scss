@@ -411,7 +411,7 @@ hr:after {
   background-color: $background-secondary;
   &--about {
     img {
-      margin-top: 4rem;
+      // margin-top: 4rem;
     }
     .card {
       width: 100%;
@@ -685,7 +685,8 @@ $speed: 50s;
   .content-chunk {
     padding: 0.2rem 3.2rem 0.3rem;
     h4 {
-      line-height: 3rem;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
       span.title {
         color: $font-grey-2;
         text-transform: lowercase;
