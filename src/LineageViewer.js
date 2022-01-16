@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import Tree from "react-d3-tree";
+import Tree, { TreeState } from "react-d3-tree";
 
 import useCenteredTree from "./hooks/useCenteredTree";
 import useNavbarScrollPrevention from "./hooks/useNavbarScrollPrevention";
@@ -30,6 +30,7 @@ const crestLoreAsAttributes = (crestLore) => {
 const LineageViewer = () => {
   useNavbarScrollPrevention();
   const [currentAccount, ...rest] = useBrowserWallet();
+  const [translate, containerRef] = useCenteredTree();
   const [tree, setTree] = useState({ name: "root", attributes: {} });
   const [contractWithSigner, signer, walletConnIsLoading] =
     useLineageCrestContract(currentAccount);
@@ -119,36 +120,25 @@ const LineageViewer = () => {
       const matrix = nodes[i].transform.baseVal[0].matrix;
       nodeCoords[i] = { x: matrix.e, y: matrix.f };
     }
-
-    const rootSVGGroup = document.getElementsByClassName("rd3t-g")[0];
-    const rootSVGElement = rootSVGGroup.parentNode;
-    const translate = rootSVGElement.createSVGTransform();
-    const scale = rootSVGElement.createSVGTransform();
-    scale.setScale(1, 1);
-    translate.setTranslate(nodeCoords[20].x, nodeCoords[20].y);
-    rootSVGGroup.transform.baseVal.clear();
-    rootSVGGroup.transform.baseVal.appendItem(scale);
-    rootSVGGroup.transform.baseVal.appendItem(translate);
   }, [tree]);
-
-  const [translate, setTranslate] = useState({ x: 0, y: 0 });
-
-  const translateToNode = useCallback(
-    (coord) => {
-      setTranslate(coord.x, coord.y);
-    },
-    [setTranslate]
-  );
 
   return (
     <>
-      <div style={{ height: "100px" }}> </div>
+      <div style={{ height: "100px" }}></div>
       <div style={{ backgroundColor: "#fffcf6" }}>
         {ownedTokens
           .map((id) => (
             <button
               onClick={() => {
-                setTranslate({ x: 100, y: 100 });
+                console.log(id);
+                const rootSVGGroup =
+                  document.getElementsByClassName("rd3t-g")[0];
+                rootSVGGroup.setAttribute(
+                  "transform",
+                  `scale(1,1) translate(${
+                    -1 * nodeCoords[id].x + translate.x
+                  },${-1 * nodeCoords[id].y + translate.y})`
+                );
               }}
             >
               Token {id}
@@ -156,7 +146,7 @@ const LineageViewer = () => {
           ))
           .slice(0, 5)}
 
-        <div style={containerStyles}>
+        <div style={containerStyles} ref={containerRef}>
           <Tree
             data={tree}
             translate={translate}
