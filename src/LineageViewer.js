@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
 import Tree, { TreeState } from "react-d3-tree";
 
 import useCenteredTree from "./hooks/useCenteredTree";
@@ -109,18 +109,23 @@ const LineageViewer = () => {
     });
   }, [walletConnIsLoading]);
 
-  const nodeCoords = {};
-  useEffect(() => {
+  // okay this shit is not working
+  const nodeCoords = useMemo(() => {
     if (!tree.children) {
-      return;
+      return {};
     }
 
+    const coords = {};
     const nodes = document.getElementsByClassName("rd3t-node");
     for (let i = 0; i < nodes.length; i++) {
       const matrix = nodes[i].transform.baseVal[0].matrix;
-      nodeCoords[i] = { x: matrix.e, y: matrix.f };
+      coords[i] = { x: matrix.e, y: matrix.f };
     }
+    console.log(coords);
+    return coords;
   }, [tree]);
+
+  const [myTranslate, setMyTranslate] = useState({ x: 0, y: 0 });
 
   return (
     <>
@@ -131,14 +136,16 @@ const LineageViewer = () => {
             <button
               onClick={() => {
                 console.log(id);
-                const rootSVGGroup =
-                  document.getElementsByClassName("rd3t-g")[0];
-                rootSVGGroup.setAttribute(
-                  "transform",
-                  `scale(1,1) translate(${
-                    -1 * nodeCoords[id].x + translate.x
-                  },${-1 * nodeCoords[id].y + translate.y})`
-                );
+                console.log(nodeCoords[id]);
+                setMyTranslate({
+                  x: -1 * nodeCoords[id].x + translate.x,
+                  y: -1 * nodeCoords[id].y + translate.y,
+                });
+                // rootSVGGroup.setAttribute(
+                //   "transform",
+                //   `scale(1,1) translate(${
+
+                //   },${})`
               }}
             >
               Token {id}
@@ -149,7 +156,7 @@ const LineageViewer = () => {
         <div style={containerStyles} ref={containerRef}>
           <Tree
             data={tree}
-            translate={translate}
+            translate={myTranslate}
             nodeSize={{ x: nodeSize.x * 1.5, y: nodeSize.y * 1.5 }}
             renderCustomNodeElement={(rd3tProps) =>
               renderForeignObjectNode({
