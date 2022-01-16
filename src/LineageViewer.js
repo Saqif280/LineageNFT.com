@@ -31,7 +31,6 @@ const LineageViewer = () => {
   useNavbarScrollPrevention();
   const [currentAccount, ...rest] = useBrowserWallet();
   const [tree, setTree] = useState({ name: "root", attributes: {} });
-  const [translate, containerRef] = useCenteredTree();
   const [contractWithSigner, signer, walletConnIsLoading] =
     useLineageCrestContract(currentAccount);
 
@@ -58,13 +57,6 @@ const LineageViewer = () => {
   };
 
   useEffect(() => {
-    // check our generated refs
-    new Promise((resolve, reject) => {
-      setTimeout(resolve, 5000);
-    }).then(() => console.log(refTracker));
-  }, []);
-
-  useEffect(() => {
     if (walletConnIsLoading) {
       return;
     }
@@ -89,7 +81,6 @@ const LineageViewer = () => {
     fetchUserTokens();
   }, [walletConnIsLoading, contractWithSigner, signer]);
 
-  // recursively builds json blob for <Tree />
   const getTree = async (rootTokenId) => ({
     name: `Token ${String(rootTokenId).padStart(4, "0")}`,
     tokenId: rootTokenId,
@@ -117,27 +108,74 @@ const LineageViewer = () => {
     });
   }, [walletConnIsLoading]);
 
+  const nodeCoords = {};
+  useEffect(() => {
+    if (!tree.children) {
+      return;
+    }
+
+    const nodes = document.getElementsByClassName("rd3t-node");
+    for (let i = 0; i < nodes.length; i++) {
+      const matrix = nodes[i].transform.baseVal[0].matrix;
+      nodeCoords[i] = { x: matrix.e, y: matrix.f };
+    }
+
+    const rootSVGGroup = document.getElementsByClassName("rd3t-g")[0];
+    const rootSVGElement = rootSVGGroup.parentNode;
+    const translate = rootSVGElement.createSVGTransform();
+    const scale = rootSVGElement.createSVGTransform();
+    scale.setScale(1, 1);
+    translate.setTranslate(nodeCoords[20].x, nodeCoords[20].y);
+    rootSVGGroup.transform.baseVal.clear();
+    rootSVGGroup.transform.baseVal.appendItem(scale);
+    rootSVGGroup.transform.baseVal.appendItem(translate);
+  }, [tree]);
+
+  const [translate, setTranslate] = useState({ x: 0, y: 0 });
+
+  const translateToNode = useCallback(
+    (coord) => {
+      setTranslate(coord.x, coord.y);
+    },
+    [setTranslate]
+  );
+
   return (
-    <div style={{ backgroundColor: "#fffcf6" }}>
-      <div style={containerStyles} ref={containerRef}>
-        <Tree
-          data={tree}
-          translate={translate}
-          nodeSize={{ x: nodeSize.x * 1.5, y: nodeSize.y * 1.5 }}
-          renderCustomNodeElement={(rd3tProps) =>
-            renderForeignObjectNode({
-              ...rd3tProps,
-              foreignObjectProps,
-              generateRef,
-            })
-          }
-          orientation="vertical"
-          // pathFunc={getCustomPath}
-          pathClassFunc={getDynamicPathClass}
-          {...nodeTypeClassNames}
-        />
+    <>
+      <div style={{ height: "100px" }}> </div>
+      <div style={{ backgroundColor: "#fffcf6" }}>
+        {ownedTokens
+          .map((id) => (
+            <button
+              onClick={() => {
+                setTranslate({ x: 100, y: 100 });
+              }}
+            >
+              Token {id}
+            </button>
+          ))
+          .slice(0, 5)}
+
+        <div style={containerStyles}>
+          <Tree
+            data={tree}
+            translate={translate}
+            nodeSize={{ x: nodeSize.x * 1.5, y: nodeSize.y * 1.5 }}
+            renderCustomNodeElement={(rd3tProps) =>
+              renderForeignObjectNode({
+                ...rd3tProps,
+                foreignObjectProps,
+                generateRef,
+              })
+            }
+            orientation="vertical"
+            // pathFunc={getCustomPath}
+            pathClassFunc={getDynamicPathClass}
+            {...nodeTypeClassNames}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

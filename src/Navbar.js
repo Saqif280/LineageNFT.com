@@ -5,8 +5,7 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { HashLink as Link } from "react-router-hash-link";
 import Wallet from "./Wallet.js";
 
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+const useScrollOffset = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
 
   useEffect(() => {
@@ -19,6 +18,12 @@ const Navbar = () => {
     };
   }, []);
 
+  return scrollOffset;
+};
+
+const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const scrollOffset = useScrollOffset();
   return (
     <div
       id="navbar"
