@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.93368d88.chunk.css",
-    "main.js": "/static/js/main.c09ce6ed.chunk.js",
-    "main.js.map": "/static/js/main.c09ce6ed.chunk.js.map",
+    "main.js": "/static/js/main.72023608.chunk.js",
+    "main.js.map": "/static/js/main.72023608.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.eb682d10.js",
     "runtime-main.js.map": "/static/js/runtime-main.eb682d10.js.map",
     "static/css/2.e9a48431.chunk.css": "/static/css/2.e9a48431.chunk.css",
@@ -18,6 +18,7 @@
     "static/media/artificer_forest.18b171ac.png": "/static/media/artificer_forest.18b171ac.png",
     "static/media/crest_4.55cc4028.png": "/static/media/crest_4.55cc4028.png",
     "static/media/crest_5.62b48e94.png": "/static/media/crest_5.62b48e94.png",
+    "static/media/crest_6.54264aa3.png": "/static/media/crest_6.54264aa3.png",
     "static/media/decisions.db3c7f10.jpg": "/static/media/decisions.db3c7f10.jpg",
     "static/media/demon_changing-2.320957a0.png": "/static/media/demon_changing-2.320957a0.png",
     "static/media/frog.e8d8f5a0.jpg": "/static/media/frog.e8d8f5a0.jpg",
@@ -41,6 +42,6 @@
     "static/css/2.e9a48431.chunk.css",
     "static/js/2.c9369a2a.chunk.js",
     "static/css/main.93368d88.chunk.css",
-    "static/js/main.c09ce6ed.chunk.js"
+    "static/js/main.72023608.chunk.js"
   ]
 }
