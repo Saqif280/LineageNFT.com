@@ -85,7 +85,7 @@ const Home = () => {
             <div className="row">
               <div className="col-md-offset-3 col-md-6">
                 <h2>How do I get started?</h2>
-                <p>We have tools to make contributing to Kharth and earning LORE straightforward. <Link to="/#" className="colored">Join our discord here</Link> so we can get you started.</p>
+                <p>We have tools to make contributing to Kharth and earning LORE straightforward. <a href="https://discord.gg/FbxxaqVVCU" target="_blank" className="colored">Join our discord here</a> so we can get you started.</p>
               </div>
             </div>
 
