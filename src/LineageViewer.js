@@ -44,7 +44,7 @@ const LineageViewer = () => {
   const [contractWithSigner, signer, walletConnIsLoading] =
     useLineageCrestContract(currentAccount);
 
-  const nodeSize = { x: 525, y: 300 };
+  const nodeSize = { x: 300, y: 300 };
   const foreignObjectProps = {
     width: nodeSize.x,
     height: nodeSize.y,

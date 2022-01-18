@@ -24,13 +24,13 @@ foreignObject {
   }
 
   to {
-    transform: scale(3);
+    transform: scale(1.5);
   }
 }
 
 @keyframes zoom-out {
   from {
-    transform: scale(3);
+    transform: scale(1.5);
   }
 
   to {

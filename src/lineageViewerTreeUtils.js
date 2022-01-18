@@ -32,35 +32,15 @@ export const renderForeignObjectNode = ({
       {/* `foreignObject` requires width & height to be explicitly set. */}
       <foreignObject
         {...foreignObjectProps}
-        // ref={refGenerator(nodeDatum)}
         className="no-animation"
         onMouseEnter={zoomIn}
         onMouseLeave={zoomOut}
-        style={{
-          border: "1px solid black",
-          background: "#fffcf6",
-        }}
       >
         <img
           width="300px"
           height="300px"
           src="https://lineage-nft-test.s3.us-west-2.amazonaws.com/nft-data/nft-components/nft_1.png"
         />
-        <div
-          style={{
-            background: "#fffcf6",
-            display: "inline-block",
-            margin: "8px 8px 8px 0",
-            verticalAlign: "top",
-          }}
-        >
-          <h3 style={{ marginRight: "auto" }}>{nodeDatum.name}</h3>
-          <ul>
-            {Object.entries(nodeDatum.attributes).map(([k, v]) => (
-              <li key={k}>{v}</li>
-            ))}
-          </ul>
-        </div>
       </foreignObject>
     </g>
   );
