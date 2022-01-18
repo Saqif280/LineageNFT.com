@@ -16,11 +16,16 @@ const zoomOut = (e) => {
   e.currentTarget.classList.remove("zoom");
 };
 
+export const nodeTypeClassNames = {
+  rootNodeClassName: "node node__root",
+  branchNodeClassName: "node__branch",
+  leafNodeClassName: "node__leaf",
+};
+
 export const renderForeignObjectNode = ({
   nodeDatum,
   toggleNode,
   foreignObjectProps,
-  generateRef,
 }) => {
   return (
     <g>
@@ -31,7 +36,6 @@ export const renderForeignObjectNode = ({
         className="no-animation"
         onMouseEnter={zoomIn}
         onMouseLeave={zoomOut}
-        ref={generateRef(nodeDatum)}
         style={{
           border: "1px solid black",
           background: "#fffcf6",

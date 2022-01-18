@@ -1,5 +1,11 @@
-import React, { useEffect, useState, useMemo, useCallback } from "react";
-import Tree, { TreeState } from "react-d3-tree";
+import React, {
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+  useRef,
+} from "react";
+import Tree from "react-d3-tree_callback-ref-prop";
 
 import useCenteredTree from "./hooks/useCenteredTree";
 import useNavbarScrollPrevention from "./hooks/useNavbarScrollPrevention";
@@ -7,6 +13,7 @@ import useLineageCrestContract from "./hooks/useLineageCrestContract";
 import {
   renderForeignObjectNode,
   getDynamicPathClass,
+  nodeTypeClassNames,
 } from "./lineageViewerTreeUtils";
 import { partial, range } from "lodash";
 
@@ -29,9 +36,11 @@ const crestLoreAsAttributes = (crestLore) => {
 
 const LineageViewer = () => {
   useNavbarScrollPrevention();
+  const nodeRefs = useRef({});
   const [currentAccount, ...rest] = useBrowserWallet();
   const [translate, containerRef] = useCenteredTree();
   const [tree, setTree] = useState({ name: "root", attributes: {} });
+  const [ownedTokens, setOwnedTokens] = useState([]);
   const [contractWithSigner, signer, walletConnIsLoading] =
     useLineageCrestContract(currentAccount);
 
@@ -41,20 +50,6 @@ const LineageViewer = () => {
     height: nodeSize.y,
     x: -(nodeSize.x / 2),
     y: -(nodeSize.y / 2),
-  };
-
-  const nodeTypeClassNames = {
-    rootNodeClassName: "node node__root",
-    branchNodeClassName: "node__branch",
-    leafNodeClassName: "node__leaf",
-  };
-
-  const [ownedTokens, setOwnedTokens] = useState([]);
-
-  const refTracker = {};
-  const generateRef = (nodeDatum) => {
-    refTracker[nodeDatum.name] = React.createRef();
-    return refTracker[nodeDatum.name];
   };
 
   useEffect(() => {
@@ -82,6 +77,7 @@ const LineageViewer = () => {
     fetchUserTokens();
   }, [walletConnIsLoading, contractWithSigner, signer]);
 
+  // This gets replaced with an api call to localhost:3001/get-nft-data
   const getTree = async (rootTokenId) => ({
     name: `Token ${String(rootTokenId).padStart(4, "0")}`,
     tokenId: rootTokenId,
@@ -109,21 +105,10 @@ const LineageViewer = () => {
     });
   }, [walletConnIsLoading]);
 
-  // okay this shit is not working
-  const nodeCoords = useMemo(() => {
-    if (!tree.children) {
-      return {};
-    }
-
-    const coords = {};
-    const nodes = document.getElementsByClassName("rd3t-node");
-    for (let i = 0; i < nodes.length; i++) {
-      const matrix = nodes[i].transform.baseVal[0].matrix;
-      coords[i] = { x: matrix.e, y: matrix.f };
-    }
-    console.log(coords);
-    return coords;
-  }, [tree]);
+  const toCoord = (element) => {
+    const matrix = element.transform.baseVal[0].matrix;
+    return { x: matrix.e, y: matrix.f };
+  };
 
   const [myTranslate, setMyTranslate] = useState({ x: 0, y: 0 });
 
@@ -135,17 +120,11 @@ const LineageViewer = () => {
           .map((id) => (
             <button
               onClick={() => {
-                console.log(id);
-                console.log(nodeCoords[id]);
+                const name = `Token ${String(id).padStart(4, "0")}`;
                 setMyTranslate({
-                  x: -1 * nodeCoords[id].x + translate.x,
-                  y: -1 * nodeCoords[id].y + translate.y,
+                  x: -1 * toCoord(nodeRefs.current[name]).x + translate.x,
+                  y: -1 * toCoord(nodeRefs.current[name]).y + translate.y,
                 });
-                // rootSVGGroup.setAttribute(
-                //   "transform",
-                //   `scale(1,1) translate(${
-
-                //   },${})`
               }}
             >
               Token {id}
@@ -162,9 +141,11 @@ const LineageViewer = () => {
               renderForeignObjectNode({
                 ...rd3tProps,
                 foreignObjectProps,
-                generateRef,
               })
             }
+            callbackRefForNode={(data, ref) => {
+              nodeRefs.current[data.name] = ref;
+            }}
             orientation="vertical"
             // pathFunc={getCustomPath}
             pathClassFunc={getDynamicPathClass}
