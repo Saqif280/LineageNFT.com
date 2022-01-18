@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="col-sm-offset-3 col-sm-3">
             <div className="navigation">
               <Link to="/#">Home</Link>
-              <Link to="/white_paper#">White Paper</Link>
+              {/* <Link to="/white_paper#">White Paper</Link> */}
               <Link to="/tos#">Terms of Service</Link>
             </div>
             <div className="socials">

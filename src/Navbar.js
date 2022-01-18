@@ -31,11 +31,11 @@ const Navbar = () => {
         <Link to="/#" className="logo">
           <h3>LoreDAO</h3>
         </Link>
-        <Link to="/#about">About</Link>
-        <Link to="/#roadmap">Roadmap</Link>
+        {/* <Link to="/#about">About</Link> */}
+        {/* <Link to="/#roadmap">Roadmap</Link> */}
         {/* <Link to="/#races">Races</Link> */}
-        <Link to="/#team">Team</Link>
-        <Link to="/white_paper#">White Paper</Link>
+        {/* <Link to="/#team">Team</Link> */}
+        {/* <Link to="/white_paper#">White Paper</Link> */}
       </div>
       <div className="right">
         <a
@@ -45,7 +45,7 @@ const Navbar = () => {
         >
           <FaTwitter />
         </a>
-        <a className="button" target="_blank">
+        <a href="https://discord.gg/FbxxaqVVCU" className="button" target="_blank">
           Join the Discord
         </a>
         {/* <Wallet /> */}
