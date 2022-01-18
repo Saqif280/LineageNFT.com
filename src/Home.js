@@ -61,7 +61,7 @@ const Home = () => {
       <div className="section--hero" style={ bgPosition(heroBgX, heroBgY) }>
         <div className="foreground" style={ bgPosition(heroFgX, heroFgY) }></div>
         <img src={Crest1} alt="family crest"/>
-        <p><span className="logo">LoreDAO</span> is a collaboratively built, collectively owned fantasy world DAO</p>
+        <p><span className="logo">LoreDAO</span> is a community creating a fantasy world with distributed ownership</p>
       </div>
 
       <div className="section section--about" id="about">
