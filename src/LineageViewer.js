@@ -21,7 +21,12 @@ import "./react-d3-tree-custom.css";
 import useBrowserWallet from "./hooks/useBrowserWallet";
 
 const containerStyles = {
-  width: "100vw",
+  width: "60vw",
+  height: "100vh",
+};
+
+const drawerStyles = {
+  width: "40vw",
   height: "100vh",
 };
 
@@ -34,15 +39,34 @@ const crestLoreAsAttributes = (crestLore) => {
   }));
 };
 
+const toCoord = (element) => {
+  const matrix = element.transform.baseVal[0].matrix;
+  return { x: matrix.e, y: matrix.f };
+};
+
 const LineageViewer = () => {
   useNavbarScrollPrevention();
   const nodeRefs = useRef({});
   const [currentAccount, ...rest] = useBrowserWallet();
   const [translate, containerRef] = useCenteredTree();
-  const [tree, setTree] = useState({ name: "root", attributes: {} });
-  const [ownedTokens, setOwnedTokens] = useState([]);
   const [contractWithSigner, signer, walletConnIsLoading] =
     useLineageCrestContract(currentAccount);
+
+  const [tree, setTree] = useState({ name: "root", attributes: {} });
+  const [ownedTokens, setOwnedTokens] = useState([]);
+  const [currentTokenId, setCurrentTokenId] = useState();
+  const myTranslate = useMemo(() => {
+    if (!currentTokenId) {
+      return { x: 0, y: 0 };
+    }
+
+    return {
+      x: -1 * toCoord(nodeRefs.current[currentTokenId]).x + translate.x,
+      y: -1 * toCoord(nodeRefs.current[currentTokenId]).y + translate.y,
+    };
+  }, [currentTokenId]);
+
+  // const useCallback(() => {}, [])
 
   const nodeSize = { x: 300, y: 300 };
   const foreignObjectProps = {
@@ -105,32 +129,13 @@ const LineageViewer = () => {
     });
   }, [walletConnIsLoading]);
 
-  const toCoord = (element) => {
-    const matrix = element.transform.baseVal[0].matrix;
-    return { x: matrix.e, y: matrix.f };
-  };
-
-  const [myTranslate, setMyTranslate] = useState({ x: 0, y: 0 });
-
   return (
     <>
       <div style={{ height: "100px" }}></div>
       <div style={{ backgroundColor: "#fffcf6" }}>
-        {ownedTokens
-          .map((id) => (
-            <button
-              onClick={() => {
-                const name = `Token ${String(id).padStart(4, "0")}`;
-                setMyTranslate({
-                  x: -1 * toCoord(nodeRefs.current[name]).x + translate.x,
-                  y: -1 * toCoord(nodeRefs.current[name]).y + translate.y,
-                });
-              }}
-            >
-              Token {id}
-            </button>
-          ))
-          .slice(0, 5)}
+        {ownedTokens.map((id) => (
+          <button onClick={() => setCurrentTokenId(id)}>Token {id}</button>
+        ))}
 
         <div style={containerStyles} ref={containerRef}>
           <Tree
@@ -144,7 +149,7 @@ const LineageViewer = () => {
               })
             }
             callbackRefForNode={(data, ref) => {
-              nodeRefs.current[data.name] = ref;
+              nodeRefs.current[data.tokenId] = ref;
             }}
             orientation="vertical"
             // pathFunc={getCustomPath}
@@ -152,6 +157,7 @@ const LineageViewer = () => {
             {...nodeTypeClassNames}
           />
         </div>
+        <div style={drawerStyles}></div>
       </div>
     </>
   );
