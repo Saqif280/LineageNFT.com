@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.dbf24760.chunk.css",
-    "main.js": "/static/js/main.8672e0a2.chunk.js",
-    "main.js.map": "/static/js/main.8672e0a2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.eb682d10.js",
-    "runtime-main.js.map": "/static/js/runtime-main.eb682d10.js.map",
+    "main.css": "/static/css/main.4803a851.chunk.css",
+    "main.js": "/static/js/main.c4265418.chunk.js",
+    "main.js.map": "/static/js/main.c4265418.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3889f4a4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3889f4a4.js.map",
     "static/css/2.e9a48431.chunk.css": "/static/css/2.e9a48431.chunk.css",
-    "static/js/2.c9369a2a.chunk.js": "/static/js/2.c9369a2a.chunk.js",
-    "static/js/2.c9369a2a.chunk.js.map": "/static/js/2.c9369a2a.chunk.js.map",
-    "static/js/3.a3b5dfd0.chunk.js": "/static/js/3.a3b5dfd0.chunk.js",
-    "static/js/3.a3b5dfd0.chunk.js.map": "/static/js/3.a3b5dfd0.chunk.js.map",
+    "static/js/2.f21d330b.chunk.js": "/static/js/2.f21d330b.chunk.js",
+    "static/js/2.f21d330b.chunk.js.map": "/static/js/2.f21d330b.chunk.js.map",
+    "static/js/3.765c356e.chunk.js": "/static/js/3.765c356e.chunk.js",
+    "static/js/3.765c356e.chunk.js.map": "/static/js/3.765c356e.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e9a48431.chunk.css.map": "/static/css/2.e9a48431.chunk.css.map",
-    "static/css/main.dbf24760.chunk.css.map": "/static/css/main.dbf24760.chunk.css.map",
-    "static/js/2.c9369a2a.chunk.js.LICENSE.txt": "/static/js/2.c9369a2a.chunk.js.LICENSE.txt",
+    "static/css/main.4803a851.chunk.css.map": "/static/css/main.4803a851.chunk.css.map",
+    "static/js/2.f21d330b.chunk.js.LICENSE.txt": "/static/js/2.f21d330b.chunk.js.LICENSE.txt",
     "static/media/artificer.369f8ba2.jpg": "/static/media/artificer.369f8ba2.jpg",
     "static/media/artificer_forest.18b171ac.png": "/static/media/artificer_forest.18b171ac.png",
     "static/media/crest_4.55cc4028.png": "/static/media/crest_4.55cc4028.png",
@@ -38,10 +38,10 @@
     "static/media/tree.c2b28834.jpg": "/static/media/tree.c2b28834.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eb682d10.js",
+    "static/js/runtime-main.3889f4a4.js",
     "static/css/2.e9a48431.chunk.css",
-    "static/js/2.c9369a2a.chunk.js",
-    "static/css/main.dbf24760.chunk.css",
-    "static/js/main.8672e0a2.chunk.js"
+    "static/js/2.f21d330b.chunk.js",
+    "static/css/main.4803a851.chunk.css",
+    "static/js/main.c4265418.chunk.js"
   ]
 }
