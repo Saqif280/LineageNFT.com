@@ -19,9 +19,10 @@ import { partial, range } from "lodash";
 
 import "./react-d3-tree-custom.css";
 import useBrowserWallet from "./hooks/useBrowserWallet";
+import TokenPicker from "./TokenPicker";
 
 const containerStyles = {
-  width: "60vw",
+  width: "100vw",
   height: "100vh",
 };
 
@@ -132,11 +133,7 @@ const LineageViewer = () => {
   return (
     <>
       <div style={{ height: "100px" }}></div>
-      <div style={{ backgroundColor: "#fffcf6" }}>
-        {ownedTokens.map((id) => (
-          <button onClick={() => setCurrentTokenId(id)}>Token {id}</button>
-        ))}
-
+      <div style={{ backgroundColor: "#fffcf6", display: "flex" }}>
         <div style={containerStyles} ref={containerRef}>
           <Tree
             data={tree}
@@ -157,7 +154,11 @@ const LineageViewer = () => {
             {...nodeTypeClassNames}
           />
         </div>
-        <div style={drawerStyles}></div>
+        <TokenPicker
+          tokens={ownedTokens}
+          setCurrentTokenId={setCurrentTokenId}
+        />
+        {/* <div style={drawerStyles}></div> */}
       </div>
     </>
   );
