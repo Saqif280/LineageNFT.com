@@ -7,9 +7,7 @@ import {
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Home from "./Home";
-import HomeV2 from "./HomeV2";
 // import WhitePaper from "./WhitePaper";
-// import TermsOfService from "./TermsOfService";
 import LineageViewer from "./LineageViewer";
 
 const App = () => {
@@ -21,18 +19,11 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/test">
-            <HomeV2 />
-          </Route>
           <Route exact path="/lineage-viewer">
             <LineageViewer />
           </Route>
-          {/* <Route path="/white_paper">
+          {/* <Route path="/whitepaper">
             <WhitePaper />
-          </Route> */}
-          <Route path="/smart_contract"></Route>
-          {/* <Route path="/tos">
-            <TermsOfService />
           </Route> */}
         </Switch>
         <Footer />
