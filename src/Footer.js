@@ -9,15 +9,15 @@ const Footer = () => {
       <div className="content">
         <div className="container-fluid">
           <div className="col-sm-6">
-            <Link to="/#" className="logo"><h3>LoreDAO</h3></Link>
-            <p>LoreDAO is a collaboratively built, collectively owned fantasy world.</p>
-            <p className="copyright">©2021 LoreDAO. All rights reserved.</p>
+            <Link to="/#" className="logo"><h3>Lineage</h3></Link>
+            <p>Lineage is a collaboratively built, collectively owned fantasy world.</p>
+            <p className="copyright">©2021 Lineage. All rights reserved.</p>
           </div>
           <div className="col-sm-offset-3 col-sm-3">
             <div className="navigation">
-              <Link to="/#">Home</Link>
+              {/* <Link to="/#">Home</Link> */}
               {/* <Link to="/white_paper#">White Paper</Link> */}
-              <Link to="/tos#">Terms of Service</Link>
+              {/* <Link to="/tos#">Terms of Service</Link> */}
             </div>
             <div className="socials">
               <a className="link--social" target="_blank"><FaDiscord /></a>

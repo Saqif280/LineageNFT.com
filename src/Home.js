@@ -19,7 +19,7 @@ import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import Team from './Team';
-import Roadmap from './Roadmap';
+import Faq from './Faq';
 
 const Home = () => {
   const sectionCommunity = useRef();
@@ -61,69 +61,16 @@ const Home = () => {
       <div className="section--hero" style={ bgPosition(heroBgX, heroBgY) }>
         <div className="foreground" style={ bgPosition(heroFgX, heroFgY) }></div>
         <img src={Crest1} alt="family crest"/>
-        <p><span className="logo">LoreDAO</span> is a community creating a fantasy world with distributed ownership</p>
+        <p><span className="logo">Lineage</span> is a community creating a fantasy world with distributed ownership</p>
       </div>
 
       <div className="section section--about" id="about">
         <div className="content">
 			    <div className="container-fluid">
 
-            <div className="row">
+            <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
-                <h2>What is LoreDAO?</h2>
-                <p>LoreDAO collectively builds and owns the fantasy world named “Kharth”. Anyone can propose entries for our encyclopedia, write a short story, or create concept art. For every contribution, you get a slice of Kharth, our native token LORE.</p>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-offset-3 col-md-6">
-                <h2>Why own Kharth?</h2>
-                <p>We're not Tolkien, but why own <i>Lord of the Rings</i>? Why own <i>any</i> intellectual property?</p>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-offset-3 col-md-6">
-                <h2>How do I get started?</h2>
-                <p>We have tools to make contributing to Kharth and earning LORE straightforward. <a href="https://discord.gg/FbxxaqVVCU" target="_blank" className="colored">Join our discord here</a> so we can get you started.</p>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-offset-3 col-md-6">
-                <h2>What if I'm not a creative?</h2>
-                <p>You can still own part of Kharth and watch the world grow. There's plenty of other ways to contribute. You can  <Link to="/#" className="colored">buy LORE on Uniswap here</Link>.</p>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-offset-3 col-md-6">
-                <h2>What can I do with my LORE?</h2>
-                <p>Anyone can stake LORE on new or underdeveloped ideas to Kharth to earn more LORE. LORE is also used to vote on the direction of the project, and how we use our treasury’s funds.</p>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-offset-3 col-md-6">
-                <h2>Where does our treasury get funds?</h2>
-                <p>To kickstart LoreDAO, we're launching an NFT project of family crests. Each crest has it's own unique lore. The lore of this collection becomes the backbone for stories set in Kharth.</p><p>With our growing IP we can make followup projects to grow our treasury.</p>
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-offset-3 col-md-6">
-                <h2>When is our work finished?</h2>
-                <p>When we are making 3 films a year like Marvel. But even then ...</p>
-              </div>
-            </div>
-            
-            
-            {/* --- */}
-
-
-            {/* <div className="row margin-bottom-6">
-              <div className="col-md-offset-3 col-md-6">
-                <h2>A CREST is your entrance into LoreDAO.</h2>
+                <h2>A CREST is your entrance into Lineage.</h2>
                 <p>Each CREST is a generative art with generative lore - the pieces of your family crest identify significant historical events and details that set you apart from your ancestor crests.</p>
                 <img src={Crest3}/>
               </div>
@@ -132,18 +79,18 @@ const Home = () => {
             <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
                 <h2>Your CREST represents your family’s unique place in its lineage</h2>
-                <p>LoreDAO Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
+                <p>Lineage Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
                 <img src={TreeDiagram} />
               </div>
             </div>
 
             <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
-                <h2>Minting seeds the world with lore and the DAO expands it.</h2>
-                <p>When you mint a LoreDAO CREST, we generate lore for why the represented family diverged from their ancestors. This lore will seed the worldbuilding that the DAO will take on.</p>
+                <h2>Minting seeds the world with lore and the community expands it.</h2>
+                <p>When you mint a Lineage CREST, we generate lore for why the represented family diverged from their ancestors. This lore will seed the worldbuilding that the community can take on.</p>
                 <img src={ArtificerForest} />
               </div>
-            </div> */}
+            </div>
             
           </div>
         </div>
@@ -153,9 +100,9 @@ const Home = () => {
         <div className="slider-row"></div>
       </div> */}
 
-      {/* <Roadmap /> */}
+      <Faq />
 
-      {/* <Team /> */}
+      <Team />
 
       <div className="section section--community"  style={ bgPosition(communityBgX, communityBgY) } ref={sectionCommunity}>
         <div className="content">

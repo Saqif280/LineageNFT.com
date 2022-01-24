@@ -29,12 +29,12 @@ const Navbar = () => {
     >
       <div className="left">
         <Link to="/#" className="logo">
-          <h3>LoreDAO</h3>
+          <h3>Lineage</h3>
         </Link>
         <Link to="/#about">About</Link>
-        {/* <Link to="/#roadmap">Roadmap</Link> */}
+        <Link to="/#faq">FAQ</Link>
         {/* <Link to="/#races">Races</Link> */}
-        {/* <Link to="/#team">Team</Link> */}
+        <Link to="/#team">Team</Link>
         {/* <Link to="/white_paper#">White Paper</Link> */}
       </div>
       <div className="right">

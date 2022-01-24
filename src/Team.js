@@ -63,7 +63,7 @@ const Team = () => {
           <div className="row">
             <div className="col-sm-12">
               <h3>Other Party Members</h3>
-              <p>The founders and creatives are just a small part of what makes the LoreDAO world turn. <Link className="colored" target="_blank">Join the discord</Link> to meet the other amazing members of our team and help shape Karth to become the universe you envision.</p>
+              <p>The founders and creatives are just a small part of what makes the Lineage world turn. <Link className="colored" target="_blank">Join the discord</Link> to meet the other amazing members of our team and help shape Karth to become the universe you envision.</p>
             </div>
           </div>
           <div className="row">
