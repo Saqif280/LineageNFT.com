@@ -4,7 +4,6 @@ import LucasPortrait from './img/portraits/lucas-cropped.png';
 import SaqifPortrait from './img/portraits/saqif-cropped.png';
 import MichaelPortrait from './img/portraits/michael-cropped.png';
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { HashLink as Link } from 'react-router-hash-link';
 
 const Team = () => {
   return (
@@ -60,7 +59,7 @@ const Team = () => {
           <div className="row">
             <div className="col-sm-12">
               <h3>Other Party Members</h3>
-              <p>Shoutout to everyone making Lineage a reality. <Link className="colored" target="_blank">Join the discord</Link> to meet the amazing members of our team.</p>
+              <p>Shoutout to everyone making Lineage a reality. <a href="https://discord.gg/FbxxaqVVCU" target="_blank" className="colored">Join the discord</a> to meet the amazing members of our team.</p>
             </div>
           </div>
           <div className="row">

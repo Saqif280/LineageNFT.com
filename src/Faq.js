@@ -31,7 +31,7 @@ const Faq = () => {
                   <div className="number">2</div>
                   <div className="content-chunk">
                     <h4>Why join Lineage?</h4>
-                    <p>Lineage is a community for D&D players, world builders, and anyone who loves fantasy. You'll love it here if you're a nerd like us. <a href="https://discord.gg/FbxxaqVVCU" className="colored" target="_blank">Join the community</a> to connect with your family line, discover your lore, or contribute art to the worldbuilding.</p>
+                    <p>Lineage is a community for D&D players, world builders, and anyone who loves fantasy. You'll love it here if you're a nerd like us. <a href="https://discord.gg/FbxxaqVVCU" target="_blank" className="colored">Join the community</a> to connect with your family line, discover your lore, or contribute art to the worldbuilding.</p>
                   </div>
                 </div>
               </div>
