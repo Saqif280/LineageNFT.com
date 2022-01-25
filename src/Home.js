@@ -61,7 +61,7 @@ const Home = () => {
       <div className="section--hero" style={ bgPosition(heroBgX, heroBgY) }>
         <div className="foreground" style={ bgPosition(heroFgX, heroFgY) }></div>
         <img src={Crest1} alt="family crest"/>
-        <p><span className="logo">Lineage</span> is a community creating a fantasy world with distributed ownership</p>
+        <p><span className="logo">Lineage</span> is a connected NFT project set in the world of Kharth</p>
       </div>
 
       <div className="section section--about" id="about">
@@ -78,7 +78,7 @@ const Home = () => {
 
             <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
-                <h2>Your CREST represents your family’s unique place in its lineage</h2>
+                <h2>Your CREST represents your family’s unique place in its lineage.</h2>
                 <p>Lineage Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
                 <img src={TreeDiagram} />
               </div>

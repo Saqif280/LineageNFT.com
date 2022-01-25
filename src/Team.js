@@ -12,11 +12,8 @@ const Team = () => {
       <div className="content">
         <div className="container-fluid">
           <div className="row margin-bottom-6">
-            <div className="col-sm-6">
+            <div className="col-sm-12">
               <h2>The Fellowship</h2>
-            </div>
-            <div className="col-sm-6">
-              <p>We're not afraid to dox ourselves &#8212; our founders are committed to seeing Karth come to life and become a one-of-a-kind NFT experience.</p>
             </div>
             <div className="col-sm-4">
               <div className="profile-card">
@@ -63,7 +60,7 @@ const Team = () => {
           <div className="row">
             <div className="col-sm-12">
               <h3>Other Party Members</h3>
-              <p>The founders and creatives are just a small part of what makes the Lineage world turn. <Link className="colored" target="_blank">Join the discord</Link> to meet the other amazing members of our team and help shape Karth to become the universe you envision.</p>
+              <p>Shoutout to everyone making Lineage a reality. <Link className="colored" target="_blank">Join the discord</Link> to meet the amazing members of our team.</p>
             </div>
           </div>
           <div className="row">

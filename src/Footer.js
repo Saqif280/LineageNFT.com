@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="container-fluid">
           <div className="col-sm-6">
             <Link to="/#" className="logo"><h3>Lineage</h3></Link>
-            <p>Lineage is a collaboratively built, collectively owned fantasy world.</p>
+            <p>Lineage is a connected NFT project set in the world of Kharth</p>
             <p className="copyright">©2021 Lineage. All rights reserved.</p>
           </div>
           <div className="col-sm-offset-3 col-sm-3">

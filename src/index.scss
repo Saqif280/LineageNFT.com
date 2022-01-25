@@ -377,7 +377,7 @@ hr:after {
     opacity: 0.999;
     line-height: 4rem;
     font-size: 2.6rem;
-    max-width: 55rem;
+    max-width: 43rem;
     text-shadow: 0.1rem 0.2rem 0.5rem rgba(255, 255, 255, 0.6);
     color: $font-black;
     margin-top: 0;
@@ -448,6 +448,14 @@ hr:after {
       background-color: $background-primary;
       width: 100%;
       border-left: 3rem darken($background-primary, 3%) solid;
+      a{
+        &.colored {
+          color: #85D7FF;
+          &:hover {
+            color: #009EEB;
+          }
+        }
+      }
       h4 {
         color: $font-white;
       }
