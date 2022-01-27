@@ -67,7 +67,7 @@ const Faq = () => {
                   <div className="number">5</div>
                   <div className="content-chunk">
                     <h4>Wen mint?</h4>
-                    <p>We're minting 4000 CRESTs in march. The mint price is X eth to keep the community as accessible as possible.</p>
+                    <p>We're minting 4000 CRESTs in March. The mint price is X eth to keep the community as accessible as possible.</p>
                   </div>
                 </div>
               </div>
@@ -76,8 +76,18 @@ const Faq = () => {
                 <div className="card">
                   <div className="number">6</div>
                   <div className="content-chunk">
-                    <h4>Whats the future for Lineage and Crests?</h4>
-                    <p>We haven't committed to anything yet, but Crests are designed like Loot, to expose their data for those that want to build on top. We're builders at heart and we're planning on building new tools and contracts for the community.</p>
+                    <h4>Why is mint so cheap?</h4>
+                    <p>We're builders not marketers. We're not advertising on tiktok, we're not doing tons of giveaways and promotions. We'd rather just ask for less ETH and make it easy for anyone to get involved.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-wrapper">
+                <div className="card">
+                  <div className="number">7</div>
+                  <div className="content-chunk">
+                    <h4>Whats the future for Lineage and CRESTs?</h4>
+                    <p>We haven't committed to anything yet, but CRESTs are designed like Loot, to expose their data for those that want to build on top. We're builders at heart and we're planning on building new tools and contracts for the community.</p>
                   </div>
                 </div>
               </div>

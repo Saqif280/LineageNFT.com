@@ -64,9 +64,9 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="row margin-bottom-6">
+          <div className="row margin-bottom-2">
             <div className="col-sm-12">
-              <h3>The Artist</h3>
+              <h3>Craftsman of the crests</h3>
             </div>
 
             {/* Ahtan */}
@@ -89,7 +89,7 @@ const Team = () => {
           </div>
           <div className="row">
             <div className="col-sm-12">
-              <h3>The tribe</h3>
+              <h3>The Lineage coalition</h3>
             </div>
           </div>
           <div className="row">
