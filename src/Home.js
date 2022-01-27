@@ -64,7 +64,7 @@ const Home = () => {
         <p><span className="logo">Lineage</span> is a connected NFT project set in the world of Kharth</p>
       </div>
 
-      <div className="section section--about" id="about">
+      <div className="section section--about section--about--top" id="about">
         <div className="content">
 			    <div className="container-fluid">
 

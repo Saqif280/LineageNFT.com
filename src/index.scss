@@ -410,6 +410,9 @@ hr:after {
   padding-bottom: 10rem;
   background-color: $background-secondary;
   &--about {
+    &--top {
+      padding-bottom: 0;
+    }
     &--bottom {
       padding-top: 2rem;
     }
@@ -611,7 +614,6 @@ $ratio: 1 / $shrink;
 $speed: 50s;
 
 .slider {
-  margin-top: -10rem;
   background-color: $background-secondary;
   width: 100%;
   top: calc(50% - #{$img-h * $ratio / 2});
@@ -635,7 +637,7 @@ $speed: 50s;
 }
 
 @media only screen and (max-width: $width-xs) {
-  $shrink: 5;
+  $shrink: 3;
   $ratio: 1 / $shrink;
 
   .slider {
