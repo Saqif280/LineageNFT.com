@@ -4,6 +4,8 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Footer = () => {
+  const year = new Date().getYear() + 1900;
+
   return (
     <div className="section--footer">
       <div className="content">
@@ -11,7 +13,7 @@ const Footer = () => {
           <div className="col-sm-6">
             <Link to="/#" className="logo"><h3>Lineage</h3></Link>
             <p>Lineage is a connected NFT project set in the world of Kharth</p>
-            <p className="copyright">©2021 Lineage. All rights reserved.</p>
+            <p className="copyright">©{year} Lineage. All rights reserved.</p>
           </div>
           <div className="col-sm-offset-3 col-sm-3">
             <div className="navigation">

@@ -71,7 +71,7 @@ const Home = () => {
             <div className="row">
               <div className="col-md-offset-3 col-md-6">
                 <h2>A CREST is your entrance into Lineage.</h2>
-                <p>Each CREST is a generative art with generative lore - the pieces of your family crest identify significant historical events and details that set you apart from your ancestor crests.</p>
+                <p>Each CREST is a generative art with generative lore - the pieces of your family CREST identify significant historical events and details that set you apart from your ancestor CRESTs.</p>
                 {/* <img src={Crest3}/> */}
               </div>
             </div>
@@ -91,7 +91,7 @@ const Home = () => {
             <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
                 <h2>Your CREST represents your family’s unique place in its lineage.</h2>
-                <p>Lineage Crests (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
+                <p>Lineage CRESTs (your NFT) are connected to one another via Lineages. Your Lineage is all the families you descended from; all of your ancestors and families from you.</p>
                 <img src={TreeDiagram} />
               </div>
             </div>

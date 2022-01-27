@@ -21,7 +21,7 @@ const Faq = () => {
                   <div className="number">1</div>
                   <div className="content-chunk">
                     <h4>What is Lineage?</h4>
-                    <p>Lineage is an interconnected NFT collection built on top of a <a href="/#" className="colored">vast world</a>. When you mint your family crest, you'll be able to discover your ancestor's and descendants (other NFT holders) and uncover together what lore sets you apart from one another. </p>
+                    <p>Lineage is an interconnected NFT collection built on top of a <a href="/#" className="colored">vast world</a>. When you mint your family CREST, you'll be able to discover your ancestor's and descendants (other NFT holders) and uncover together what lore sets you apart from one another. </p>
                   </div>
                 </div>
               </div>
@@ -41,7 +41,7 @@ const Faq = () => {
                   <div className="number">3</div>
                   <div className="content-chunk">
                     <h4>What do I get when I mint a Lineage NFT?</h4>
-                    <p>To join the community, you mint a CREST that represents a family in the world of Kharth. Upon mint, we create generative lore that is unique to your family and based on your ancestry. Your mint will place you in one of eight races, and in one of countless family lines. Through our <a href="/#" className="colored">Ancestry Explorer</a>, you'll be able to uncover your ancestor and descendent crests and connect with the NFT holders that make up your bloodline.</p>
+                    <p>To join the community, you mint a CREST that represents a family in the world of Kharth. Upon mint, we create generative lore that is unique to your family and based on your ancestry. Your mint will place you in one of eight races, and in one of countless family lines. Through our <a href="/#" className="colored">Ancestry Explorer</a>, you'll be able to uncover your ancestor and descendent CRESTs and connect with the NFT holders that make up your bloodline.</p>
                   </div>
                 </div>
               </div>
@@ -51,7 +51,7 @@ const Faq = () => {
                   <div className="number">4</div>
                   <div className="content-chunk">
                     <h4>What is the inherent value of a CREST?</h4>
-                    <p>
+                    <p>Ultimately, it’s a creative project, and it’s worth whatever you deem it to be worth. But:
                     <ul>
                       <li>CRESTs are the first NFT project where the tokens have relationships between each other</li>
                       <li>Each CREST has its own generative backstory</li>
@@ -67,7 +67,7 @@ const Faq = () => {
                   <div className="number">4</div>
                   <div className="content-chunk">
                     <h4>Wen mint?</h4>
-                    <p>We're minting 4000 CRESTs in march. The mint price is .02 eth to keep the community as accessible as possible.</p>
+                    <p>We're minting 4000 CRESTs in march. The mint price is X eth to keep the community as accessible as possible.</p>
                   </div>
                 </div>
               </div>
