@@ -71,7 +71,7 @@ const Home = () => {
             <div className="row">
               <div className="col-md-offset-3 col-md-6">
                 <h2>A CREST is your entrance into Lineage.</h2>
-                <p>Each CREST is a generative art with generative lore - the pieces of your family CREST identify significant historical events and details that set you apart from your ancestor CRESTs.</p>
+                <p>Each CREST is generative art with generative lore - the pieces of your family CREST identify significant historical events and details that set you apart from the CRESTs of your <b>ancestors</b> and <b>descendants.</b></p>
                 {/* <img src={Crest3}/> */}
               </div>
             </div>

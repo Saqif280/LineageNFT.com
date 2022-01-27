@@ -621,7 +621,7 @@ $speed: 50s;
   .slider-row {
     width: 100%;
     height: $img-h * $ratio;
-    background-image: url('./img/crests/CrestCarousel.png');
+    background-image: url('./img/crests/crest_carousel.png');
     background-size: $img-w * $ratio $img-h * $ratio;
     animation: slide $speed linear infinite;
     @include drop-shadow(#999);
@@ -660,7 +660,7 @@ $speed: 50s;
 }
 
 .profile-card {
-  margin-top: 6rem;
+  margin-top: 2rem;
   background-color: $background-white;
   width: 100%;
   @include box-shadow($shadow-color);
@@ -709,9 +709,16 @@ $speed: 50s;
 }
 @media only screen and (max-width: $width-xs) {
   .profile-card {
-    margin-top: 2rem;
+    margin-top: 1rem;
     .content-chunk {
       padding: 1rem 4rem 3rem;
+    }
+  }
+}
+@media only screen and (max-width: $width-sm) {
+  .profile-card-small {
+    img {
+      display: none;
     }
   }
 }
@@ -788,6 +795,10 @@ $speed: 50s;
 
 .margin-bottom-2 {
   margin-bottom: 2rem;
+}
+
+.margin-bottom-4 {
+  margin-bottom: 4rem;
 }
 
 .margin-bottom-6 {

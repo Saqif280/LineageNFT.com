@@ -64,10 +64,20 @@ const Faq = () => {
 
               <div className="card-wrapper">
                 <div className="card">
-                  <div className="number">4</div>
+                  <div className="number">5</div>
                   <div className="content-chunk">
                     <h4>Wen mint?</h4>
                     <p>We're minting 4000 CRESTs in march. The mint price is X eth to keep the community as accessible as possible.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-wrapper">
+                <div className="card">
+                  <div className="number">6</div>
+                  <div className="content-chunk">
+                    <h4>Whats the future for Lineage and Crests?</h4>
+                    <p>We haven't committed to anything yet, but Crests are designed like Loot, to expose their data for those that want to build on top. We're builders at heart and we're planning on building new tools and contracts for the community.</p>
                   </div>
                 </div>
               </div>

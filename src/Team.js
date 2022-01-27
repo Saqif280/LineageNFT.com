@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import LucasPortrait from './img/portraits/lucas-cropped.png';
 import SaqifPortrait from './img/portraits/saqif-cropped.png';
 import MichaelPortrait from './img/portraits/michael-cropped.png';
+import Ahtan from './img/portraits/ahtan.jpg';
+import AhtanHighlights from './img/crest_artist_highlights.png';
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Team = () => {
@@ -10,9 +12,15 @@ const Team = () => {
     <div className="section" id="team">
       <div className="content">
         <div className="container-fluid">
+          <div className="row margin-bottom-2">
+            <div className="col-sm-12">
+              <h2>Our Fellowship</h2>
+              <p>A huge thank you to everyone making Lineage a reality. <a href="https://discord.gg/FbxxaqVVCU" target="_blank" className="colored">Join the discord</a> to meet the amazing members of our team.</p>
+            </div>
+          </div>
           <div className="row margin-bottom-6">
             <div className="col-sm-12">
-              <h2>The Fellowship</h2>
+              <h3>The founding folk</h3>
             </div>
             <div className="col-sm-4">
               <div className="profile-card">
@@ -56,31 +64,42 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row margin-bottom-6">
             <div className="col-sm-12">
-              <h3>Other Party Members</h3>
-              <p>Shoutout to everyone making Lineage a reality. <a href="https://discord.gg/FbxxaqVVCU" target="_blank" className="colored">Join the discord</a> to meet the amazing members of our team.</p>
+              <h3>The Artist</h3>
             </div>
-          </div>
-          <div className="row">
 
             {/* Ahtan */}
-            <div className="col-lg-3 col-md-4 col-sm-6">
+            <div className="col-md-3">
               <div className="profile-card-small">
+                <img src={Ahtan} alt="Ahtan"/>
                 <div className="content-chunk">
                   <a target="_blank" href="https://www.instagram.com/ahtan_delmundo/">
-                    <h4>@ahtan_delmundo<br /><span className="title">Crest Artist</span></h4>
+                    <h4>@ahtan_delmundo<br /><span className="title">Crest Artisan</span></h4>
                   </a>
                 </div>
               </div>
             </div>
+
+            <div className="col-md-9">
+              <br />
+              <img src={AhtanHighlights} />
+            </div>
+
+          </div>
+          <div className="row">
+            <div className="col-sm-12">
+              <h3>The tribe</h3>
+            </div>
+          </div>
+          <div className="row">
 
             {/* Art Coordinator */}
             <div className="col-lg-3 col-md-4 col-sm-6">
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a target="_blank" href="https://www.instagram.com/samkimball__/">
-                    <h4>@samkimball__<br /><span className="title">Art Coordinator</span></h4>
+                    <h4>@samkimball__<br /><span className="title">Artisan Coordinator</span></h4>
                   </a>
                 </div>
               </div>
@@ -91,29 +110,18 @@ const Team = () => {
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a target="_blank" href="https://www.instagram.com/v__i__q/">
-                    <h4>@v__i__q<br /><span className="title">Concept Artist</span></h4>
+                    <h4>@v__i__q<br /><span className="title">Concept Artisan</span></h4>
                   </a>
                 </div>
               </div>
             </div>
-
-            {/* CB */}
-            {/* <div className="col-lg-3 col-md-4 col-sm-6">
-              <div className="profile-card-small">
-                <div className="content-chunk">
-                  <a target="_blank" href="https://www.instagram.com/chahatbavanya">
-                    <h4>@chahatbavanya<br /><span className="title">Lore Artist</span></h4>
-                  </a>
-                </div>
-              </div>
-            </div> */}
 
             {/* Yoman */}
             <div className="col-lg-3 col-md-4 col-sm-6">
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a target="_blank" href="https://twitter.com/yoman301">
-                    <h4>@yoman301<br /><span className="title">World Builder</span></h4>
+                    <h4>@yoman301<br /><span className="title">Loresmith</span></h4>
                   </a>
                 </div>
               </div>
@@ -124,7 +132,7 @@ const Team = () => {
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a target="_blank" href="https://twitter.com/sambino">
-                    <h4>@sambino<br /><span className="title">Community Manager</span></h4>
+                    <h4>@sambino<br /><span className="title">Community Oracle</span></h4>
                   </a>
                 </div>
               </div>
@@ -135,7 +143,7 @@ const Team = () => {
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a target="_blank" href="https://twitter.com/nftyktty">
-                    <h4>@nftyktty<br /><span className="title">Community Manager</span></h4>
+                    <h4>@nftyktty<br /><span className="title">Community Oracle</span></h4>
                   </a>
                 </div>
               </div>
@@ -146,14 +154,25 @@ const Team = () => {
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a href="">
-                    <h4>@prince<br /><span className="title">Growth Engineer</span></h4>
+                    <h4>@prince<br /><span className="title">Growth Artificer</span></h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Nate */}
+            <div className="col-lg-3 col-md-4 col-sm-6">
+              <div className="profile-card-small">
+                <div className="content-chunk">
+                  <a href="">
+                    <h4>@geko<br /><span className="title">Growth Artificer</span></h4>
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Dusty */}
-            <div className="col-lg-3 col-md-4 col-sm-6">
+            {/* <div className="col-lg-3 col-md-4 col-sm-6">
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a href="">
@@ -161,10 +180,10 @@ const Team = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* FY */}
-            <div className="col-lg-3 col-md-4 col-sm-6">
+            {/* <div className="col-lg-3 col-md-4 col-sm-6">
               <div className="profile-card-small">
                 <div className="content-chunk">
                   <a href="">
@@ -172,7 +191,7 @@ const Team = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
           </div>
         </div>
