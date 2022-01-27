@@ -68,13 +68,25 @@ const Home = () => {
         <div className="content">
 			    <div className="container-fluid">
 
-            <div className="row margin-bottom-6">
+            <div className="row">
               <div className="col-md-offset-3 col-md-6">
                 <h2>A CREST is your entrance into Lineage.</h2>
                 <p>Each CREST is a generative art with generative lore - the pieces of your family crest identify significant historical events and details that set you apart from your ancestor crests.</p>
-                <img src={Crest3}/>
+                {/* <img src={Crest3}/> */}
               </div>
             </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div className="slider">
+        <div className="slider-row"></div>
+      </div>
+      
+      <div className="section section--about section--about--bottom">
+        <div className="content">
+			    <div className="container-fluid">
 
             <div className="row margin-bottom-6">
               <div className="col-md-offset-3 col-md-6">
@@ -95,10 +107,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="slider">
-        <div className="slider-row"></div>
-      </div> */}
 
       <Faq />
 
