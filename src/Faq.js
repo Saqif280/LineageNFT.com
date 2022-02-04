@@ -21,7 +21,7 @@ const Faq = () => {
                   <div className="number">1</div>
                   <div className="content-chunk">
                     <h4>What is Lineage?</h4>
-                    <p>Lineage is an interconnected NFT collection built on top of a <a className="colored">vast world</a>. When you mint your family CREST, you'll be able to discover your ancestor's and descendants (other NFT holders) and uncover together what lore sets you apart from one another. </p>
+                    <p>Lineage is an interconnected NFT collection built on top of a <a target="_blank" href="https://twitter.com/search?q=%22Encyclopedia%20entry%22%20(from%3ALineageNFT)%20-filter%3Areplies&src=typed_query" className="colored">vast world</a>. When you mint your family CREST, you'll be able to discover your ancestor's and descendants (other NFT holders) and uncover together what lore sets you apart from one another. </p>
                   </div>
                 </div>
               </div>
