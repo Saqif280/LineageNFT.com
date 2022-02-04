@@ -11,15 +11,13 @@ import InheritanceDiagram from './img/diagrams/inheritance.jpg';
 
 import ArtificerForest from './img/scenes/artificer_forest.png';
 
-import Artificer from './img/races/artificer.jpg';
-import Frog from './img/races/frog.jpg';
-import Owl from './img/races/owl.jpg';
-
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import Team from './Team';
 import Faq from './Faq';
+import Roadmap from './Roadmap';
+import Divider from './Divider';
 
 const Home = () => {
   const sectionCommunity = useRef();
@@ -109,7 +107,8 @@ const Home = () => {
       </div>
 
       <Faq />
-
+      <Roadmap />
+      <Divider />
       <Team />
 
       <div className="section section--community"  style={ bgPosition(communityBgX, communityBgY) } ref={sectionCommunity}>

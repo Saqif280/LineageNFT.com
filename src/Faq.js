@@ -4,7 +4,7 @@ import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
 
 const Faq = () => {
   return (
-    <div className="section section--roadmap" id="faq">
+    <div className="section section--faq" id="faq">
       <div className="content">
         <div className="container-fluid">
           <div className="row margin-bottom-6">
@@ -15,7 +15,7 @@ const Faq = () => {
 
           <div className="row equal">
           
-            <div className="col-md-6">
+            <div className="col-md-8">
               <div className="card-wrapper">
                 <div className="card">
                   <div className="number">1</div>
@@ -53,7 +53,7 @@ const Faq = () => {
                     <h4>What is the inherent value of a CREST?</h4>
                     <p>Ultimately, it’s a creative project, and it’s worth whatever you deem it to be worth. But:
                     <ul>
-                      <li>CRESTs are the first NFT project where the tokens have relationships between each other</li>
+                      <li>CRESTs are the first project where the tokens have relationships between each other</li>
                       <li>Each CREST has its own generative backstory</li>
                       <li>The art looks amazing, depicts your family's backstory, and ties into our world building</li>
                     </ul>
@@ -67,33 +67,16 @@ const Faq = () => {
                   <div className="number">5</div>
                   <div className="content-chunk">
                     <h4>Wen mint?</h4>
-                    <p>We're minting 4000 CRESTs in March. The mint price is X eth to keep the community as accessible as possible.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="card-wrapper">
-                <div className="card">
-                  <div className="number">6</div>
-                  <div className="content-chunk">
-                    <h4>Why is mint so cheap?</h4>
+                    <p>We're minting 4000 CRESTs in March. The mint price is X ETH to keep the community as accessible as possible.</p>
                     <p>We're builders not marketers. We're not advertising on tiktok, we're not doing tons of giveaways and promotions. We'd rather just ask for less ETH and make it easy for anyone to get involved.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="card-wrapper">
-                <div className="card">
-                  <div className="number">7</div>
-                  <div className="content-chunk">
-                    <h4>Whats the future for Lineage and CRESTs?</h4>
-                    <p>We haven't committed to anything yet, but CRESTs are designed like Loot, to expose their data for those that want to build on top. We're builders at heart and we're planning on building new tools and contracts for the community.</p>
-                  </div>
-                </div>
-              </div>
-
             </div>
-            <div className="col-md-6 bg-moon-monkey"></div>
+            <div className="col-md-4 bg-moon-monkey">
+            </div>
+            {/* <div className="col-md-6 bg-moon-monkey"></div> */}
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ const Team = () => {
                   <p>7+ years of web development experience. Formerly @ Yelp. Fan of the Sugandese Universe.</p>
                   <div className="socials">
                     <a className="link--social" target="_blank" href="https://www.linkedin.com/in/saqif/"><FaLinkedin /></a>
-                    <a className="link--social" target="_blank" href="https://twitter.com/FungMeButt"><FaTwitter /></a>
+                    <a className="link--social" target="_blank" href="https://twitter.com/FungeMeButt"><FaTwitter /></a>
                   </div>
                 </div>
               </div>
@@ -55,7 +55,7 @@ const Team = () => {
                 <img src={MichaelPortrait} alt="Michael"/>
                 <div className="content-chunk">
                   <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
-                  <p>2,000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP Inc.</p>
+                  <p>2000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP Inc.</p>
                   <div className="socials">
                     <a className="link--social" target="_blank" href="https://www.linkedin.com/in/michaelgguo/"><FaLinkedin /></a>
                     {/* <a className="link--social" target="_blank" href="#"><FaTwitter /></a> */}
@@ -109,8 +109,8 @@ const Team = () => {
             <div className="col-lg-3 col-md-4 col-sm-6">
               <div className="profile-card-small">
                 <div className="content-chunk">
-                  <a target="_blank" href="https://www.instagram.com/v__i__q/">
-                    <h4>@v__i__q<br /><span className="title">Concept Artisan</span></h4>
+                  <a target="_blank" href="https://www.instagram.com/viq_with_a_pen/">
+                    <h4>@viq<br /><span className="title">Concept Artisan</span></h4>
                   </a>
                 </div>
               </div>

@@ -423,7 +423,7 @@ hr:after {
       @include box-shadow($shadow-color);
     }
   }
-  &--roadmap {
+  &--faq {
     position: relative;
     overflow: hidden;
     background: linear-gradient(
@@ -511,7 +511,11 @@ hr:after {
       }
     }
   }
-
+  &--roadmap {
+    img {
+      width: 100%;
+    }
+  }
   &--races {
     .content-chunk {
       padding: 0 3rem 0;
