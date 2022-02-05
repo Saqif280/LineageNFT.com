@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { FaTwitter, FaInstagram, FaMedium } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { HashLink as Link } from "react-router-hash-link";
-import Wallet from "./Wallet.js";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -48,7 +47,6 @@ const Navbar = () => {
         <a href="https://discord.gg/FbxxaqVVCU" className="button" target="_blank">
           Join the Discord
         </a>
-        {/* <Wallet /> */}
       </div>
       <div className="navbar-controls">
         <a
