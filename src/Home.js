@@ -111,7 +111,7 @@ const Home = () => {
       <Divider />
       <Team />
 
-      <div className="section section--community"  style={ bgPosition(communityBgX, communityBgY) } ref={sectionCommunity}>
+      <div className="section section--community" style={ bgPosition(communityBgX, communityBgY) } ref={sectionCommunity}>
         <div className="content">
 			    <div className="container-fluid">
             <div className="col-sm-6">

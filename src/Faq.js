@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 import MoonMonkeyCathedral from './img/scenes/moon_monkey_cathedral.png';
 
 const Faq = () => {
+  const bgPicture = useRef();
+  const [scrollOffset, setScrollOffset] = useState(0);
+  const [bgPictureOffset, setBgPictureOffset] = useState();
+
+  useEffect(() => {
+    const setOffset = () => {
+      setScrollOffset(window.pageYOffset);
+      setBgPictureOffset(bgPicture?.current?.offsetTop);
+    }
+    window.addEventListener('scroll', setOffset);
+    return function cleanupListener() {
+      window.removeEventListener('scroll', setOffset);
+    }
+  }, []);
+  
+  const bgPictureX = (bgPictureOffset-scrollOffset)/200 + 50;
+  const bgPictureY = (bgPictureOffset-scrollOffset)/200 + 50;
+  const bgPosition = (x, y) => {
+    return { 'backgroundPosition': `${x}% ${y}%` };
+  }
+
   return (
     <div className="section section--faq" id="faq">
       <div className="content">
@@ -74,9 +95,8 @@ const Faq = () => {
               </div>
 
             </div>
-            <div className="col-md-4 bg-moon-monkey">
+            <div className="col-md-4 bg-moon-monkey" style={ bgPosition(bgPictureX, bgPictureY) } ref={bgPicture}>
             </div>
-            {/* <div className="col-md-6 bg-moon-monkey"></div> */}
           </div>
         </div>
       </div>
