@@ -347,7 +347,7 @@ hr:after {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0)
@@ -366,12 +366,12 @@ hr:after {
     no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 120vh;
   padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   text-align: center;
   p {
     opacity: 0.999;
@@ -393,7 +393,7 @@ hr:after {
     }
   }
   img {
-    margin-top: -10rem;
+    margin-top: calc(50vh - 25rem);
     width: 34rem;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
@@ -542,7 +542,7 @@ hr:after {
         rgba(255, 255, 255, 0.6),
         rgba(255, 255, 255, 0.6)
       ),
-      url('/img/scenes/rice_paddy.jpg')
+      url('/img/scenes/rice_paddy-small.jpg')
         no-repeat;
     background-position: center;
     background-size: cover;
@@ -671,6 +671,30 @@ $speed: 50s;
   img {
     width: 100%;
   }
+  .portrait-lucas {
+    width: 100%;
+    height: 25rem;
+    background: url('/img/portraits/lucas.png')
+        no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .portrait-saqif {
+    width: 100%;
+    height: 25rem;
+    background: url('/img/portraits/saqif.png')
+        no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+  .portrait-michael {
+    width: 100%;
+    height: 25rem;
+    background: url('/img/portraits/michael.png')
+        no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
   .content-chunk {
     padding: 1rem 4.5rem 3.5rem;
     h4 {
@@ -720,6 +744,9 @@ $speed: 50s;
   }
 }
 @media only screen and (max-width: $width-sm) {
+  .portrait-lucas, .portrait-saqif, .portrait-michael {
+    display: none;
+  }
   .profile-card-small {
     img {
       display: none;

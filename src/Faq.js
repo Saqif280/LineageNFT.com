@@ -18,8 +18,8 @@ const Faq = () => {
     }
   }, []);
   
-  const bgPictureX = (bgPictureOffset-scrollOffset)/200 + 50;
-  const bgPictureY = (bgPictureOffset-scrollOffset)/200 + 50;
+  const bgPictureX = (bgPictureOffset-scrollOffset)/300 + 50;
+  const bgPictureY = (bgPictureOffset-scrollOffset)/300 + 50;
   const bgPosition = (x, y) => {
     return { 'backgroundPosition': `${x}% ${y}%` };
   }

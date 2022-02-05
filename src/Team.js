@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
-import LucasPortrait from './img/portraits/lucas-cropped.png';
-import SaqifPortrait from './img/portraits/saqif-cropped.png';
-import MichaelPortrait from './img/portraits/michael-cropped.png';
 import Ahtan from './img/portraits/ahtan.jpg';
 import AhtanHighlights from './img/crest_artist_highlights.png';
 import { FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Team = () => {
+  const portrait1 = useRef();
+  const [scrollOffset, setScrollOffset] = useState(0);
+  const [portraitOffset, setPortraitOffset] = useState();
+
+  useEffect(() => {
+    const setOffset = () => {
+      setScrollOffset(window.pageYOffset);
+      setPortraitOffset(portrait1?.current?.offsetTop);
+    }
+    window.addEventListener('scroll', setOffset);
+    return function cleanupListener() {
+      window.removeEventListener('scroll', setOffset);
+    }
+  }, []);
+  
+  const bgPictureX = (portraitOffset-scrollOffset)/15 + 600;
+  const bgPictureY = (portraitOffset-scrollOffset)/15 + 500;
+  const bgPosition = (x, y) => {
+    return { 'backgroundPosition': `${x}% ${y}%` };
+  }
+
   return (
     <div className="section" id="team">
       <div className="content">
@@ -24,7 +42,7 @@ const Team = () => {
             </div>
             <div className="col-sm-4">
               <div className="profile-card">
-                <img src={LucasPortrait} alt="Lucas"/>
+                <div className="portrait-lucas" style={ bgPosition(bgPictureX, bgPictureY) } ref={portrait1}></div>
                 <div className="content-chunk">
                   <h4>Lucas<br /><span className="title">ETH Alchemist</span></h4>
                   <p>7+ years of software development experience. Formerly @ Apple. Fantasy nerd since age 4.</p>
@@ -38,7 +56,7 @@ const Team = () => {
             
             <div className="col-sm-4">
               <div className="profile-card">
-                <img src={SaqifPortrait} alt="Saqif"/>
+                <div className="portrait-saqif" style={ bgPosition(bgPictureX, bgPictureY) }></div>
                 <div className="content-chunk">
                   <h4>Saqif<br /><span className="title">Web Artificer</span></h4>
                   <p>7+ years of web development experience. Formerly @ Yelp. Fan of the Sugandese Universe.</p>
@@ -52,7 +70,7 @@ const Team = () => {
             
             <div className="col-sm-4">
               <div className="profile-card">
-                <img src={MichaelPortrait} alt="Michael"/>
+                <div className="portrait-michael" style={ bgPosition(bgPictureX, bgPictureY) }></div>
                 <div className="content-chunk">
                   <h4>Michael<br /><span className="title">Lore Wizard</span></h4>
                   <p>2000+ hours of GM experience. Die hard critter and Dwarven Forge addict. Formerly @ GAP Inc.</p>
@@ -64,6 +82,7 @@ const Team = () => {
               </div>
             </div>
           </div>
+
           <div className="row margin-bottom-2">
             <div className="col-sm-12">
               <h3>Craftsman of the crests</h3>

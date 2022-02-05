@@ -35,10 +35,10 @@ const Home = () => {
     }
   }, []);
   
-  const heroBgX = scrollOffset/25 + 50;
-  const heroBgY = scrollOffset/25 + 50;
-  const heroFgX = scrollOffset/50 + 50;
-  const heroFgY = scrollOffset/50 + 50;
+  const heroBgX = scrollOffset/40 + 50;
+  const heroBgY = scrollOffset/40 + 50;
+  const heroFgX = scrollOffset/60 + 50;
+  const heroFgY = scrollOffset/60 + 50;
   // const percentCommunity = window.innerHeight/(sectionCommunityOffset-scrollOffset);
   const communityBgX = (sectionCommunityOffset-scrollOffset)/25 + 50;
   const communityBgY = (sectionCommunityOffset-scrollOffset)/25 + 30;
