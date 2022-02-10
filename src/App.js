@@ -7,6 +7,7 @@ import {
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Home from "./Home";
+import Team from "./Team";
 import Mint from "./Mint";
 import LineageViewer from "./LineageViewer";
 
@@ -21,6 +22,9 @@ const App = () => {
           </Route>
           <Route exact path="/lineage-viewer">
             <LineageViewer />
+          </Route>
+          <Route path="/team">
+            <Team />
           </Route>
           <Route path="/mint">
             <Mint />

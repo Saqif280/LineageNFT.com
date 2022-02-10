@@ -20,8 +20,8 @@ const Team = () => {
     }
   }, []);
   
-  const bgPictureX = (portraitOffset-scrollOffset)/15 + 600;
-  const bgPictureY = (portraitOffset-scrollOffset)/15 + 500;
+  const bgPictureX = (portraitOffset-scrollOffset)/15 + 30;
+  const bgPictureY = (portraitOffset-scrollOffset)/15 + 30;
   const bgPosition = (x, y) => {
     return { 'backgroundPosition': `${x}% ${y}%` };
   }
