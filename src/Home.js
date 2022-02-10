@@ -16,7 +16,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 import Faq from './Faq';
 import Roadmap from './Roadmap';
-import Divider from './Divider';
 
 const Home = () => {
   const sectionCommunity = useRef();
@@ -107,7 +106,6 @@ const Home = () => {
 
       <Faq />
       <Roadmap />
-      <Divider />
 
       <div className="section section--community" style={ bgPosition(communityBgX, communityBgY) } ref={sectionCommunity}>
         <div className="content">
