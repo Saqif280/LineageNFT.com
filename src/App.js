@@ -7,7 +7,7 @@ import {
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Home from "./Home";
-// import WhitePaper from "./WhitePaper";
+import Mint from "./Mint";
 import LineageViewer from "./LineageViewer";
 
 const App = () => {
@@ -22,9 +22,9 @@ const App = () => {
           <Route exact path="/lineage-viewer">
             <LineageViewer />
           </Route>
-          {/* <Route path="/whitepaper">
-            <WhitePaper />
-          </Route> */}
+          <Route path="/mint">
+            <Mint />
+          </Route>
         </Switch>
         <Footer />
       </Router>
