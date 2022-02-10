@@ -524,6 +524,12 @@ hr:after {
       width: 100%;
     }
   }
+  &--mint {
+    img {
+      width: 100%;
+      max-width: 14rem;
+    }
+  }
   &--races {
     .content-chunk {
       padding: 0 3rem 0;
