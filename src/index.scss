@@ -212,6 +212,10 @@ hr:after {
         color: $font-black;
       }
     }
+    .left-bordered {
+      border-left: 1px solid rgba($font-black, .1);
+      padding-left: 2rem;
+    }
   }
   .right {
     position: absolute;
@@ -292,6 +296,10 @@ hr:after {
       position: static;
       a:not(.logo) {
         display: none;
+      }
+      .left-bordered {
+        border-left: none;
+        padding-left: 0;
       }
     }
     .right {
@@ -514,6 +522,12 @@ hr:after {
   &--roadmap {
     img {
       width: 100%;
+    }
+  }
+  &--mint {
+    img {
+      width: 100%;
+      max-width: 14rem;
     }
   }
   &--races {

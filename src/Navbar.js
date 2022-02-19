@@ -33,8 +33,9 @@ const Navbar = () => {
         <Link to="/#about">About</Link>
         <Link to="/#faq">FAQ</Link>
         <Link to="/#roadmap">Roadmap</Link>
-        <Link to="/#team">Team</Link>
-        {/* <Link to="/white_paper#">White Paper</Link> */}
+        <a className="left-bordered" target="_blank" href="https://twitter.com/search?q=%22Encyclopedia%20entry%22%20(from%3ALineageNFT)%20-filter%3Areplies&src=typed_query">Lore</a>
+        <Link to="/team#">Team</Link>
+        {/* <Link to="/mint#">Mint</Link> */}
       </div>
       <div className="right">
         <a
