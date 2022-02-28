@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import CONTRACT from './contract.json';
 
 const Mint = () => {
-  const [mintedCount, setMintedCount] = useState(0);
+  const [mintedCount, setMintedCount] = useState('?');
   const [statusText, setStatusText] = useState();
   const [waitingForMintSignature, setWaitingForMintSignature] = useState(false);
   const CONTRACT_ADDRESS = '0xBBedB508F864f828155389BA8a9d13ACFE65C29f';
