@@ -1,6 +1,7 @@
-@import 'grid12';
-@import 'variables';
-@import 'animations';
+@import "grid12";
+@import "variables";
+@import "animations";
+@import "bouncing-arrow";
 
 html {
   // set this to normalize rem unit
@@ -10,7 +11,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   font-size: 2rem;
   line-height: 3rem;
   color: $font-grey-2;
@@ -19,7 +20,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -29,7 +30,7 @@ pre {
 }
 
 h1 {
-  font-family: 'Spectral SC', serif;
+  font-family: "Spectral SC", serif;
   font-weight: 200;
   font-size: 6.4rem;
   color: $font-white;
@@ -38,14 +39,14 @@ h1 {
   margin-bottom: 1rem;
 }
 h2 {
-  font-family: 'Spectral SC', serif;
+  font-family: "Spectral SC", serif;
   color: $font-black;
   font-size: 4rem;
   line-height: 4rem;
   font-weight: 500;
 }
 h3 {
-  font-family: 'Spectral SC', serif;
+  font-family: "Spectral SC", serif;
   color: $font-black;
   font-size: 3rem;
   line-height: 3rem;
@@ -53,14 +54,14 @@ h3 {
   margin-bottom: 0;
 }
 h4 {
-  font-family: 'Spectral SC', serif;
+  font-family: "Spectral SC", serif;
   color: $font-black;
   font-size: 2rem;
   line-height: 2rem;
   font-weight: 400;
 }
 h5 {
-  font-family: 'Spectral SC', serif;
+  font-family: "Spectral SC", serif;
   color: $font-black;
   font-size: 2.5rem;
   line-height: 2.5rem;
@@ -72,7 +73,7 @@ span {
   &.logo {
     font-weight: 400;
     font-size: 2.4rem;
-    font-family: 'Spectral SC', serif;
+    font-family: "Spectral SC", serif;
     color: $font-white;
     margin-right: 0.3rem;
   }
@@ -136,7 +137,7 @@ hr {
   );
 }
 hr:after {
-  content: '§';
+  content: "§";
   display: inline-block;
   position: relative;
   top: -1.8rem;
@@ -174,14 +175,14 @@ hr:after {
     to left,
     $background-secondary,
     rgba(255, 255, 255, 0),
-    $background-secondary,
+    $background-secondary
   );
   font-size: 1.7rem;
   transition: 300ms all;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 3s;
-  @include fade-in('1300ms');
+  @include fade-in("1300ms");
   .navbar-controls {
     display: none;
     position: absolute;
@@ -213,7 +214,7 @@ hr:after {
       }
     }
     .left-bordered {
-      border-left: 1px solid rgba($font-black, .1);
+      border-left: 1px solid rgba($font-black, 0.1);
       padding-left: 2rem;
     }
   }
@@ -236,7 +237,7 @@ hr:after {
       }
     }
     .button--wallet {
-      font-family: 'Lora', serif;
+      font-family: "Lora", serif;
       color: $font-grey;
       display: inline-block;
       margin-right: 2.5rem;
@@ -270,7 +271,8 @@ hr:after {
     h3 {
       color: $font-black;
     }
-    a, a.link--social {
+    a,
+    a.link--social {
       color: $font-grey-2;
       &:hover {
         color: $font-black;
@@ -356,22 +358,17 @@ hr:after {
   left: 0;
   width: 100%;
   height: 120vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    url('/img/scenes/pillar_valley_fg.png')
-      no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    url("/img/scenes/pillar_valley_fg.png") no-repeat;
   background-position: center;
   background-size: cover;
 }
 .section--hero {
   background: linear-gradient(
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.7)
-  ),
-  url('/img/scenes/pillar_valley_bg.png')
-    no-repeat;
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("/img/scenes/pillar_valley_bg.png") no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   min-height: 120vh;
@@ -392,7 +389,7 @@ hr:after {
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
-    @include fade-in('800ms');
+    @include fade-in("800ms");
     span.logo {
       font-size: 2.8rem;
       color: $font-black;
@@ -406,7 +403,7 @@ hr:after {
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 3s;
-    @include fade-in('300ms');
+    @include fade-in("300ms");
     @include drop-shadow(#222);
   }
 }
@@ -435,11 +432,10 @@ hr:after {
     position: relative;
     overflow: hidden;
     background: linear-gradient(
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    url('/img/scenes/moon_monkey_cathedral-blur.jpg')
-      no-repeat;
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.2)
+      ),
+      url("/img/scenes/moon_monkey_cathedral-blur.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     p {
@@ -459,11 +455,11 @@ hr:after {
       background-color: $background-primary;
       width: 100%;
       border-left: 3rem darken($background-primary, 3%) solid;
-      a{
+      a {
         &.colored {
-          color: #85D7FF;
+          color: #85d7ff;
           &:hover {
-            color: #009EEB;
+            color: #009eeb;
           }
         }
       }
@@ -478,7 +474,7 @@ hr:after {
         top: calc(50% - 1.5rem);
         left: -2rem;
         color: $font-grey-2;
-        font-family: 'Spectral SC', serif;
+        font-family: "Spectral SC", serif;
         font-size: 2rem;
       }
       .content-chunk {
@@ -556,8 +552,7 @@ hr:after {
         rgba(255, 255, 255, 0.6),
         rgba(255, 255, 255, 0.6)
       ),
-      url('/img/scenes/rice_paddy-small.jpg')
-        no-repeat;
+      url("/img/scenes/rice_paddy-small.jpg") no-repeat;
     background-position: center;
     background-size: cover;
   }
@@ -639,7 +634,7 @@ $speed: 50s;
   .slider-row {
     width: 100%;
     height: $img-h * $ratio;
-    background-image: url('./img/crests/crest_carousel.png');
+    background-image: url("./img/crests/crest_carousel.png");
     background-size: $img-w * $ratio $img-h * $ratio;
     animation: slide $speed linear infinite;
     @include drop-shadow(#999);
@@ -688,24 +683,21 @@ $speed: 50s;
   .portrait-lucas {
     width: 100%;
     height: 25rem;
-    background: url('/img/portraits/lucas.png')
-        no-repeat;
+    background: url("/img/portraits/lucas.png") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .portrait-saqif {
     width: 100%;
     height: 25rem;
-    background: url('/img/portraits/saqif.png')
-        no-repeat;
+    background: url("/img/portraits/saqif.png") no-repeat;
     background-position: top;
     background-size: cover;
   }
   .portrait-michael {
     width: 100%;
     height: 25rem;
-    background: url('/img/portraits/michael.png')
-        no-repeat;
+    background: url("/img/portraits/michael.png") no-repeat;
     background-position: top;
     background-size: cover;
   }
@@ -758,7 +750,9 @@ $speed: 50s;
   }
 }
 @media only screen and (max-width: $width-sm) {
-  .portrait-lucas, .portrait-saqif, .portrait-michael {
+  .portrait-lucas,
+  .portrait-saqif,
+  .portrait-michael {
     display: none;
   }
   .profile-card-small {
@@ -788,6 +782,10 @@ $speed: 50s;
   }
 }
 
+.mint-container {
+  background: rgba(255, 252, 246, 0.1);
+}
+
 .whitepaper {
   h3 {
     margin-top: 6rem;
@@ -808,16 +806,11 @@ $speed: 50s;
 
 .bg-moon-monkey {
   min-height: 40rem;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    url('/img/scenes/moon_monkey_cathedral-sq.png')
-      no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    url("/img/scenes/moon_monkey_cathedral-sq.png") no-repeat;
   background-position: center;
   background-size: cover;
 }
-
 
 @media (max-width: $width-sm) {
   .bg-moon-monkey {

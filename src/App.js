@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Team from "./Team";
 import Mint from "./Mint";
-import LineageViewer from "./LineageViewer";
+import NewMint from "./mint-page/App";
 
 const App = () => {
   return (
@@ -20,14 +20,11 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/lineage-viewer">
-            <LineageViewer />
-          </Route>
           <Route path="/team">
             <Team />
           </Route>
           <Route path="/mint">
-            <Mint />
+            <NewMint />
           </Route>
         </Switch>
         <Footer />
