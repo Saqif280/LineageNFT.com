@@ -782,8 +782,9 @@ $speed: 50s;
   }
 }
 
-.mint-container {
-  background: rgba(255, 252, 246, 0.1);
+.mint-container.mint-container {
+  background: rgba(255, 252, 246, 0.53);
+  padding: 16px;
 }
 
 .whitepaper {

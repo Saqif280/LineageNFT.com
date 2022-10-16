@@ -34,10 +34,8 @@ import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   height: 60px;
-  margin-top: 10px;
-  margin-bottom: 5px;
   background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
-  color: white;
+  color: gold;
   font-size: 16px;
   font-weight: bold;
 `;
@@ -489,7 +487,7 @@ const Home = (props: HomeProps) => {
   return (
     <Container>
       <Container maxWidth="xs" style={{ position: "relative" }}>
-        <Paper className="mint-container" style={{}}>
+        <Paper className="mint-container">
           {!wallet.connected ? (
             <ConnectButton>Connect Wallet</ConnectButton>
           ) : (
@@ -517,9 +515,7 @@ const Home = (props: HomeProps) => {
                   </Grid>
                   <Grid item xs={4}>
                     <Typography variant="body2" color="textSecondary">
-                      {isWhitelistUser && discountPrice
-                        ? "Discount Price"
-                        : "Price"}
+                      Price
                     </Typography>
                     <Typography
                       variant="h6"
@@ -562,8 +558,6 @@ const Home = (props: HomeProps) => {
                             candyMachine?.state?.isSoldOut ||
                             (endDate && Date.now() > endDate.getTime())
                               ? "COMPLETED"
-                              : isPresale
-                              ? "PRESALE"
                               : "LIVE"
                           }
                           onComplete={toggleMintButton}

@@ -16,10 +16,12 @@ import { CIVIC_GATEKEEPER_NETWORK } from "./utils";
 export const CTAButton = styled(Button)`
   width: 100%;
   height: 60px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
-  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 252, 246, 1) 0%,
+    rgb(252 236 203) 100%
+  );
+  color: gold;
   font-size: 16px;
   font-weight: bold;
 `; // add your own styles here
