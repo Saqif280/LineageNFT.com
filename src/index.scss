@@ -405,6 +405,9 @@ hr:after {
     animation-duration: 3s;
     @include fade-in("300ms");
     @include drop-shadow(#222);
+    @media only screen and (max-width: $width-sm) {
+      margin-top: calc(42vh - 25rem);
+    }
   }
 }
 .divider {
