@@ -816,6 +816,14 @@ $speed: 50s;
   background-size: cover;
 }
 
+.MuiSnackbar-root {
+  transition: 300ms all;
+  @include box-shadow(rgba(0, 0, 0, 0.4));
+  &:hover {
+    @include box-shadow(rgba(0, 0, 0, 0.6));
+  }
+}
+
 @media (max-width: $width-sm) {
   .bg-moon-monkey {
     margin: 4rem 1.6rem;

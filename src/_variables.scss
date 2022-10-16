@@ -1,12 +1,12 @@
 $background-black: #000000;
 $background-white: #ffffff;
-$background-grey: #C0CCDA;
+$background-grey: #c0ccda;
 $background-primary: #282c34;
 $background-secondary: #fffcf6;
 
 $font-white: #ffffff;
-$font-grey: #C0CCDA;
-$font-grey-2: #3C4858;
+$font-grey: #c0ccda;
+$font-grey-2: #3c4858;
 $font-black: #000000;
 
 $shadow-color: rgba(0, 0, 0, 0.05);
@@ -19,9 +19,13 @@ $shadow-color: rgba(0, 0, 0, 0.05);
   -webkit-filter: drop-shadow(0.5rem 0.5rem 0.5rem $color);
   filter: drop-shadow(0.5rem 0.5rem 0.5rem $color);
 }
+@mixin drop-shadow-light($color) {
+  -webkit-filter: drop-shadow(0.25rem 0.25rem 0.5rem $color);
+  filter: drop-shadow(0.25rem 0.25rem 0.5rem $color);
+}
 
-$snow: #F9FAFC;
-$dark-snow: #EFF2F7;
+$snow: #f9fafc;
+$dark-snow: #eff2f7;
 $gold: gold;
 
 $width-xs: 767px; // [0 - 767px]

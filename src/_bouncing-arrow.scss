@@ -13,6 +13,7 @@
   box-sizing: border-box;
   height: 50px;
   width: 50px;
+  @include drop-shadow-light(#999);
   /*    border-style: solid;
    border-color: black;
    border-width: 0px 10px 10px 0px;

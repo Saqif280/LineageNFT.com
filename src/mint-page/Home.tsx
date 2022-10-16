@@ -4,7 +4,7 @@ import * as anchor from "@project-serum/anchor";
 import styled from "styled-components";
 import { Container, Snackbar } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
-import Alert from "@material-ui/lab/Alert";
+import Alert from "@mui/material/Alert";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import {
@@ -113,7 +113,6 @@ const Home = (props: HomeProps) => {
             props.candyMachineId,
             connection
           );
-          console.log("Candy machine state: ", cndy);
           let active = cndy?.state.goLiveDate
             ? cndy?.state.goLiveDate.toNumber() < new Date().getTime() / 1000
             : false;
@@ -309,7 +308,7 @@ const Home = (props: HomeProps) => {
         if (needTxnSplit && setupTxn === undefined) {
           setAlertState({
             open: true,
-            message: "Please sign account setup transaction",
+            message: "Adventurer, sign your account setup transaction!",
             severity: "info",
           });
           setupMint = await createAccountsForMint(
@@ -330,13 +329,14 @@ const Home = (props: HomeProps) => {
             setAlertState({
               open: true,
               message:
-                "Setup transaction succeeded! Please sign minting transaction",
+                "Setup transaction succeeded. Sign the minting transaction adventurer!",
               severity: "info",
             });
           } else {
             setAlertState({
               open: true,
-              message: "Mint failed! Please try again!",
+              message:
+                "Mint failed! Try again, and message us in Discord if you need help!",
               severity: "error",
             });
             setIsUserMinting(false);
@@ -345,7 +345,8 @@ const Home = (props: HomeProps) => {
         } else {
           setAlertState({
             open: true,
-            message: "Please sign minting transaction",
+            message:
+              "Welcome to the gates of Kharth! Sign the minting transaction to enter.",
             severity: "info",
           });
         }
@@ -386,7 +387,7 @@ const Home = (props: HomeProps) => {
           setSetupTxn(undefined);
           setAlertState({
             open: true,
-            message: "Congratulations! Mint succeeded!",
+            message: "Congratulations! Welcome to Kharth!",
             severity: "success",
             hideDuration: 7000,
           });
@@ -403,14 +404,17 @@ const Home = (props: HomeProps) => {
         } else {
           setAlertState({
             open: true,
-            message: "Mint failed! Please try again!",
+            message:
+              "Mint failed! Try again, and message us in Discord if you need help!",
             severity: "error",
           });
           refreshCandyMachineState();
         }
       }
     } catch (error: any) {
-      let message = error.msg || "Minting failed! Please try again!";
+      let message =
+        error.msg ||
+        "Mint failed! Try again, and message us in Discord if you need help!";
       if (!error.msg) {
         if (!error.message) {
           message = "Transaction timeout! Please try again.";
@@ -418,7 +422,7 @@ const Home = (props: HomeProps) => {
           console.log(error);
           message = `SOLD OUT!`;
         } else if (error.message.indexOf("0x135")) {
-          message = `Insufficient funds to mint. Please fund your wallet.`;
+          message = `Insufficient funds dear adventurer. Add SOL to your wallet and try again!`;
         }
       } else {
         if (error.code === 311) {
@@ -639,6 +643,17 @@ const Home = (props: HomeProps) => {
         <Alert
           onClose={() => setAlertState({ ...alertState, open: false })}
           severity={alertState.severity}
+          sx={{
+            lineHeight: "20px",
+            fontSize: "11px",
+            bgcolor: "#fffcf6",
+            "& .MuiAlert-icon, & .MuiAlert-action": {
+              alignItems: "center",
+            },
+            "& .MuiAlert-action": {
+              paddingTop: 0,
+            },
+          }}
         >
           {alertState.message}
         </Alert>

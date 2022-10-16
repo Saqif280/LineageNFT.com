@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 
 import Crest1 from "./img/crests/crest_4.png";
 import Crest2 from "./img/crests/crest_5.png";
@@ -58,7 +58,8 @@ const Home = () => {
           in the world of Kharth
         </p>
         <Mint />
-        <BouncingArrow />
+        {/* 800 is very, VERY arbitrary, its just where the user should be mostly scrolled into the next page */}
+        <BouncingArrow visible={scrollOffset < 250} />
       </div>
 
       <div className="section section--about section--about--top" id="about">
